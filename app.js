@@ -303,7 +303,6 @@ function reveal(auto) {
   const overlayEl = $("#overlay");
   if (overlayEl) {
     try { overlayEl.dataset.kqView = "results"; } catch { try { overlayEl.setAttribute("data-kq-view", "results"); } catch {} }
-    try { overlayEl.dataset.kqVipBlock = "1"; } catch { try { overlayEl.setAttribute("data-kq-vip-block", "1"); } catch {} }
     overlayEl.style.display = "flex";
   }
   $("#nextBtn").classList.remove("hidden");
@@ -318,8 +317,6 @@ function reveal(auto) {
         overlayNode.style.display = "none";
         try { delete overlayNode.dataset.kqView; } catch {}
         try { overlayNode.removeAttribute("data-kq-view"); } catch {}
-        try { delete overlayNode.dataset.kqVipBlock; } catch {}
-        try { overlayNode.removeAttribute("data-kq-vip-block"); } catch {}
         proceed();
       }
     }, 3000);
@@ -332,8 +329,6 @@ function proceed() {
     overlayNode.style.display = "none";
     try { delete overlayNode.dataset.kqView; } catch {}
     try { overlayNode.removeAttribute("data-kq-view"); } catch {}
-    try { delete overlayNode.dataset.kqVipBlock; } catch {}
-    try { overlayNode.removeAttribute("data-kq-vip-block"); } catch {}
   }
   state.session.i++;
   state.session.done++;
