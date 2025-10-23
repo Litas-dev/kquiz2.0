@@ -3,6 +3,7 @@
   function factory(){
     let K=null;
     let styleEl=null, root=null, listEl=null;
+    let overlayObserver=null;
     let off=[];
     let lastSig="";
 
@@ -38,6 +39,7 @@
       }
       if(!root) return;
       root.classList.add('kq-top5bg');
+      if(!root.style.display) root.style.display='none';
       try{ root.dataset.kqTop5bg='1'; }catch{}
       if(!root.querySelector('.kq-top5bg-header')){
         const hdr=document.createElement('div');
@@ -50,6 +52,21 @@
         listEl.className='kq-top5bg-list';
         root.appendChild(listEl);
       }
+    };
+
+    const isOverlayVisible = ()=>{
+      const overlay=document.getElementById('overlay');
+      if(!overlay) return false;
+      const inline=(overlay.style && typeof overlay.style.display==='string') ? overlay.style.display.trim() : '';
+      if(inline){ return inline !== 'none'; }
+      try{ return window.getComputedStyle(overlay).display !== 'none'; }catch{}
+      return false;
+    };
+
+    const syncVisibility = ()=>{
+      ensureRoot();
+      if(!root) return;
+      root.style.display = isOverlayVisible() ? 'block' : 'none';
     };
 
     function sortTop(){
@@ -81,7 +98,10 @@
       ensureRoot();
       const top = sortTop();
       const sig = JSON.stringify(top.map(p=>[p.id,p.score,p.avatar,p.name]));
-      if(sig===lastSig) return;
+      if(sig===lastSig){
+        syncVisibility();
+        return;
+      }
       lastSig=sig;
       if(!listEl) ensureRoot();
       listEl.innerHTML='';
@@ -138,20 +158,26 @@
       }catch{
         try{ window.KQ_VIP?.scan?.(); }catch{}
       }
+      syncVisibility();
     };
 
     const handleScores = ()=>{ lastSig=""; render(); };
+    const handleQuestionStart = ()=>{ syncVisibility(); };
+    const handleQuestionEnd = ()=>{ handleScores(); syncVisibility(); };
 
     const enable = (ctx)=>{
       K=ctx;
       ensureStyle();
       ensureRoot();
       render();
+      syncVisibility();
       const handlers=[
         ['scoresChanged', handleScores],
         ['leaderboardRefresh', handleScores],
         ['wsMessage', handleScores],
-        ['gameStart', handleScores]
+        ['gameStart', handleScores],
+        ['questionStart', handleQuestionStart],
+        ['questionEnd', handleQuestionEnd]
       ];
       handlers.forEach(([evt,fn])=>{ try{ K.on?.(evt, fn); off.push(()=>{ try{ K.off?.(evt, fn); }catch{} }); }catch{} });
       const vipHandler=()=>{ handleScores(); };
@@ -160,6 +186,14 @@
         window.addEventListener('kqvip:change', vipHandler);
         off.push(()=>{ try{ window.removeEventListener('kqvip:ready', vipHandler); }catch{} });
         off.push(()=>{ try{ window.removeEventListener('kqvip:change', vipHandler); }catch{} });
+      }catch{}
+      try{
+        const overlay=document.getElementById('overlay');
+        if(overlay){
+          overlayObserver = new MutationObserver(syncVisibility);
+          overlayObserver.observe(overlay, { attributes:true, attributeFilter:['style','class'] });
+          off.push(()=>{ try{ overlayObserver && overlayObserver.disconnect(); }catch{} overlayObserver=null; });
+        }
       }catch{}
     };
 
@@ -171,6 +205,8 @@
       if(listEl){ try{ listEl.innerHTML=''; }catch{} }
       listEl=null;
       if(root){ try{ root.classList.remove('kq-top5bg'); }catch{} }
+      if(overlayObserver){ try{ overlayObserver.disconnect(); }catch{} }
+      overlayObserver=null;
     };
 
     return { id:'top5bg', name:'Top5 BG lentelė', description:'Rodo Top-5 foninėje lentoje su VIP/SUB ženklais.', defaultEnabled:true, enable, disable };
