@@ -254,17 +254,29 @@ function reveal(auto) {
   if (winners.length) {
     winners.sort((a, b) => b.score - a.score);
     winners.forEach((w) => {
-      const left = el("div", { class: "rowL" },
-        w.avatar
-          ? el("img", {
-              class: "av",
-              src: w.avatar,
-              alt: "",
-              referrerpolicy: "no-referrer",
-              loading: "lazy",
-              onerror: "this.remove()"
-            })
-          : el("span", {}, ""),
+      let img = null;
+      if (w.avatar) {
+        img = el("img", {
+          class: "av kq-av kquiz-avatar",
+          src: w.avatar,
+          alt: w.name || "",
+          referrerpolicy: "no-referrer",
+          loading: "lazy",
+          onerror: "this.remove()"
+        });
+        try {
+          img.dataset.uid = String(w.id || "");
+          img.dataset.name = w.name || "";
+        } catch {}
+        img.setAttribute("data-uid", String(w.id || ""));
+        img.setAttribute("data-name", w.name || "");
+        if (!img.title) img.title = w.name || "";
+      }
+
+      const left = el(
+        "div",
+        { class: "rowL" },
+        img || el("span", {}, ""),
         el("div", {}, w.name)
       );
       box.appendChild(el("div", { class: "row" }, left, el("div", {}, String(w.score))));
@@ -278,6 +290,8 @@ function reveal(auto) {
   $("#overlay").style.display = "flex";
   $("#nextBtn").classList.remove("hidden");
   save();
+
+  try { window.KQ_VIP?.scan?.(); } catch {}
 
   if (state.settings.autoNext && auto) {
     window.autoNextTimer = setTimeout(() => {
