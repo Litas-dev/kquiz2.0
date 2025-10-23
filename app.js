@@ -300,7 +300,11 @@ function reveal(auto) {
       try { const f = $("#failAudio"); f.currentTime = 0; f.play(); } catch {}
     }
   }
-  $("#overlay").style.display = "flex";
+  const overlayEl = $("#overlay");
+  if (overlayEl) {
+    try { overlayEl.dataset.kqView = "results"; } catch { try { overlayEl.setAttribute("data-kq-view", "results"); } catch {} }
+    overlayEl.style.display = "flex";
+  }
   $("#nextBtn").classList.remove("hidden");
   save();
 
@@ -308,8 +312,11 @@ function reveal(auto) {
 
   if (state.settings.autoNext && auto) {
     window.autoNextTimer = setTimeout(() => {
-      if ($("#overlay").style.display !== "none") {
-        $("#overlay").style.display = "none";
+      const overlayNode = $("#overlay");
+      if (overlayNode && overlayNode.style.display !== "none") {
+        overlayNode.style.display = "none";
+        try { delete overlayNode.dataset.kqView; } catch {}
+        try { overlayNode.removeAttribute("data-kq-view"); } catch {}
         proceed();
       }
     }, 3000);
@@ -317,7 +324,12 @@ function reveal(auto) {
   emit("questionEnd", { qid: curr ? curr.qid : null, correctKey: correct });
 }
 function proceed() {
-  $("#overlay").style.display = "none";
+  const overlayNode = $("#overlay");
+  if (overlayNode) {
+    overlayNode.style.display = "none";
+    try { delete overlayNode.dataset.kqView; } catch {}
+    try { overlayNode.removeAttribute("data-kq-view"); } catch {}
+  }
   state.session.i++;
   state.session.done++;
   state.session.curr = null;
@@ -481,7 +493,15 @@ function pauseMain() {
   tickStop();
 }
 function resumeFlow() { nextQ(); }
-function nextQuestionNow() { $("#overlay").style.display = "none"; proceed(); }
+function nextQuestionNow() {
+  const overlayNode = $("#overlay");
+  if (overlayNode) {
+    overlayNode.style.display = "none";
+    try { delete overlayNode.dataset.kqView; } catch {}
+    try { overlayNode.removeAttribute("data-kq-view"); } catch {}
+  }
+  proceed();
+}
 function setChatGuard(fn) { chatGuard = fn; }
 function clearChatGuard() { chatGuard = null; }
 function getRandomQuestion() {

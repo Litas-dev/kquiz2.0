@@ -57,6 +57,8 @@
     const isOverlayVisible = ()=>{
       const overlay=document.getElementById('overlay');
       if(!overlay) return false;
+      const mode = (overlay.dataset && overlay.dataset.kqView) || overlay.getAttribute?.('data-kq-view') || '';
+      if(mode !== 'results') return false;
       const inline=(overlay.style && typeof overlay.style.display==='string') ? overlay.style.display.trim() : '';
       if(inline){ return inline !== 'none'; }
       try{ return window.getComputedStyle(overlay).display !== 'none'; }catch{}
@@ -162,7 +164,10 @@
     };
 
     const handleScores = ()=>{ lastSig=""; render(); };
-    const handleQuestionStart = ()=>{ syncVisibility(); };
+    const handleQuestionStart = ()=>{
+      if(root) root.style.display='none';
+      syncVisibility();
+    };
     const handleQuestionEnd = ()=>{ handleScores(); syncVisibility(); };
 
     const enable = (ctx)=>{
@@ -191,7 +196,7 @@
         const overlay=document.getElementById('overlay');
         if(overlay){
           overlayObserver = new MutationObserver(syncVisibility);
-          overlayObserver.observe(overlay, { attributes:true, attributeFilter:['style','class'] });
+          overlayObserver.observe(overlay, { attributes:true, attributeFilter:['style','class','data-kq-view'] });
           off.push(()=>{ try{ overlayObserver && overlayObserver.disconnect(); }catch{} overlayObserver=null; });
         }
       }catch{}
