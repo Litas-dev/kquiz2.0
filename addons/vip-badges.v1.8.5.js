@@ -18,7 +18,7 @@
 
   const byNameKey = (name)=> `nm:${norm(name)}`;
   const byIdKey   = (id)=> `id:${String(id)}`;
-  const saveVIPs = ()=> saveList(STORAGE.vip, state.vips);
+   const saveVIPs = ()=> saveList(STORAGE.vip, state.vips);
   const saveSUBs = ()=> saveList(STORAGE.sub, state.subs);
 
   const isVIP = (name, uid) => {
@@ -54,7 +54,9 @@
     @keyframes kqFlameSpin { 0%{ transform:rotate(0deg) } 100%{ transform:rotate(360deg) } }
     @keyframes kqSpark { 0%{ transform:scale(.6); opacity:0 } 10%{opacity:1} 100%{ transform:scale(1.2); opacity:0 } }
   }
-  .kq-vip-ring, .kq-aura, .kq-flame, .kq-trail, .kq-spark{ position:fixed; left:-9999px; top:-9999px; pointer-events:none; z-index:${CFG.z}; }
+
+ .kq-vip-ring, .kq-aura, .kq-flame, .kq-trail, .kq-spark{ position:fixed; left:-9999px; top:-9999px; pointer-events:none; z-index:${CFG.z}; }
+
   .kq-vip-ring{
     border-radius:999px;
     border:2px solid rgba(255,225,0,.85);
@@ -135,13 +137,13 @@
     t.style.left   = x + "px"; t.style.top    = y + "px";
     document.body.appendChild(t);
     o.trails.push(t);
-    while(o.trails.length > CFG.trailMax){ try{ o.trails.shift().remove(); }catch{} }
+ while(o.trails.length > CFG.trailMax){ try{ o.trails.shift().remove(); }catch{} }
     setTimeout(()=>{ try{ t.remove(); }catch{} }, CFG.trailTTL+50);
   }
   function spawnSpark(o, r){
     const now = performance.now();
     if(now - o.lastSparkAt < CFG.sparksEveryMs) return;
-    o.lastSparkAt = now;
+    o.lastTrailAt = now;
     const s = document.createElement("div"); s.className="kq-spark";
     const ang = Math.random()*Math.PI*2;
     const rad = Math.min(r.width, r.height)/2 + 8;
