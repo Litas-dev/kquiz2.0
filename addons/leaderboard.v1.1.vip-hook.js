@@ -1,7 +1,8 @@
 /* KQuiz addon: Leaderboard v1.1 — top-3 scaling */
 (function(){
   function factory(){
-    let mounted=false, scoresHandler=null;
+    let mounted=false, scoresHandler=null, vipSignalHandler=null;
+    let currentK=null;
     let overlay=null, listEl=null, floatBtn=null;
 
     const $=(q,r=document)=>r.querySelector(q);
@@ -84,13 +85,28 @@
     function closeLeaderboard(){ if(overlay) overlay.style.display='none'; }
 
     function enable(K){
+      currentK = K;
       mountUI(); render(K);
       scoresHandler=()=>{ if(overlay && overlay.style.display==='flex') render(K); };
       K.on('scoresChanged', scoresHandler);
+      vipSignalHandler = ()=>{ if(currentK) render(currentK); };
+      try{
+        window.addEventListener('kqvip:ready', vipSignalHandler);
+        window.addEventListener('kqvip:change', vipSignalHandler);
+      }catch{}
     }
     function disable(){
       try{ if(scoresHandler && window.KQuiz) window.KQuiz.off('scoresChanged', scoresHandler); }catch{}
-      scoresHandler=null; if(overlay) overlay.style.display='none';
+      scoresHandler=null;
+      if(vipSignalHandler){
+        try{
+          window.removeEventListener('kqvip:ready', vipSignalHandler);
+          window.removeEventListener('kqvip:change', vipSignalHandler);
+        }catch{}
+      }
+      vipSignalHandler=null;
+      currentK=null;
+      if(overlay) overlay.style.display='none';
       try{ delete window.openLeaderboard; delete window.closeLeaderboard; }catch{}
       mounted=false;
     }

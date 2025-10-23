@@ -13,6 +13,7 @@
   const norm = s => String(s||"").normalize('NFKD').replace(/\p{Diacritic}/gu,'').trim().toLowerCase().replace(/\s+/g," ");
   const loadList = (key) => { try{ return JSON.parse(localStorage.getItem(key)||"[]"); }catch{ return []; } };
   const saveList = (key, value) => localStorage.setItem(key, JSON.stringify(value));
+  const emit = (event, detail)=>{ try{ window.dispatchEvent(new CustomEvent(event,{ detail })); }catch{} };
   const STORAGE = { vip: "kq_vips", sub: "kq_subs" };
   const state = { vips: loadList(STORAGE.vip), subs: loadList(STORAGE.sub) };
 
@@ -20,6 +21,7 @@
   const byIdKey   = (id)=> `id:${String(id)}`;
   const saveVIPs = ()=> saveList(STORAGE.vip, state.vips);
   const saveSUBs = ()=> saveList(STORAGE.sub, state.subs);
+  const notifyStateChange = ()=> emit("kqvip:change", { vips: state.vips.slice(), subs: state.subs.slice(), at: Date.now() });
 
   const isVIP = (name, uid) => {
     const k1 = uid ? byIdKey(uid) : null;
@@ -29,10 +31,17 @@
   const addVIPByName = (name)=>{
     const nm = String(name||"").trim(); if(!nm) return;
     const key = byNameKey(nm);
-    if(!state.vips.some(v=>v.key===key)) state.vips.push({key, type:"name", name:nm});
+    if(state.vips.some(v=>v.key===key)) return;
+    state.vips.push({key, type:"name", name:nm});
     saveVIPs();
+    notifyStateChange();
   };
-  const removeVIP = (key)=>{ state.vips = state.vips.filter(v=>v.key!==key); saveVIPs(); };
+  const removeVIP = (key)=>{
+    const before = state.vips.length;
+    state.vips = state.vips.filter(v=>v.key!==key);
+    if(state.vips.length===before) return;
+    saveVIPs(); notifyStateChange();
+  };
   const isSUB = (name, uid) => {
     const k1 = uid ? byIdKey(uid) : null;
     const k2 = name ? byNameKey(name) : null;
@@ -41,10 +50,17 @@
   const addSUBByName = (name)=>{
     const nm = String(name||"").trim(); if(!nm) return;
     const key = byNameKey(nm);
-    if(!state.subs.some(v=>v.key===key)) state.subs.push({key, type:"name", name:nm});
+    if(state.subs.some(v=>v.key===key)) return;
+    state.subs.push({key, type:"name", name:nm});
     saveSUBs();
+    notifyStateChange();
   };
-  const removeSUB = (key)=>{ state.subs = state.subs.filter(v=>v.key!==key); saveSUBs(); };
+  const removeSUB = (key)=>{
+    const before = state.subs.length;
+    state.subs = state.subs.filter(v=>v.key!==key);
+    if(state.subs.length===before) return;
+    saveSUBs(); notifyStateChange();
+  };
 
   // ---------- CSS ----------
   const CSS = `
@@ -342,12 +358,21 @@
         const vipCb = document.createElement("input"); vipCb.type="checkbox";
         vipCb.checked = state.vips.some(v=>v.key===keyId || v.key===keyNm);
         vipCb.onchange = ()=>{
+          let changed = false;
           if(vipCb.checked){
-            if(!state.vips.some(v=>v.key===keyId)) state.vips.push({key:keyId,type:"id",name:p.name});
+            if(!state.vips.some(v=>v.key===keyId)){
+              state.vips.push({key:keyId,type:"id",name:p.name});
+              changed = true;
+            }
           }else{
-            state.vips = state.vips.filter(v=>v.key!==keyId && v.key!==keyNm);
+            const next = state.vips.filter(v=>v.key!==keyId && v.key!==keyNm);
+            if(next.length !== state.vips.length){
+              state.vips = next;
+              changed = true;
+            }
           }
-          saveVIPs(); schedule(true);
+          if(changed){ saveVIPs(); notifyStateChange(); }
+          schedule(true);
         };
         vipLabel.appendChild(vipCb);
         vipLabel.appendChild(document.createTextNode("VIP"));
@@ -356,12 +381,21 @@
         const subCb = document.createElement("input"); subCb.type="checkbox";
         subCb.checked = state.subs.some(v=>v.key===keyId || v.key===keyNm);
         subCb.onchange = ()=>{
+          let changed = false;
           if(subCb.checked){
-            if(!state.subs.some(v=>v.key===keyId)) state.subs.push({key:keyId,type:"id",name:p.name});
+            if(!state.subs.some(v=>v.key===keyId)){
+              state.subs.push({key:keyId,type:"id",name:p.name});
+              changed = true;
+            }
           }else{
-            state.subs = state.subs.filter(v=>v.key!==keyId && v.key!==keyNm);
+            const next = state.subs.filter(v=>v.key!==keyId && v.key!==keyNm);
+            if(next.length !== state.subs.length){
+              state.subs = next;
+              changed = true;
+            }
           }
-          saveSUBs(); schedule(true);
+          if(changed){ saveSUBs(); notifyStateChange(); }
+          schedule(true);
         };
         subLabel.appendChild(subCb);
         subLabel.appendChild(document.createTextNode("SUB"));
@@ -372,7 +406,9 @@
         const del = document.createElement("button"); del.className="kq-btn"; del.textContent="✕"; del.title="Pašalinti pagal vardą";
         del.onclick = ()=>{
           removeVIP(keyNm);
+          removeVIP(keyId);
           removeSUB(keyNm);
+          removeSUB(keyId);
           renderPanel(container);
           schedule(true);
         };
@@ -487,4 +523,5 @@
     createBadge,
     decorateLabel
   });
+  emit("kqvip:ready", { helpers: window.KQ_VIP, vips: state.vips.slice(), subs: state.subs.slice(), at: Date.now() });
 })();
