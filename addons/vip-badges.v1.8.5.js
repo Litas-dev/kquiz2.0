@@ -70,12 +70,18 @@
     @keyframes kqFlameSpin { 0%{ transform:rotate(0deg) } 100%{ transform:rotate(360deg) } }
     @keyframes kqSpark { 0%{ transform:scale(.6); opacity:0 } 10%{opacity:1} 100%{ transform:scale(1.2); opacity:0 } }
   }
-  .kq-vip-ring, .kq-aura, .kq-flame, .kq-trail, .kq-spark{ position:fixed; left:-9999px; top:-9999px; pointer-events:none; z-index:${CFG.z}; }
+  .kq-vip-ring, .kq-sub-ring, .kq-aura, .kq-flame, .kq-trail, .kq-spark{ position:fixed; left:-9999px; top:-9999px; pointer-events:none; z-index:${CFG.z}; }
   .kq-vip-ring{
     border-radius:999px;
     border:2px solid rgba(255,225,0,.85);
     box-shadow:0 0 14px rgba(255,225,0,.55);
     background:rgba(255,255,0,.06);
+  }
+  .kq-sub-ring{
+    border-radius:999px;
+    border:2px solid rgba(255,70,70,.9);
+    box-shadow:0 0 16px rgba(255,70,70,.45);
+    background:rgba(255,0,0,.08);
   }
   .kq-aura{
     border-radius:999px;
@@ -121,23 +127,24 @@
   function ensureOverlays(node){
     let o = pool.get(node);
     if(!o){
-      const ring  = document.createElement("div"); ring.className  = "kq-vip-ring";
+      const vipRing  = document.createElement("div"); vipRing.className  = "kq-vip-ring";
+      const subRing  = document.createElement("div"); subRing.className  = "kq-sub-ring";
       const aura  = document.createElement("div"); aura.className  = "kq-aura";
       const flame = document.createElement("div"); flame.className = "kq-flame";
-      document.body.appendChild(ring); document.body.appendChild(aura); document.body.appendChild(flame);
-      o = { ring, aura, flame, trails:[], lastTrailAt:0, lastRect:null, lastSparkAt:0, role:null };
+      document.body.appendChild(vipRing); document.body.appendChild(subRing); document.body.appendChild(aura); document.body.appendChild(flame);
+      o = { vipRing, subRing, aura, flame, trails:[], lastTrailAt:0, lastRect:null, lastSparkAt:0, role:null };
       pool.set(node, o);
     }
     return o;
   }
   function hidePos(el){ if(!el) return; el.style.left="-9999px"; el.style.top="-9999px"; }
   function clearTrails(o){ while(o?.trails?.length){ try{ o.trails.shift().remove(); }catch{} } }
-  function hide(o){ if(!o) return; o.role=null; hidePos(o.ring); hidePos(o.aura); hidePos(o.flame); clearTrails(o); }
+  function hide(o){ if(!o) return; o.role=null; hidePos(o.vipRing); hidePos(o.subRing); hidePos(o.aura); hidePos(o.flame); clearTrails(o); }
   function setRole(o, role){
     if(!o) return;
     if(o.role===role) return;
-    if(role==="vip"){ hidePos(o.aura); hidePos(o.flame); clearTrails(o); }
-    if(role==="sub"){ hidePos(o.ring); }
+    if(role==="vip"){ hidePos(o.subRing); hidePos(o.aura); hidePos(o.flame); clearTrails(o); }
+    if(role==="sub"){ hidePos(o.vipRing); hidePos(o.aura); hidePos(o.flame); clearTrails(o); }
     o.role = role;
   }
 
@@ -180,23 +187,21 @@
     const dy = o.lastRect ? Math.abs(r.top  - o.lastRect.top)  : 999;
     o.lastRect = { left:r.left, top:r.top, width:r.width, height:r.height };
     if(o.role === "sub"){
-      if(dx+dy > 1.5) spawnTrail(o, r);
-      const g = CFG.haloGrow;
-      const w = snap(Math.max(0, r.width + g*2)), h = snap(Math.max(0, r.height + g*2));
-      const x = snap(r.left - g), y = snap(r.top - g);
-      hidePos(o.ring);
-      o.aura.style.width=w+"px"; o.aura.style.height=h+"px"; o.aura.style.left=x+"px"; o.aura.style.top=y+"px";
-      o.flame.style.width=w+"px"; o.flame.style.height=h+"px"; o.flame.style.left=x+"px"; o.flame.style.top=y+"px";
-      spawnSpark(o, r);
-    }else if(o.role === "vip"){
-      clearTrails(o);
-      hidePos(o.aura); hidePos(o.flame);
       const ringGrow = 6;
       const w = snap(Math.max(0, r.width + ringGrow*2));
       const h = snap(Math.max(0, r.height + ringGrow*2));
       const x = snap(r.left - ringGrow);
       const y = snap(r.top - ringGrow);
-      o.ring.style.width=w+"px"; o.ring.style.height=h+"px"; o.ring.style.left=x+"px"; o.ring.style.top=y+"px";
+      hidePos(o.vipRing);
+      o.subRing.style.width=w+"px"; o.subRing.style.height=h+"px"; o.subRing.style.left=x+"px"; o.subRing.style.top=y+"px";
+    }else if(o.role === "vip"){
+      const ringGrow = 6;
+      const w = snap(Math.max(0, r.width + ringGrow*2));
+      const h = snap(Math.max(0, r.height + ringGrow*2));
+      const x = snap(r.left - ringGrow);
+      const y = snap(r.top - ringGrow);
+      hidePos(o.subRing);
+      o.vipRing.style.width=w+"px"; o.vipRing.style.height=h+"px"; o.vipRing.style.left=x+"px"; o.vipRing.style.top=y+"px";
     }
   }
 
