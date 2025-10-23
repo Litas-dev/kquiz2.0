@@ -90,6 +90,10 @@
   .kq-sub{ color:#9fb0d6; font-size:12px }
   .kq-input{ padding:8px 10px; border:1px solid #2a365f; border-radius:10px; background:#0f162d; color:#cfe0ff; width:100% }
   .kq-btn{ padding:6px 10px; border-radius:10px; border:1px solid #2a365f; background:#0f162d; color:#cfe0ff }
+  .kq-badge{ display:inline-flex; align-items:center; gap:4px; margin-left:6px; padding:2px 8px; border-radius:999px; font-size:0.72em; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; box-shadow:0 0 10px rgba(0,0,0,.18) }
+  .kq-badge-icon{ font-size:0.9em; line-height:1 }
+  .kq-badge-vip{ background:rgba(255,224,74,.18); color:#ffe45c; border:1px solid rgba(255,224,74,.42); box-shadow:0 0 10px rgba(255,224,74,.35) }
+  .kq-badge-sub{ background:linear-gradient(130deg, rgba(255,176,0,.28), rgba(224,95,170,.35)); color:#ffe9ff; border:1px solid rgba(224,95,170,.5); box-shadow:0 0 14px rgba(224,95,170,.45) }
   `;
   function ensureStyle(){ if(document.getElementById("kq-aura-style")) return; const s=document.createElement("style"); s.id="kq-aura-style"; s.textContent=CSS; document.head.appendChild(s); }
 
@@ -408,6 +412,33 @@
     document.body.appendChild(btn);
   }
 
+  function createBadge(role){
+    const type = role === "sub" ? "sub" : role === "vip" ? "vip" : null;
+    if(!type) return null;
+    const badge = document.createElement("span");
+    badge.className = `kq-badge kq-badge-${type}`;
+    const icon = document.createElement("span"); icon.className = "kq-badge-icon";
+    icon.textContent = type === "sub" ? "💎" : "⭐";
+    const label = document.createElement("span"); label.textContent = type.toUpperCase();
+    badge.appendChild(icon);
+    badge.appendChild(label);
+    return badge;
+  }
+
+  function decorateLabel(el, info){
+    if(!el) return null;
+    try{ Array.from(el.children||[]).forEach(ch=>{ if(ch?.classList?.contains("kq-badge")) ch.remove(); }); }catch{}
+    const uid = info?.uid || info?.id || "";
+    const name = info?.name || info?.label || "";
+    const sub = isSUB(name, uid);
+    const vip = !sub && isVIP(name, uid);
+    if(!sub && !vip) return null;
+    const badge = createBadge(sub ? "sub" : "vip");
+    if(!badge) return null;
+    el.appendChild(badge);
+    return badge;
+  }
+
   // ---------- lifecycle ----------
   function enable(){
     ensureStyle();
@@ -452,6 +483,8 @@
       const kId = uid ? byIdKey(uid) : null;
       const kNm = name ? byNameKey(name) : null;
       return state.subs.some(v => (kId && v.key === kId) || (kNm && v.key === kNm));
-    }
+    },
+    createBadge,
+    decorateLabel
   });
 })();

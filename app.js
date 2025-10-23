@@ -36,6 +36,20 @@ const el = (t, a = {}, ...cs) => {
   cs.forEach((c) => n.appendChild(typeof c === "string" ? document.createTextNode(c) : c));
   return n;
 };
+function applyVipMetadata(node, player) {
+  if (!node || !player) return;
+  const uid = String(player.id || player.uid || "");
+  const name = player.name || player.displayName || "";
+  try {
+    if (node.dataset) {
+      node.dataset.uid = uid;
+      node.dataset.name = name;
+    }
+  } catch {}
+  node.setAttribute("data-uid", uid);
+  node.setAttribute("data-name", name);
+  if (!node.title && name) node.title = name;
+}
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const shuffle = (a) => {
   for (let i = a.length - 1; i > 0; i--) {
@@ -254,9 +268,9 @@ function reveal(auto) {
   if (winners.length) {
     winners.sort((a, b) => b.score - a.score);
     winners.forEach((w) => {
-      let img = null;
+      let avatarEl;
       if (w.avatar) {
-        img = el("img", {
+        avatarEl = el("img", {
           class: "av kq-av kquiz-avatar",
           src: w.avatar,
           alt: w.name || "",
@@ -264,21 +278,20 @@ function reveal(auto) {
           loading: "lazy",
           onerror: "this.remove()"
         });
-        try {
-          img.dataset.uid = String(w.id || "");
-          img.dataset.name = w.name || "";
-        } catch {}
-        img.setAttribute("data-uid", String(w.id || ""));
-        img.setAttribute("data-name", w.name || "");
-        if (!img.title) img.title = w.name || "";
+      } else {
+        avatarEl = el("div", {
+          class: "av kq-av avatar",
+          style: "width:32px;height:32px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:inline-block;"
+        });
       }
+      applyVipMetadata(avatarEl, w);
 
-      const left = el(
-        "div",
-        { class: "rowL" },
-        img || el("span", {}, ""),
-        el("div", {}, w.name)
-      );
+      const nameWrap = el("div", { style: "display:flex;align-items:center;gap:6px;" }, w.name);
+      try {
+        window.KQ_VIP?.decorateLabel?.(nameWrap, { uid: w.id, id: w.id, name: w.name });
+      } catch {}
+
+      const left = el("div", { class: "rowL" }, avatarEl, nameWrap);
       box.appendChild(el("div", { class: "row" }, left, el("div", {}, String(w.score))));
     });
   } else {

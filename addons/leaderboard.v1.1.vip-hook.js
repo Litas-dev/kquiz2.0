@@ -68,7 +68,8 @@
         }
         tagForVIP(avatarNode, p);
 
-        const nameEl = el('div',{style:`font-weight:900;font-size:${nameSize}px;transform-origin:left center`}, `${i+1}. ${p.name}`);
+        const nameEl = el('div',{style:`font-weight:900;font-size:${nameSize}px;transform-origin:left center;display:flex;align-items:center;gap:6px;`}, `${i+1}. ${p.name}`);
+        try{ window.KQ_VIP?.decorateLabel?.(nameEl, { uid:p.id, id:p.id, name:p.name }); }catch{}
 
         const left = el('div',{class:'rowL'}, avatarNode, nameEl);
         listEl.appendChild(el('div',{class:'row'}, left, el('div',{}, String(p.score))));
