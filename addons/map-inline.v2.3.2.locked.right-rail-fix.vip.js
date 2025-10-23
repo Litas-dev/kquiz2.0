@@ -140,6 +140,7 @@
   function mountOverlay(){
     const overlay = document.createElement("div");
     overlay.id="kq-map-overlay";
+    try{ overlay.dataset.kqVipBlock = "1"; }catch{ try{ overlay.setAttribute("data-kq-vip-block", "1"); }catch{} }
     overlay.style.cssText="position:fixed;inset:0;background:rgba(7,10,18,.96);z-index:10040;display:flex;align-items:center;justify-content:center;padding:12px";
     const introImg=(()=>{ try{ if(window.KQ_ASSETS?.image) return window.KQ_ASSETS.image("map.png"); }catch{} return "assets/images/map.png"; })();
     overlay.innerHTML = `
