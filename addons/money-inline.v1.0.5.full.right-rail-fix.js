@@ -46,6 +46,7 @@ const perQ = [];
 const totals = new Map();
 let currentQuestion = null;
 const blacklist = new Set(loadBlacklist());
+let vipSuppressed = false;
 
   const { $, shuffle, parseAnswer, banner } = KQuiz.util;
   const { pauseMain, resumeFlow, setChatGuard, clearChatGuard } = KQuiz.control;
@@ -428,6 +429,10 @@ async function fetchMoneyRaw(kind){
     try{ document.getElementById("kq-money-overlay")?.remove(); }catch{}
     try{ resumeFlow(); }catch{}
     releaseLock();
+    if(vipSuppressed){
+      try{ KQuiz.control?.releaseVip?.(ADDON_ID); }catch{}
+      vipSuppressed = false;
+    }
   }
 
   // ---------- Start / trigger ----------
@@ -435,6 +440,10 @@ async function fetchMoneyRaw(kind){
     if(active) return;
     if(!acquireLock()) { console.warn("[money-inline] start skipped, another mini active"); return; }
     active=true; phase="intro"; qIdx=1; used.clear(); perQ.length=0; totals.clear();
+    if(!vipSuppressed){
+      try{ KQuiz.control?.suppressVip?.(ADDON_ID); }catch{}
+      vipSuppressed = true;
+    }
     pauseMain(); mountOverlay(); await ensurePool();
   }
 

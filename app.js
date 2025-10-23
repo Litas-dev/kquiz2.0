@@ -59,6 +59,34 @@ const shuffle = (a) => {
   return a;
 };
 
+const vipSuppressTokens = new Set();
+function refreshVipSuppressFlag() {
+  const body = document.body;
+  if (!body) return;
+  const shouldSuppress = vipSuppressTokens.size > 0;
+  try {
+    if (shouldSuppress) body.dataset.kqVipSuppress = "1";
+    else delete body.dataset.kqVipSuppress;
+  } catch {
+    try {
+      if (shouldSuppress) body.setAttribute("data-kq-vip-suppress", "1");
+      else body.removeAttribute("data-kq-vip-suppress");
+    } catch {}
+  }
+  try { window.KQ_VIP?.scan?.(); } catch {}
+}
+function suppressVip(tag) {
+  const token = tag || `sup-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  vipSuppressTokens.add(token);
+  refreshVipSuppressFlag();
+  return token;
+}
+function releaseVip(tag) {
+  if (!tag) return;
+  if (vipSuppressTokens.delete(tag)) refreshVipSuppressFlag();
+  else if (!vipSuppressTokens.size) refreshVipSuppressFlag();
+}
+
 // Event bus / plugin API
 const _bus = {};
 function on(evt, fn) { (_bus[evt] ||= []).push(fn); }
@@ -565,7 +593,7 @@ function refreshAddonsUI() {
 window.KQuiz = {
   state, on, off, emit, use,
   util: { el, $, $$, shuffle, clamp, parseAnswer },
-  control: { pauseMain, resumeFlow, nextQuestionNow, setChatGuard, clearChatGuard, getRandomQuestion },
+  control: { pauseMain, resumeFlow, nextQuestionNow, setChatGuard, clearChatGuard, getRandomQuestion, suppressVip, releaseVip },
   registerAddon, setAddonEnabled
 };
 window.KQuiz.__addons = addons;
