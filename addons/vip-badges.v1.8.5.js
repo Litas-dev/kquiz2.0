@@ -54,7 +54,9 @@
     @keyframes kqFlameSpin { 0%{ transform:rotate(0deg) } 100%{ transform:rotate(360deg) } }
     @keyframes kqSpark { 0%{ transform:scale(.6); opacity:0 } 10%{opacity:1} 100%{ transform:scale(1.2); opacity:0 } }
   }
+
  .kq-vip-ring, .kq-aura, .kq-flame, .kq-trail, .kq-spark{ position:fixed; left:-9999px; top:-9999px; pointer-events:none; z-index:${CFG.z}; }
+
   .kq-vip-ring{
     border-radius:999px;
     border:2px solid rgba(255,225,0,.85);
@@ -101,7 +103,7 @@
   function ensureOverlays(node){
     let o = pool.get(node);
     if(!o){
-            const ring  = document.createElement("div"); ring.className  = "kq-vip-ring";
+      const ring  = document.createElement("div"); ring.className  = "kq-vip-ring";
       const aura  = document.createElement("div"); aura.className  = "kq-aura";
       const flame = document.createElement("div"); flame.className = "kq-flame";
       document.body.appendChild(ring); document.body.appendChild(aura); document.body.appendChild(flame);
