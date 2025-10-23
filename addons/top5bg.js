@@ -10,22 +10,15 @@
       if(styleEl) return;
       styleEl=document.createElement('style');
       styleEl.textContent=`
-      .kq-top5bg{position:relative;display:block;margin:12px 0 4px;padding:0;color:inherit;font-family:inherit;width:100%;box-sizing:border-box;}
-      .kq-top5bg-header{font-weight:800;font-size:16px;margin-bottom:6px;color:inherit;display:flex;align-items:flex-end;justify-content:space-between;}
-      .kq-top5bg-header span{font-size:12px;font-weight:500;opacity:0.7;}
-      .kq-top5bg-list{display:flex;flex-direction:column;gap:4px;margin:0;padding:0;list-style:none;}
-      .kq-top5bg-row{display:grid;grid-template-columns:auto auto 1fr auto;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.08);color:inherit;position:relative;}
-      .kq-top5bg-row:last-child{border-bottom:none;}
-      .kq-top5bg-row[data-kq-tier="vip"] .kq-top5bg-avatar::after,
-      .kq-top5bg-row[data-kq-tier="sub"] .kq-top5bg-avatar::after{content:"";position:absolute;inset:-3px;border-radius:999px;border:3px solid transparent;box-shadow:none;pointer-events:none;}
-      .kq-top5bg-row[data-kq-tier="vip"] .kq-top5bg-avatar::after{border-color:rgba(255,215,0,0.95);}
-      .kq-top5bg-row[data-kq-tier="sub"] .kq-top5bg-avatar::after{border-color:rgba(255,80,80,0.95);}
-      .kq-top5bg-avatar{position:relative;display:flex;align-items:center;justify-content:center;width:42px;height:42px;}
-      .kq-top5bg-avatar .kq-top5bg-initial{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;background:rgba(255,255,255,0.08);color:inherit;border:2px solid rgba(255,255,255,0.18);}
-      .kq-top5bg-avatar img{width:42px;height:42px;border-radius:50%;object-fit:cover;}
-      .kq-top5bg-name{font-weight:600;font-size:15px;min-height:20px;display:flex;align-items:center;}
-      .kq-top5bg-rank{font-weight:700;font-size:16px;width:32px;text-align:center;opacity:0.8;}
-      .kq-top5bg-score{font-weight:700;font-size:16px;min-width:48px;text-align:right;}
+      .kq-top5bg{position:relative;display:flex;justify-content:center;align-items:center;gap:12px;margin:12px auto 6px;padding:0;color:inherit;font-family:inherit;width:100%;box-sizing:border-box;}
+      .kq-top5bg-list{display:flex;flex-direction:row;gap:12px;margin:0;padding:0;list-style:none;justify-content:center;align-items:center;width:auto;}
+      .kq-top5bg-item{position:relative;width:54px;height:54px;display:flex;align-items:center;justify-content:center;}
+      .kq-top5bg-item::after{content:"";position:absolute;inset:-4px;border-radius:999px;border:3px solid transparent;box-shadow:none;pointer-events:none;}
+      .kq-top5bg-item[data-kq-tier="vip"]::after{border-color:rgba(255,215,0,0.95);}
+      .kq-top5bg-item[data-kq-tier="sub"]::after{border-color:rgba(255,80,80,0.95);}
+      .kq-top5bg-avatar{width:48px;height:48px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.08);}
+      .kq-top5bg-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;}
+      .kq-top5bg-avatar .kq-top5bg-initial{width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;background:rgba(255,255,255,0.16);color:inherit;}
       `;
       document.head.appendChild(styleEl);
     };
@@ -43,8 +36,9 @@
       }
       if(!root) return;
       root.classList.add('kq-top5bg');
-      root.style.display='block';
+      root.style.display='none';
       try{ root.dataset.kqTop5bg='1'; }catch{}
+      try{ root.querySelectorAll('.kq-top5bg-header').forEach(el=>el.remove()); }catch{}
       if(root.parentNode!==board){
         if(answers && answers.parentNode===board){
           board.insertBefore(root, answers);
@@ -52,17 +46,17 @@
           board.appendChild(root);
         }
       }
-      if(!root.querySelector('.kq-top5bg-header')){
-        const hdr=document.createElement('div');
-        hdr.className='kq-top5bg-header';
-        hdr.innerHTML='<div>TOP 5 žaidėjai</div><span>Taškai</span>';
-        root.appendChild(hdr);
+      if(!listEl || !listEl.isConnected){
+        listEl = root.querySelector('.kq-top5bg-list');
       }
-      if(!listEl || !listEl.isConnected || listEl.parentNode!==root){
+      if(!listEl || listEl.parentNode!==root){
         listEl=document.createElement('div');
         listEl.className='kq-top5bg-list';
         root.appendChild(listEl);
       }
+      try{
+        root.querySelectorAll('.kq-top5bg-list').forEach(el=>{ if(el!==listEl) el.remove(); });
+      }catch{}
     };
 
     function sortTop(){
@@ -99,24 +93,19 @@
       }
       lastSig=sig;
       if(!listEl) ensureRoot();
+      if(!listEl) return;
       listEl.innerHTML='';
       const helpers = window.KQ_VIP || null;
       if(top.length===0){
-        const empty=document.createElement('div');
-        empty.className='kq-top5bg-row';
-        empty.textContent='Nėra žaidėjų';
-        listEl.appendChild(empty);
+        if(root) root.style.display='none';
         return;
       }
+      if(root) root.style.display='flex';
       top.forEach((p,idx)=>{
         const rank=idx+1;
-        const row=document.createElement('div');
-        row.className='kq-top5bg-row';
-        row.dataset.rank=String(rank);
-
-        const rankEl=document.createElement('div');
-        rankEl.className='kq-top5bg-rank';
-        rankEl.textContent=`${rank}.`;
+        const item=document.createElement('div');
+        item.className='kq-top5bg-item';
+        item.dataset.rank=String(rank);
 
         const avatarWrap=document.createElement('div');
         avatarWrap.className='kq-top5bg-avatar';
@@ -138,28 +127,17 @@
         tagNode(avatarNode, p);
         avatarWrap.appendChild(avatarNode);
 
-        const nameEl=document.createElement('div');
-        nameEl.className='kq-top5bg-name';
-        nameEl.textContent=p.name;
         if(helpers && typeof helpers.isSub==='function' && typeof helpers.isVip==='function'){
           const isSub=helpers.isSub(p.id, p.name);
           const isVip=!isSub && helpers.isVip(p.id, p.name);
           if(isSub || isVip){
-            row.dataset.kqTier=isSub ? 'sub' : 'vip';
+            item.dataset.kqTier=isSub ? 'sub' : 'vip';
           }else{
-            delete row.dataset.kqTier;
+            item.removeAttribute('data-kq-tier');
           }
         }
-
-        const scoreEl=document.createElement('div');
-        scoreEl.className='kq-top5bg-score';
-        scoreEl.textContent=String(p.score);
-
-        row.appendChild(rankEl);
-        row.appendChild(avatarWrap);
-        row.appendChild(nameEl);
-        row.appendChild(scoreEl);
-        listEl.appendChild(row);
+        item.appendChild(avatarWrap);
+        listEl.appendChild(item);
       });
       try{
         queueMicrotask(()=>{ try{ window.KQ_VIP?.scan?.(); }catch{} });
