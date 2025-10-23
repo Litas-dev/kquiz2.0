@@ -26,6 +26,16 @@
       mounted=true;
     }
 
+    function tagForVIP(target, player){
+      if(!target || !player) return;
+      const uid = String(player.id || "");
+      const name = player.name || "";
+      try{ if(target.dataset){ target.dataset.uid = uid; target.dataset.name = name; } }catch{}
+      target.setAttribute("data-uid", uid);
+      target.setAttribute("data-name", name);
+      if(!target.title) target.title = name;
+    }
+
     function render(K){
       if(!listEl) return;
       listEl.innerHTML='';
@@ -41,31 +51,32 @@
         const avSize = Math.round(28*factor);
         const nameSize = Math.round(16*factor);
 
-        const img = p.avatar
-          ? el('img',{
-              class:'av kq-av kquiz-avatar',
-              src:(window.KQuiz&&window.KQuiz.util&&window.KQuiz.util.proxyURL)?window.KQuiz.util.proxyURL(p.avatar):p.avatar,
-              alt:p.name||'',
-              referrerpolicy:'no-referrer',
-              style:`width:${avSize}px;height:${avSize}px`})
-          : el('span',{},'');
-        if (img) {
-          try {
-            img.dataset.uid = String(p.id || '');
-            img.dataset.name = p.name || '';
-          } catch {}
-          img.setAttribute('data-uid', String(p.id || ''));
-          img.setAttribute('data-name', p.name || '');
-          img.title = p.name || '';
+        let avatarNode = null;
+        if(p.avatar){
+          avatarNode = el('img',{
+            class:'av kq-av kquiz-avatar',
+            src:(window.KQuiz&&window.KQuiz.util&&window.KQuiz.util.proxyURL)?window.KQuiz.util.proxyURL(p.avatar):p.avatar,
+            alt:p.name||'',
+            referrerpolicy:'no-referrer',
+            style:`width:${avSize}px;height:${avSize}px`
+          });
+        }else{
+          avatarNode = el('div',{
+            class:'av kq-av avatar',
+            style:`width:${avSize}px;height:${avSize}px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:inline-block`
+          });
         }
+        tagForVIP(avatarNode, p);
 
         const nameEl = el('div',{style:`font-weight:900;font-size:${nameSize}px;transform-origin:left center`}, `${i+1}. ${p.name}`);
 
-        const left = el('div',{class:'rowL'}, img, nameEl);
+        const left = el('div',{class:'rowL'}, avatarNode, nameEl);
         listEl.appendChild(el('div',{class:'row'}, left, el('div',{}, String(p.score))));
       });
 
-      try { window.KQ_VIP?.scan?.(); } catch {}
+      try{ queueMicrotask(()=>{ try{ window.KQ_VIP?.scan?.(); }catch{} }); }catch{
+        try{ window.KQ_VIP?.scan?.(); }catch{}
+      }
     }
 
     function openLeaderboard(){ if(overlay){ overlay.style.display='flex'; render(window.KQuiz); } }
