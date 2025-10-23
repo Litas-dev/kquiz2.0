@@ -1,0 +1,336 @@
+/* KQuiz addon: Milestone Solo Challenge v1.7
+   - Auto-queue on 100/200/300…
+   - Pauses main game while SOLO queue drains
+   - Shows correct answer after user answers (REVEAL_MS), then proceeds
+   - Hard timer reset per SOLO
+   - Bonus sound on popup (assets/audio/game-bonus.mp3)
+*/
+(function () {
+  function factory() {
+    // ---- state ----
+    let queue = [];                 // FIFO of player IDs awaiting SOLO
+    let running = false;            // SOLO active
+    let targetId = null;            // current SOLO player id
+    let stage = "idle";             // 'idle' | 'intro' | 'question'
+    let t = null, left = 0, total = 0;
+    let overlay = null, styleEl = null, mounted = false;
+    let guardActive = false;
+    let curQ = null;
+
+    // Config
+    const STEP = 100;               // milestones: 100, 200, 300...
+    const REVEAL_MS = 2500;         // how long to show the correct answer before moving on
+
+    const seenMilestone = new Map(); // id -> last reached multiple (1=100,2=200,...)
+
+    // ---- UI mount/unmount ----
+    function mountUI() {
+      if (mounted) return;
+      const css = `
+.kq-solo-overlay{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:99;padding:16px;background:rgba(3,8,18,.65);backdrop-filter:blur(3px)}
+.kq-solo-card{width:min(900px,96vw);background:rgba(16,24,40,.55);border:1px solid #1E2A3F;border-radius:20px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.kq-row{display:flex;align-items:center;gap:8px}
+.kq-av{width:64px;height:64px;border-radius:50%;object-fit:cover;border:1px solid #1E2A3F}
+.kq-name{font-weight:900;font-size:clamp(18px,3.4vw,24px)}
+.kq-badge{font-size:12px;color:#9FB0C6}
+.kq-q{text-align:center;font-weight:900;line-height:1.25;font-size:clamp(22px,4.6vw,36px);margin:10px 0}
+.kq-ans{width:100%;max-width:900px;display:grid;gap:12px;grid-template-columns:1fr}
+@media (min-width:720px){.kq-ans{grid-template-columns:1fr 1fr}}
+.kq-choice{display:flex;align-items:center;gap:12px;padding:16px 14px;border-radius:18px;border:1px solid #1E2A3F;background:rgba(17,27,47,.75);font-weight:800;font-size:clamp(18px,3.6vw,28px)}
+.kq-choice.is-correct{outline:3px solid #2EE5A9}
+.kq-choice.is-dim{filter:grayscale(.35) opacity(.85)}
+.kq-key{min-width:56px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:14px;background:#0E1730;border:1px solid #26365A;color:#BBD7FF;font-weight:900}
+.kq-bar{height:14px;border-radius:999px;background:#11213A;border:1px solid #1E2A3F;overflow:hidden;margin-top:6px}
+.kq-fill{height:100%;width:0%;background:linear-gradient(90deg,#7C5CFF,#2EE5A9)}
+.kq-ctrls{display:flex;gap:10px;justify-content:center;margin-top:12px;flex-wrap:wrap}
+.kq-btn{padding:10px 14px;border-radius:14px;border:1px solid #1E2A3F;background:#0E162B;color:#F3F6FC;font-weight:900;cursor:pointer}
+.kq-hide{display:none}
+.kq-result{margin-top:10px;text-align:center;font-weight:900;font-size:clamp(16px,3vw,22px)}
+.kq-result.ok{color:#2EE5A9}
+.kq-result.bad{color:#FF5A6E}
+`;
+      styleEl = document.createElement("style");
+      styleEl.textContent = css;
+      document.head.appendChild(styleEl);
+
+      // Bonus sound element (file lives next to index.html)
+      if (!document.getElementById("bonusAudio")) {
+        const a = document.createElement("audio");
+        a.id = "bonusAudio";
+        a.src = "assets/audio/game-bonus.mp3";      // mp3 next to index.html
+        a.preload = "auto";
+        a.volume = 1.0;
+        document.body.appendChild(a);
+      }
+
+      overlay = document.createElement("div");
+      overlay.className = "kq-solo-overlay";
+      overlay.innerHTML = `
+        <div class="kq-solo-card">
+          <!-- INTRO -->
+          <div id="kqSoloIntro">
+            <div class="kq-row" style="justify-content:center;gap:12px;margin-bottom:8px">
+              <img class="kq-av" id="kqSoloAva" alt="">
+              <div>
+                <div class="kq-name" id="kqSoloName">Žaidėjas</div>
+                <div class="kq-badge">Asmeninis iššūkis</div>
+              </div>
+            </div>
+            <div class="kq-ctrls">
+              <button class="kq-btn" id="kqSoloGo">Toliau</button>
+              <button class="kq-btn" id="kqSoloCancel1">Atšaukti</button>
+            </div>
+          </div>
+
+          <!-- QUESTION -->
+          <div id="kqSoloPlay" class="kq-hide">
+            <div class="kq-q" id="kqSoloQ">Klausimas...</div>
+            <div class="kq-bar"><div class="kq-fill" id="kqSoloFill"></div></div>
+            <div class="kq-row" style="justify-content:space-between;color:#9FB0C6;font-weight:700;margin:4px 2px">
+              <div>Laikas: <span id="kqSoloLeft">0</span>s</div>
+              <div>Riba: +10 / -50%</div>
+            </div>
+            <div class="kq-ans" id="kqSoloAns"></div>
+            <div id="kqSoloResult" class="kq-result kq-hide"></div>
+            <div class="kq-ctrls">
+              <button class="kq-btn" id="kqSoloCancel2">Atšaukti</button>
+              <button class="kq-btn kq-hide" id="kqSoloResume">Tęsti žaidimą</button>
+            </div>
+          </div>
+        </div>`;
+      document.body.appendChild(overlay);
+
+      mounted = true;
+    }
+
+    function unmountUI() {
+      try { if (overlay?.parentNode) overlay.parentNode.removeChild(overlay); } catch {}
+      try { if (styleEl?.parentNode) styleEl.parentNode.removeChild(styleEl); } catch {}
+      overlay = null; styleEl = null; mounted = false;
+    }
+
+    // ---- helpers ----
+    function resetVisuals() {
+      try {
+        const fill = document.getElementById("kqSoloFill"); if (fill) fill.style.width = "0%";
+        const leftEl = document.getElementById("kqSoloLeft"); if (leftEl) leftEl.textContent = "0";
+        const res = document.getElementById("kqSoloResult"); if (res) { res.classList.add("kq-hide"); res.classList.remove("ok","bad"); res.textContent = ""; }
+        const nodes = document.querySelectorAll("#kqSoloAns .kq-choice");
+        nodes.forEach(n => n.classList.remove("is-correct","is-dim"));
+      } catch {}
+    }
+    function stopTick() { try { const a = document.getElementById("tickAudio"); if (a) a.pause(); } catch {} }
+    function playFail() { try { const f = document.getElementById("failAudio"); if (f) { f.currentTime = 0; f.play(); } } catch {} }
+    function playBonus() { try { const a = document.getElementById("bonusAudio"); if (a) { a.currentTime = 0; a.play(); } } catch {} }
+
+    function highlightCorrect() {
+      if (!curQ) return;
+      try {
+        const nodes = Array.from(document.querySelectorAll("#kqSoloAns .kq-choice"));
+        nodes.forEach(n => {
+          const k = (n.getAttribute("data-key") || "").trim();
+          if (k === curQ.correctKey) n.classList.add("is-correct");
+          else n.classList.add("is-dim");
+        });
+      } catch {}
+    }
+
+    // ---- queue API ----
+    function enqueue(id) {
+      const pid = String(id || "").toLowerCase();
+      if (!pid) return;
+      if (!queue.includes(pid)) queue.push(pid);
+      const K = window.KQuiz;
+      if (!running && K?.control?.pauseMain) K.control.pauseMain();
+      kick(window.KQuiz);
+    }
+    function kick(K) {
+      if (!running && queue.length > 0) runIntro(K, queue.shift());
+    }
+
+    // ---- stages ----
+    function runIntro(K, id) {
+      running = true;
+      targetId = id;
+      stage = "intro";
+
+      K.control.pauseMain();
+      mountUI(); resetVisuals();
+
+      const p = K.state.players[id] || {};
+      document.getElementById("kqSoloName").textContent = p.name || id;
+      document.getElementById("kqSoloAva").src = p.avatar || "";
+
+      document.getElementById("kqSoloIntro").classList.remove("kq-hide");
+      document.getElementById("kqSoloPlay").classList.add("kq-hide");
+      overlay.style.display = "flex";
+
+      playBonus();
+
+      document.getElementById("kqSoloGo").onclick = () => startQuestion(K);
+      document.getElementById("kqSoloCancel1").onclick = () => resolve(K, false);
+    }
+
+    function startQuestion(K) {
+      if (stage !== "intro") return;
+      stage = "question";
+
+      const q = K.control.getRandomQuestion() || {
+        q: "Klausimas",
+        options: ["Atsakymas A","Atsakymas B","Atsakymas C","Atsakymas D"],
+        keys: ["A","B","C","D"],
+        correctKey: "A",
+        correctText: "Atsakymas A"
+      };
+      curQ = q;
+
+      document.getElementById("kqSoloIntro").classList.add("kq-hide");
+      document.getElementById("kqSoloPlay").classList.remove("kq-hide");
+      resetVisuals();
+
+      const qEl = document.getElementById("kqSoloQ");
+      const box = document.getElementById("kqSoloAns");
+      const fill = document.getElementById("kqSoloFill");
+      const leftEl = document.getElementById("kqSoloLeft");
+      const cancelBtn = document.getElementById("kqSoloCancel2");
+      const resumeBtn = document.getElementById("kqSoloResume");
+      if (resumeBtn) { resumeBtn.classList.add("kq-hide"); resumeBtn.onclick = null; }
+
+      qEl.textContent = q.q;
+      box.innerHTML = "";
+      q.options.forEach((opt, i) => {
+        const key = q.keys[i];
+        const node = K.util.el("div", { class: "kq-choice", "data-key": key },
+          K.util.el("div", { class: "kq-key" }, key), opt);
+        box.appendChild(node);
+      });
+
+      if (!guardActive) {
+        K.control.setChatGuard((msg, { parseAnswer, ensurePlayer }) => {
+          if (stage !== "question") return true;
+          const { id: uid } = ensurePlayer(msg);
+          if (uid !== targetId) return true;
+          const key = parseAnswer(String(msg.text || ""));
+          if (!key) return true;
+          resolve(K, key === q.correctKey);
+          return true;
+        });
+        guardActive = true;
+      }
+
+      try {
+        if (K.state.settings?.sounds?.ticking) {
+          const a = document.getElementById("tickAudio");
+          if (a) { a.currentTime = 0; a.play(); }
+        }
+      } catch {}
+
+      // timer
+      if (t) { clearInterval(t); t = null; }
+      const SOLO_SECS = Number(K?.state?.settings?.soloSeconds || 30);
+      left = SOLO_SECS; total = left;
+      leftEl.textContent = String(left);
+      fill.style.width = "0%";
+
+      t = setInterval(() => {
+        left--;
+        leftEl.textContent = String(Math.max(0, left));
+        fill.style.width = (total ? (100 * (total - left) / total) : 0) + "%";
+        if (left <= 0) { clearInterval(t); t = null; resolve(K, false); }
+      }, 1000);
+
+      cancelBtn.onclick = () => resolve(K, false);
+    }
+
+    function resolve(K, ok) {
+      if (t) { clearInterval(t); t = null; }
+      try { const a = document.getElementById("tickAudio"); if (a) a.pause(); } catch {}
+
+      // score update
+      const p = K.state.players[targetId];
+      if (p) p.score = ok ? (p.score || 0) + 10 : Math.floor((p.score || 0) * 0.5);
+
+      // show result + correct answer
+      if (curQ) {
+        const res = document.getElementById("kqSoloResult");
+        if (res) {
+          res.classList.remove("kq-hide");
+          res.classList.toggle("ok", !!ok);
+          res.classList.toggle("bad", !ok);
+          res.textContent = ok
+            ? `Teisinga! +10 (${curQ.correctText})`
+            : `Neteisinga. −50% | Teisingas: ${curQ.correctText}`;
+        }
+        highlightCorrect();
+      }
+      if (!ok) playFail();
+
+      if (guardActive) { try { K.control.clearChatGuard(); } catch {} guardActive = false; }
+
+      // keep overlay visible while revealing, keep main paused
+      const hasNext = queue.length > 0;
+      setTimeout(() => {
+        if (hasNext) {
+          resetVisuals();
+          stage = "idle"; running = false; targetId = null; curQ = null;
+          overlay.style.display = "flex";
+          kick(K);                       // start next SOLO; main remains paused
+        } else {
+          resetVisuals();
+          overlay.style.display = "none";
+          stage = "idle"; running = false; targetId = null; curQ = null;
+          K.control.resumeMain();        // resume only when queue is empty
+        }
+      }, REVEAL_MS);
+    }
+
+    // ---- milestone monitor ----
+    function scanMilestones(K){
+      const players = K?.state?.players || {};
+      for (const [id, p] of Object.entries(players)) {
+        const s = Number(p?.score || 0);
+        if (s < STEP) { seenMilestone.set(id, 0); continue; }
+        const k = Math.floor(s / STEP);          // 1=100, 2=200, ...
+        const prev = seenMilestone.get(id) || 0;
+        if (k > prev) {
+          seenMilestone.set(id, k);
+          enqueue(id);
+        }
+      }
+    }
+
+    let scanTimer = null;
+
+    // ---- addon interface ----
+    return {
+      id: "milestoneSolo",
+      name: "Milestone Solo",
+      description: "SOLO iššūkis su atskleidimu po atsakymo ir eile.",
+      defaultEnabled: true,
+      enable(K) {
+        if (!scanTimer) scanTimer = setInterval(() => scanMilestones(K), 400);
+        K.on && K.on("milestoneHit", ({ id }) => { enqueue(id); });
+        if (!K.control) K.control = {};
+        const prev = K.control.enqueueSolo;
+        K.control.enqueueSolo = function(id){
+          enqueue(id);
+          if (typeof prev === "function") try { prev.call(this, id); } catch {}
+        };
+      },
+      disable() {
+        try { if (t) clearInterval(t); } catch {}
+        try { if (scanTimer) clearInterval(scanTimer); } catch {}
+        scanTimer = null;
+        try { if (guardActive) window.KQuiz?.control?.clearChatGuard(); } catch {}
+        resetVisuals(); unmountUI();
+        queue = []; running = false; targetId = null; stage = "idle"; curQ = null; guardActive = false;
+      }
+    };
+  }
+
+  function register() {
+    if (!window.KQuiz?.registerAddon) return setTimeout(register, 120);
+    window.KQuiz.registerAddon(factory());
+  }
+  register();
+})();
