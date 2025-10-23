@@ -81,8 +81,20 @@
       }
     }
 
-    function openLeaderboard(){ if(overlay){ overlay.style.display='flex'; render(window.KQuiz); } }
-    function closeLeaderboard(){ if(overlay) overlay.style.display='none'; }
+    function openLeaderboard(){
+      if(overlay){
+        try{ overlay.dataset.kqVipBlock = '1'; }catch{ try{ overlay.setAttribute('data-kq-vip-block','1'); }catch{} }
+        overlay.style.display='flex';
+        render(window.KQuiz);
+      }
+    }
+    function closeLeaderboard(){
+      if(overlay){
+        overlay.style.display='none';
+        try{ delete overlay.dataset.kqVipBlock; }catch{}
+        try{ overlay.removeAttribute('data-kq-vip-block'); }catch{}
+      }
+    }
 
     function enable(K){
       currentK = K;
@@ -106,7 +118,11 @@
       }
       vipSignalHandler=null;
       currentK=null;
-      if(overlay) overlay.style.display='none';
+      if(overlay){
+        overlay.style.display='none';
+        try{ delete overlay.dataset.kqVipBlock; }catch{}
+        try{ overlay.removeAttribute('data-kq-vip-block'); }catch{}
+      }
       try{ delete window.openLeaderboard; delete window.closeLeaderboard; }catch{}
       mounted=false;
     }
