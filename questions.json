@@ -1,0 +1,6706 @@
+[
+  {
+    "q": "Kas parašė romaną „Ana Karenina“?",
+    "correct": "Levas Tolstojus",
+    "wrong": [
+      "Fiodoras Dostojevskis",
+      "Antonas Čechovas",
+      "Aleksandras Puškinas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Romanas išleistas 1878 m., vienas garsiausių rusų literatūros kūrinių."
+  },
+  {
+    "q": "Kuri medžiaga buvo pagrindinė pirmųjų elektros lemputės siūlelių sudedamoji dalis?",
+    "correct": "Anglis",
+    "wrong": [
+      "Volframas",
+      "Varis",
+      "Plienas"
+    ],
+    "cat": "Technologijos",
+    "diff": "hard",
+    "note": "Edisono lemputės naudojo anglies siūlus, volframas atsirado vėliau."
+  },
+  {
+    "q": "Kas sukūrė polonezą „Atsisveikinimas su Tėvyne“?",
+    "correct": "Mykolas Kleopas Oginskis",
+    "wrong": [
+      "Stanislovas Moniuška",
+      "Fryderykas Chopinas",
+      "Jonas Basanavičius"
+    ],
+    "cat": "Muzika",
+    "diff": "hard",
+    "note": "Kūrinys tapo XIX a. lietuvių ir lenkų patriotizmo simboliu."
+  },
+  {
+    "q": "Kurioje šalyje gimė fizikas Albertas Einšteinas?",
+    "correct": "Vokietijoje",
+    "wrong": [
+      "Šveicarijoje",
+      "Austrijoje",
+      "JAV"
+    ],
+    "cat": "Mokslas",
+    "diff": "medium",
+    "note": "Gimė Ulme, Vokietijoje 1879 m."
+  },
+  {
+    "q": "Kokia valiuta naudojama Japonijoje?",
+    "correct": "Jenos",
+    "wrong": [
+      "Juanis",
+      "Vonas",
+      "Batas"
+    ],
+    "cat": "Ekonomika",
+    "diff": "easy",
+    "note": "Jenos simbolis ¥."
+  },
+  {
+    "q": "Kas parašė „Dieviškąją komediją“?",
+    "correct": "Dantė Aligjeris",
+    "wrong": [
+      "Giovanni Boccaccio",
+      "Francesco Petrarca",
+      "Ludovico Ariosto"
+    ],
+    "cat": "Literatūra",
+    "diff": "hard",
+    "note": "Parašyta 1308–1320 m., laikoma italų literatūros šedevru."
+  },
+  {
+    "q": "Kas nutiko 1453 m., simbolizuojant viduramžių pabaigą Europoje?",
+    "correct": "Konstantinopolio žlugimas",
+    "wrong": [
+      "Renesanso pradžia",
+      "Reformacijos pradžia",
+      "Kolumbo kelionė"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "Osmanų imperija užėmė miestą, žymėdama Bizantijos pabaigą."
+  },
+  {
+    "q": "Kuri valstybė pirmoji įteisino moterų kandidatavimą į parlamentą?",
+    "correct": "Suomija",
+    "wrong": [
+      "Prancūzija",
+      "JAV",
+      "Naujoji Zelandija"
+    ],
+    "cat": "Politika",
+    "diff": "hard",
+    "note": "1906 m. Suomija suteikė moterims pilnas politines teises."
+  },
+  {
+    "q": "Kas yra parašęs muziką JAV himnui?",
+    "correct": "John Stafford Smith",
+    "wrong": [
+      "Francis Scott Key",
+      "George Washington",
+      "John Philip Sousa"
+    ],
+    "cat": "Muzika",
+    "diff": "hard",
+    "note": "Francis Scott Key parašė žodžius, bet muzika kilo iš anglų dainos."
+  },
+  {
+    "q": "Kuri Europos šalis pirmoji įvedė eurą kaip nacionalinę valiutą?",
+    "correct": "Vokietija",
+    "wrong": [
+      "Prancūzija",
+      "Ispanija",
+      "Italija"
+    ],
+    "cat": "Ekonomika",
+    "diff": "medium",
+    "note": "1999 m. euras įvestas elektroninėje formoje, 2002 – grynaisiais."
+  },
+  {
+    "q": "Kokia yra tradicinė japonų sriuba, gaminama iš fermentuotų sojų?",
+    "correct": "Miso",
+    "wrong": [
+      "Ramen",
+      "Pho",
+      "Tom Yum"
+    ],
+    "cat": "Maistas",
+    "diff": "medium",
+    "note": "Miso sriuba gaminama iš fermentuotų sojų pastos ir dashi sultinio."
+  },
+  {
+    "q": "Kas sukūrė teoriją, kad žemynai juda „kontinentinio dreifo teoriją“?",
+    "correct": "Alfredas Wegeneris",
+    "wrong": [
+      "Charles Darwin",
+      "Isaac Newton",
+      "James Hutton"
+    ],
+    "cat": "Mokslas",
+    "diff": "hard",
+    "note": "Wegenerio teorija 1912 m. buvo laikoma radikalia, bet vėliau patvirtinta."
+  },
+  {
+    "q": "Kuri šalis pirmoji įteisino vienalytes santuokas?",
+    "correct": "Nyderlandai",
+    "wrong": [
+      "Kanada",
+      "Ispanija",
+      "Švedija"
+    ],
+    "cat": "Politika",
+    "diff": "hard",
+    "note": "Įteisinta 2001 m."
+  },
+  {
+    "q": "Kuri šalis pirmoji įgyvendino privalomą pradinį švietimą visiems vaikams?",
+    "correct": "Prūsija",
+    "wrong": [
+      "Prancūzija",
+      "Didžioji Britanija",
+      "JAV"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "Prūsijoje privalomas mokslas įvestas 1717 m."
+  },
+  {
+    "q": "Kokia yra pagrindinė fotosintezės dujų išmetimo medžiaga?",
+    "correct": "Deguonis",
+    "wrong": [
+      "Anglies dioksidas",
+      "Azotas",
+      "Vandenilis"
+    ],
+    "cat": "Mokslas",
+    "diff": "medium",
+    "note": "Fotosintezės metu augalai sugeria CO₂ ir išskiria O₂."
+  },
+  {
+    "q": "Kuris rašytojas sukūrė „Šerloko Holmso“ personažą?",
+    "correct": "Arthur Conan Doyle",
+    "wrong": [
+      "Agatha Christie",
+      "Edgar Allan Poe",
+      "Charles Dickens"
+    ],
+    "cat": "Literatūra",
+    "diff": "medium",
+    "note": "Pirmasis pasakojimas išleistas 1887 m."
+  },
+  {
+    "q": "Kas yra sukūręs operą „Aida“?",
+    "correct": "Giuseppe Verdi",
+    "wrong": [
+      "Mozartas",
+      "Puccini",
+      "Bachas"
+    ],
+    "cat": "Muzika",
+    "diff": "medium",
+    "note": "„Aida“ sukurta 1871 m. Egipto valdovo užsakymu."
+  },
+  {
+    "q": "Kuris iš šių metalų yra lengviausias?",
+    "correct": "Liitis",
+    "wrong": [
+      "Aliuminis",
+      "Geležis",
+      "Varis"
+    ],
+    "cat": "Mokslas",
+    "diff": "hard",
+    "note": "Liitis yra lengviausias kietasis metalas, naudojamas baterijoms."
+  },
+  {
+    "q": "Kas buvo pirmasis žmogus, kuris iškėlė Lietuvos trispalvę Gedimino pilies bokšte 1919 m.?",
+    "correct": "Simono Daukanto pulkas",
+    "wrong": [
+      "Prezidentas Smetona",
+      "Jonas Basanavičius",
+      "Lietuvos kariuomenės savanoriai"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "Tai įvyko 1919 m. sausio 1 d., simbolizuodamas valstybės atgimimą."
+  },
+  {
+    "q": "Kuri šalis išrado porcelianą?",
+    "correct": "Kinija",
+    "wrong": [
+      "Japonija",
+      "Graikija",
+      "Egiptas"
+    ],
+    "cat": "Kultūra",
+    "diff": "medium",
+    "note": "Porcelianas buvo gaminamas Kinijoje jau VII–VIII a."
+  },
+  {
+    "q": "Kuri šalis turi daugiausiai kaimyninių valstybių?",
+    "correct": "Kinija",
+    "wrong": [
+      "Rusija",
+      "Brazilija",
+      "Vokietija"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Kinija ribojasi su 14 šalių."
+  },
+  {
+    "q": "Kuri šalis pirmoji įgyvendino visuotinį balsavimą vyrams ir moterims vienu metu?",
+    "correct": "Naujoji Zelandija",
+    "wrong": [
+      "Suomija",
+      "Prancūzija",
+      "JAV"
+    ],
+    "cat": "Politika",
+    "diff": "hard",
+    "note": "1893 m. Naujoji Zelandija įteisino balsavimą moterims."
+  },
+  {
+    "q": "Kas buvo pirmasis žmogus, pasiekęs Pietų ašigalį?",
+    "correct": "Roaldas Amundsenas",
+    "wrong": [
+      "Robertas Scottas",
+      "Shackletonas",
+      "Edmundas Hillary"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Amundsenas pasiekė Pietų ašigalį 1911 m. gruodžio 14 d"
+  },
+  {
+    "q": "Kurioje šalyje kilo gotikos architektūros stilius?",
+    "correct": "Prancūzijoje",
+    "wrong": [
+      "Italijoje",
+      "Vokietijoje",
+      "Ispanijoje"
+    ],
+    "cat": "Kultūra",
+    "diff": "hard",
+    "note": "Gotikos stilius gimė XII a. Paryžiaus apylinkėse."
+  },
+  {
+    "q": "Kuri šalis yra didžiausia kavos vartotoja pasaulyje vienam gyventojui?",
+    "correct": "Suomija",
+    "wrong": [
+      "Italija",
+      "JAV",
+      "Brazilija"
+    ],
+    "cat": "Ekonomika",
+    "diff": "hard",
+    "note": "Suomių vidutinė metinė norma daugiau nei 10 kg vienam žmogui."
+  },
+  {
+    "q": "Kas buvo pirmoji moteris kosmose?",
+    "correct": "Valentina Tereškova",
+    "wrong": [
+      "Sally Ride",
+      "Svetlana Savickaja",
+      "Mae Jemison"
+    ],
+    "cat": "Mae Jemison",
+    "diff": "hard",
+    "note": "1963 m. birželį Tereškova tapo pirmąja moterimi kosmose."
+  },
+  {
+    "q": "Kuri valstybė yra laikoma pirmąja konstitucine monarchija pasaulyje?",
+    "correct": "Didžioji Britanija",
+    "wrong": [
+      "Prancūzija",
+      "Ispanija",
+      "Nyderlandai"
+    ],
+    "cat": "Politika",
+    "diff": "hard",
+    "note": "1688 m. Šlovingoji revoliucija ir 1689 m. Teisių aktas įtvirtino konstitucinę monarchiją."
+  },
+  {
+    "q": "Kuriais metais buvo išrastas internetas?",
+    "correct": "1969",
+    "wrong": [
+      "1975",
+      "1972",
+      "1967"
+    ],
+    "cat": "Technologijos",
+    "diff": "hard",
+    "note": "1969 m. sukurta ARPANET sistema – interneto protėvis."
+  },
+  {
+    "q": "Kuris iš šių miestų buvo įkurtas anksčiausiai?",
+    "correct": "Damaske",
+    "wrong": [
+      "Roma",
+      "Londonas",
+      "Paryžius"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Damaskas laikomas vienu seniausių nuolat apgyvendintų miestų pasaulyje (nuo 3 tūkst. pr. m. e.)."
+  },
+  {
+    "q": "Kuri tauta sukūrė pirmąją rašto sistemą, panaudotą administracijai ir literatūrai?",
+    "correct": "Šumerai",
+    "wrong": [
+      "Egiptiečiai",
+      "Hetitai",
+      "Babiloniečiai"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "Šumerų dantiraštis buvo naudojamas dar 4 tūkst. pr. m. e."
+  },
+  {
+    "q": "Kuri religija turi „Keturias kilnias tiesas“ ir „Aštuonialypį kelią“ kaip pagrindinius mokymus?",
+    "correct": "Budizmas",
+    "wrong": [
+      "Hinduizmas",
+      "Džainizmas",
+      "Konfucianizmas"
+    ],
+    "cat": "Religijos",
+    "diff": "medium",
+    "note": "Tai Budos mokymo pagrindas."
+  },
+  {
+    "q": "Kuris Europos miestas pirmasis įvedė požeminį metro?",
+    "correct": "Londonas",
+    "wrong": [
+      "Paryžius",
+      "Berlynas",
+      "Viena"
+    ],
+    "cat": "Technologijos",
+    "diff": "medium",
+    "note": "1863 m. atidarytas „Metropolitan Railway“"
+  },
+  {
+    "q": "Kuris miestas yra žemiausiai virš jūros lygio esantis pasaulyje?",
+    "correct": "Jerichas",
+    "wrong": [
+      "Amsterdamas",
+      "Kairas",
+      "Doha"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Jerichas yra apie 258 m žemiau jūros lygio prie Negyvosios jūros."
+  },
+  {
+    "q": "Kurioje šalyje gimė Nobelio premijos įkūrėjas Alfredas Nobelis?",
+    "correct": "Švedijoje",
+    "wrong": [
+      "Norvegijoje",
+      "Vokietijoje",
+      "Šveicarijoje"
+    ],
+    "cat": "Istorija",
+    "diff": "medium",
+    "note": "Alfredas Nobelis gimė Stokholme 1833 m."
+  },
+  {
+    "q": "Kuri šalis valdė dabartinės Indonezijos teritoriją kolonijų laikais?",
+    "correct": "Nyderlandai",
+    "wrong": [
+      "Portugalija",
+      "Didžioji Britanija",
+      "Ispanija"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "Nyderlandų Rytų Indijos kompanija valdė teritoriją nuo XVII a."
+  },
+  {
+    "q": "Kuris garsus mokslininkas buvo aklas savo gyvenimo pabaigoje?",
+    "correct": "Galilėjus Galilėjus",
+    "wrong": [
+      "Isaakas Niutonas",
+      "Nikola Tesla",
+      "Albertas Einšteinas"
+    ],
+    "cat": "Mokslas",
+    "diff": "medium",
+    "note": "Galilėjus apako 1637 m., likus keleriems metams iki mirties."
+  },
+  {
+    "q": "Kuri iš šių kalbų turi oficialų statusą tiek Europoje, tiek Pietų Amerikoje?",
+    "correct": "Olandų",
+    "wrong": [
+      "Prancūzų",
+      "Anglų",
+      "Ispanų"
+    ],
+    "cat": "Ispanų",
+    "diff": "hard",
+    "note": "Olandų kalba vartojama Nyderlanduose ir Suriname"
+  },
+  {
+    "q": "Kurioje valstybėje gimė filosofas Immanuelis Kantas?",
+    "correct": "Prūsijoje",
+    "wrong": [
+      "Austrijoje",
+      "Šveicarijoje",
+      "Prancūzijoje"
+    ],
+    "cat": "Filosofija",
+    "diff": "hard",
+    "note": "Kantas gimė Karaliaučiuje (dab. Kaliningradas), tuometinėje Prūsijoje."
+  },
+  {
+    "q": "Kuri iš šių kalbų turi „trigubą rašybos sistemą“ (hiragana, katakana ir kanji)?",
+    "correct": "Japonų",
+    "wrong": [
+      "Korėjiečių",
+      "Kinų",
+      "Vietnamiečių"
+    ],
+    "cat": "Kalbos",
+    "diff": "medium",
+    "note": "Japonų kalboje kartu naudojamos trys rašto sistemos."
+  },
+  {
+    "q": "Kuris imperatorius padalijo Romos imperiją į Rytų ir Vakarų dalis?",
+    "correct": "Teodosijus I",
+    "wrong": [
+      "Konstantinas Didysis",
+      "Augustas",
+      "Neronas"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "Po Teodosijaus mirties 395 m. imperija galutinai padalyta jo sūnums Arkadijui ir Honorijui."
+  },
+  {
+    "q": "Kuri šalis neturi oficialios valstybinės kalbos, nors viena kalba dominuoja?",
+    "correct": "JAV",
+    "wrong": [
+      "Kanada",
+      "Jungtinė Karalystė",
+      "Australija"
+    ],
+    "cat": "Kalbos",
+    "diff": "medium",
+    "note": "Anglų kalba dominuoja, bet JAV Konstitucijoje nėra nustatyta oficiali kalba."
+  },
+  {
+    "q": "Kuris miestas buvo pirmoji JAV sostinė?",
+    "correct": "Niujorkas",
+    "wrong": [
+      "Vašingtonas",
+      "Filadelfija",
+      "Bostonas"
+    ],
+    "cat": "Istorija",
+    "diff": "medium",
+    "note": "Niujorkas buvo laikina sostinė 1789–1790 m."
+  },
+  {
+    "q": "Kuris lotyniškas posakis reiškia „laikas bėga“?",
+    "correct": "Tempus fugit",
+    "wrong": [
+      "Carpe diem",
+      "Cogito ergo sum",
+      "Veni vidi vici"
+    ],
+    "cat": "Kalbos",
+    "diff": "hard",
+    "note": "Posakis vartojamas nuo senovės Romos laikų, reiškia laikinumo suvokimą."
+  },
+  {
+    "q": "Kuri šalis pirmoji panaikino monarchiją po Pirmojo pasaulinio karo?",
+    "correct": "Vokietija",
+    "wrong": [
+      "Austrija",
+      "Rusija",
+      "Italija"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "1918 m. Vokietijos kaizeris Vilhelmas II atsisakė sosto, įkurta Veimaro respublika."
+  },
+  {
+    "q": "Kuris Europos miestas ilgą laiką buvo žinomas kaip Hanza sąjungos centras?",
+    "correct": "Liubekas",
+    "wrong": [
+      "Hamburgas",
+      "Amsterdamas",
+      "Kopenhaga"
+    ],
+    "cat": "Ekonomika",
+    "diff": "hard",
+    "note": "Liubekas buvo Hanzos „karalienė“, XIII–XVI a. prekybos tinklo širdis."
+  },
+  {
+    "q": "Kurioje šalyje yra Angkoro Wat šventykla?",
+    "correct": "Kambodžoje",
+    "wrong": [
+      "Tailande",
+      "Laose",
+      "Vietname"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Angkoro Wat didžiausias religinis statinys pasaulyje."
+  },
+  {
+    "q": "Kuri yra ilgiausia žinoma urvų sistema pasaulyje?",
+    "correct": "Mammoth Urvas",
+    "wrong": [
+      "Postojnos urvas",
+      "Škocjano urvai",
+      "Waitomo urvai"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Kentukyje, ištirtų praėjimų ilgis viršija 600 km."
+  },
+  {
+    "q": "Kuri dykuma laikoma seniausia pasaulyje?",
+    "correct": "Namibo",
+    "wrong": [
+      "Sachara",
+      "Gobi",
+      "Kalaharis"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Namibo amžius vertinamas dešimtimis milijonų metų."
+  },
+  {
+    "q": "Kuriai kalbai būdingos dvi oficialios standartinės rašybos formos valstybiniu lygiu?",
+    "correct": "Norvegų",
+    "wrong": [
+      "Olandų",
+      "Serbų",
+      "Katalonų"
+    ],
+    "cat": "Kalbos",
+    "diff": "hard",
+    "note": "Bokmål ir Nynorsk yra dvi oficialios normos"
+  },
+  {
+    "q": "Kuri šalis turi didžiausią elektros gamybos dalį iš geoterminės energijos?",
+    "correct": "Islandija",
+    "wrong": [
+      "Italija",
+      "Japonija",
+      "Naujoji Zelandija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Islandijoje geotermija ir hidroenergija sudaro beveik visą generaciją."
+  },
+  {
+    "q": "Kuri sala laikoma tankiausiai apgyvendinta pasaulyje?",
+    "correct": "Java",
+    "wrong": [
+      "Honkongas",
+      "Sicilija",
+      "Sumatra"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Javoje gyvena per 150 mln. žmonių."
+  },
+  {
+    "q": "Kuri šalis turi seniausią vis dar veikiančią monarchiją?",
+    "correct": "Japonija",
+    "wrong": [
+      "Didžioji Britanija",
+      "Danija",
+      "Tailandas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Japonijos imperatorių dinastija datuojama 660 m. pr. m. e."
+  },
+  {
+    "q": "Kuri dykuma garsėja didžiausiais temperatūros svyravimais tarp dienos ir nakties?",
+    "correct": "Gobio",
+    "wrong": [
+      "Sacharos",
+      "Kalahario",
+      "Sonoros"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Temperatūra gali svyruoti iki 35–40 °C per parą."
+  },
+  {
+    "q": "Kuris miestas laikomas pasaulio parfumerijos sostine?",
+    "correct": "Grasas",
+    "wrong": [
+      "Paryžius",
+      "Roma",
+      "Milano"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Graso miestas nuo XVII a. garsėja kvepalų gamyba."
+  },
+  {
+    "q": "Kuris iš šių metalų buvo žinomas ir naudojamas seniausiai?",
+    "correct": "Varis",
+    "wrong": [
+      "Geležis",
+      "Auksas",
+      "Alavas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Varis naudotas jau prieš 10 000 metų, dar prieš geležies erą."
+  },
+  {
+    "q": "Kuri šalis pirmoji uždraudė plastiko maišelius nacionaliniu mastu?",
+    "correct": "Bangladešas",
+    "wrong": [
+      "Norvegija",
+      "Vokietija",
+      "Kanada"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "2002 m. Bangladešas uždraudė plastikinius maišelius dėl užtvindymo problemų."
+  },
+  {
+    "q": "Kuri šalis pirmoji įsteigė nacionalinį parką?",
+    "correct": "JAV",
+    "wrong": [
+      "Kanada",
+      "Norvegija",
+      "Naujoji Zelandija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1872 m. Yellowstone tapo pirmuoju nacionaliniu parku pasaulyje."
+  },
+  {
+    "q": "Kuri kalba turi ilgiausią žodį pasaulyje pagal oficialų žodyną?",
+    "correct": "Vokiečių",
+    "wrong": [
+      "Suomių",
+      "Islandų",
+      "Anglų"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Vokiečių kalba leidžia jungti žodžius neribotai, yra žodžių su >60 raidžių."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie kalbas yra teisingas?",
+    "correct": "Japonų kalba turi 3 rašto sistemas",
+    "wrong": [
+      "Lietuvių kalba turi 10 linksnių",
+      "Prancūzų kalboje nėra veiksmažodžių laikų",
+      "Anglų kalba yra senesnė už graikų"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuris iš šių miestų yra aukščiausiai virš jūros lygio?",
+    "correct": "La Paz",
+    "wrong": [
+      "Maskva",
+      "Berlynas",
+      "Berlynas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kurioje šalyje oficiali kalba yra portugalų, bet sostinė nėra Lisabona?",
+    "correct": "Brazilija",
+    "wrong": [
+      "Ispanija",
+      "Angola",
+      "Mozambikas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuris iš šių įvykių įvyko anksčiausiai?",
+    "correct": "Pirmoji elektrinė lemputė",
+    "wrong": [
+      "Berlyno sienos griūtis",
+      "Pirmasis žmogus Mėnulyje",
+      "Pirmasis „iPhone“ pristatymas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuris miestas nėra valstybinė sostinė?",
+    "correct": "Ciurichas",
+    "wrong": [
+      "Bernas",
+      "Otava",
+      "Vašingtonas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Ciurichas yra didžiausias Šveicarijos miestas, bet ne sostinė."
+  },
+  {
+    "q": "Kuris iš šių valstybių vėliavų simbolių neturi religinės reikšmės?",
+    "correct": "Japonijos saulė",
+    "wrong": [
+      "Turkijos mėnulis ir žvaigždė",
+      "Šveicarijos kryžius",
+      "Izraelio Dovydo žvaigždė"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Japonijos vėliava simbolizuoja saulę, o ne religiją."
+  },
+  {
+    "q": "Kuris iš šių šalių neturi nė vieno nuolat gyvenamo salyno?",
+    "correct": "Austrija",
+    "wrong": [
+      "Norvegija",
+      "Japonija",
+      "Indonezija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Austrija yra sausumos šalis be salų."
+  },
+  {
+    "q": "Kuris iš šių miestų istoriškai buvo didžiausias prekybos centras Šilko kelyje?",
+    "correct": "Samarkandas",
+    "wrong": [
+      "Pekinas",
+      "Bagdadas",
+      "Roma"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Samarkandas buvo vienas pagrindinių Rytų–Vakarų prekybos centrų."
+  },
+  {
+    "q": "Kuris iš šių miestų geografiškai yra arčiausiai 0° ilgumos ir 0° platumos susikirtimo taško?",
+    "correct": "Akra",
+    "wrong": [
+      "Lagosas",
+      "Londonas",
+      "Kaire"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "0°/0° taškas yra Gvinėjos įlankoje; Akra yra netoliese."
+  },
+  {
+    "q": "Kuris teiginys apie kalbas yra teisingas?",
+    "correct": "Prancūzų kalboje nėra linksnių",
+    "wrong": [
+      "Arabų kalba turi daugiau linksnių nei lietuvių",
+      "Suomių kalba priklauso indoeuropiečių šeimai",
+      "Ispanų kalba turi tonus kaip kinų"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Prancūzų kalba remiasi linksnių likučiais, bet neturi gramatinių linksnių sistemos kaip lietuvių."
+  },
+  {
+    "q": "Kuris iš šių miestų yra seniausias?",
+    "correct": "Jeruzalė",
+    "wrong": [
+      "Roma",
+      "Atėnai",
+      "Stambulas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Jeruzalė gyvavo dar prieš klasikinį Antikos laikotarpį."
+  },
+  {
+    "q": "Kuris teiginys apie technologijas yra teisingas?",
+    "correct": "Telegrafas egzistavo anksčiau nei telefonas",
+    "wrong": [
+      "Radijas buvo sukurtas po televizijos",
+      "Internetas egzistavo prieš pirmąjį palydovą",
+      "Elektrinė lemputė išrasta XX a."
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Telegrafas buvo pagrindinė komunikacijos priemonė dar XIX a."
+  },
+  {
+    "q": "Kuris miestas turi sostinės statusą, bet nėra didžiausias šalies miestas?",
+    "correct": "Otava",
+    "wrong": [
+      "Londonas",
+      "Tokijas",
+      "Roma"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Otava – Kanados sostinė, bet Torontas didesnis."
+  },
+  {
+    "q": "Kuris teiginys apie kalbas yra teisingas?",
+    "correct": "Islandų kalba beveik nepakito nuo viduramžių",
+    "wrong": [
+      "Vengrų kalba priklauso slavų kalboms",
+      "Lietuvių kalba kilusi iš lotynų",
+      "Baskų kalba yra indoeuropiečių šeimos narė"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Islandų kalba išlaikė archajišką gramatiką ir rašybą."
+  },
+  {
+    "q": "Kuris iš šių miestų buvo svarbiausias islamo mokslo centras viduramžiais?",
+    "correct": "Bagdadas",
+    "wrong": [
+      "Stambulas",
+      "Teheranas",
+      "Dubajus"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Bagdadas buvo Abasidų kalifato mokslo centras, „Išminties namai“."
+  },
+  {
+    "q": "Kuris iš šių rašto tipų laikomas vienu iš seniausių?",
+    "correct": "Kuneiforminis raštas",
+    "wrong": [
+      "Kirilica",
+      "Lotyniškas raštas",
+      "Arabų raštas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kuneiformas naudotas Mesopotamijoje nuo IV tūkst. pr. Kr."
+  },
+  {
+    "q": "Kuris teiginys apie Europos miestus yra teisingas?",
+    "correct": "Stokholmas yra arčiau Šiaurės ašigalio nei Oslas",
+    "wrong": [
+      "Ciurichas yra Šveicarijos sostinė",
+      "Berlynas yra šiauriausias iš Skandinavijos sostinių",
+      "Briuselis yra aukščiau jūros lygio nei Viena"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Stokholmas iš tikrųjų šiauriau nei Oslas."
+  },
+  {
+    "q": "Kuris įvykis įvyko paskiausiai?",
+    "correct": "Berlyno sienos griūtis",
+    "wrong": [
+      "Pirmasis palydovas",
+      "Pirmasis žmogus kosmose",
+      "Pirmoji spalvota televizija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Sienos griūtis 1989 m., po kosminių įvykių."
+  },
+  {
+    "q": "Kuris teiginys apie baskų kalbą yra teisingas?",
+    "correct": "Ji neturi giminingų kalbų",
+    "wrong": [
+      "Tai indoeuropiečių kalba",
+      "Ji kilusi iš lotynų kalbos",
+      "Ji turi toninę sistemą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Baskų kalba yra izoliuota, neturinti giminingų kalbų."
+  },
+  {
+    "q": "Kuris įvykis įvyko anksčiausiai?",
+    "correct": "Garo variklio patentavimas",
+    "wrong": [
+      "Pirmasis geležinkelis",
+      "Radijo išradimas",
+      "Televizijos išradimas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuris teiginys apie prancūzų kalbą yra teisingas?",
+    "correct": "Ji kilusi iš lotynų kalbos",
+    "wrong": [
+      "Prancūzų kalba turi septynis linksnius",
+      "Ji priklauso germanų kalbų šeimai",
+      "Ji turi toninę sistemą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Prancūzų kalba yra romanų kalba, kilusi iš lotynų."
+  },
+  {
+    "q": "Kuris iš šių terminų neturi tiesioginio ryšio su globalizacijos procesu?",
+    "correct": "Lokalizacija kaip priešinga tendencija",
+    "wrong": [
+      "Kapitalo judėjimas tarp valstybių",
+      "Tarptautinė prekyba",
+      "Kultūrų sąveika per migraciją"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Lokalizacija yra priešinga globalizacijai, ne jos dalis."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie demokratiją yra logiškai neteisingas, nors skamba įtikinamai?",
+    "correct": "Demokratijoje visada garantuojamos visos žmogaus teisės",
+    "wrong": [
+      "Demokratijoje valdžia kyla iš piliečių",
+      "Demokratijoje egzistuoja rinkimų sistema",
+      "Demokratijoje valdžia keičiasi pagal nustatytas taisykles"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Demokratijos buvimas negarantuoja visų teisių apsaugos"
+  },
+  {
+    "q": "Kuris iš šių reiškinių nėra tiesioginė ekonominės integracijos forma?",
+    "correct": "Kalendorinės reformos",
+    "wrong": [
+      "Muitų sąjungos",
+      "Vieninga rinka",
+      "Bendros valiutos įvedimas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kalendoriaus reforma nesusijusi su ekonomine integracija."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie mokslą yra netikslus?",
+    "correct": "Hipotezės laikomos absoliučiai teisingomis",
+    "wrong": [
+      "Mokslas remiasi empiriniu tikrinimu",
+      "Teorijos turi būti falsifikuojamos",
+      "Stebėjimai yra duomenų šaltinis"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Hipotezės nėra absoliučios tiesos — jos tikrinamos ir gali būti atmestos."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie rinką yra neteisingas?",
+    "correct": "Valstybė niekada neturi jokio vaidmens rinkoje",
+    "wrong": [
+      "Laisvoji rinka remiasi savanoriška mainų sistema",
+      "Paklausa ir pasiūla daro įtaką kainoms",
+      "Rinkos dalyviai reaguoja į paskatas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Net laisvoje rinkoje egzistuoja reguliavimas, teisės ir institucijos."
+  },
+  {
+    "q": "Kuris iš šių terminų nėra susijęs su socialine mobilumu?",
+    "correct": "Paveldėtas turtas",
+    "wrong": [
+      "Karjeros kilimas",
+      "Išsilavinimas",
+      "Migracija dėl geresnių galimybių"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Paveldėjimas nereiškia mobilumo — tai statuso perdavimas."
+  },
+  {
+    "q": "Klausimas: Kuris iš šių teiginių apie informaciją yra logiškai neteisingas?",
+    "correct": "Informacijos kiekis visada reiškia geresnį sprendimų priėmimą",
+    "wrong": [
+      "Informacija gali būti tikslinama ir tikrinama",
+      "Informacija gali būti tiek objektyvi, tiek šališka",
+      "Dezinformacija yra tyčinis klaidinimas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Daug informacijos ≠ geri sprendimai, svarbi kokybė."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie ekonomiką yra neteisingas?",
+    "correct": "Ekonomikos augimas visada reiškia geresnę gyvenimo kokybę",
+    "wrong": [
+      "Infliacija reiškia bendrą kainų lygio kilimą",
+      "Defliacija yra kainų mažėjimo procesas",
+      "Pinigų politika daro įtaką rinkoms"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Ekonomikos augimas gali būti nelygus ir neteikti naudos visiems."
+  },
+  {
+    "q": "Kuris iš šių terminų nėra susijęs su technologine pažanga?",
+    "correct": "Žvaigždžių horoskopų sudarymas",
+    "wrong": [
+      "Inovacijos",
+      "Patentinės teisės",
+      "Žemės ūkio produktyvumo didinimas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Horoskopai neturi technologinio pagrindo."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie žinias yra neteisingas?",
+    "correct": "Žinios visada yra objektyvios",
+    "wrong": [
+      "Žinios gali būti perduodamos formaliai ir neformaliai",
+      "Žinios gali būti kolektyvinės arba individualios",
+      "Žinios gali būti kaupiamos kartų laikotarpiu"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Žinios gali būti subjektyvios, kultūriškai konstruotos."
+  },
+  {
+    "q": "Kuris iš šių reiškinių nėra valstybės funkcija?",
+    "correct": "Meteorų trajektorijų skaičiavimas",
+    "wrong": [
+      "Gynyba",
+      "Viešųjų gėrybių teikimas",
+      "Kultūrinių normų palaikymas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Meteorų stebėjimas nėra pagrindinė valstybės funkcija."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie švietimą yra neteisingas?",
+    "correct": "Švietimas visada panaikina socialinę nelygybę",
+    "wrong": [
+      "Švietimas perduoda žinias, vertybes ir normas",
+      "Švietimas gali būti tiek formalus, tiek neformalus",
+      "Švietimo sistemos gali būti centralizuotos arba decentralizuotos"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Švietimas dažnai mažina nelygybę, bet negarantuoja jos panaikinimo."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie industrializaciją yra netikslus?",
+    "correct": "Ji iš karto pagerino darbininkų gyvenimo sąlygas",
+    "wrong": [
+      "Ji skatino masinę urbanizaciją",
+      "Ji prisidėjo prie gamybos mechanizavimo",
+      "Ji sukūrė naujas socialines klases"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Iš pradžių darbo sąlygos buvo prastos; pagerėjimas įvyko tik vėliau."
+  },
+  {
+    "q": "Kuris iš šių įvykių nebuvo tiesioginė Antrojo pasaulinio karo pasekmė?",
+    "correct": "Romos imperijos žlugimas",
+    "wrong": [
+      "Jungtinių Tautų įkūrimas",
+      "Šaltojo karo pradžia",
+      "Europos ekonominė rekonstrukcija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Romos imperija žlugo gerokai anksčiau – V a."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie Europos kolonializmą yra netikslus?",
+    "correct": "Jis visada vyko taikiai ir savanoriškai",
+    "wrong": [
+      "Jis skatino pasaulinės prekybos plėtrą",
+      "Jis buvo lydimas kultūrinės ekspansijos",
+      "Jis turėjo ilgalaikių socialinių pasekmių"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kolonizacija dažnai buvo prievartinė, lydima karinių konfliktų."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie pinigus yra logiškai klaidingas?",
+    "correct": "Pinigai visada turi materialų pavidalą",
+    "wrong": [
+      "Pinigai veikia kaip vertės matas",
+      "Pinigai gali būti mainų priemonė",
+      "Pinigai gali būti vertės kaupimo priemonė"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Dauguma šiuolaikinių pinigų yra skaitmeniniai, ne materialūs."
+  },
+  {
+    "q": "Kuris iš šių įvykių neturi tiesioginio ryšio su Prancūzijos revoliucija?",
+    "correct": "Pirmojo pasaulinio karo pradžia",
+    "wrong": [
+      "Feodalinių privilegijų panaikinimas",
+      "Deklaracijos apie žmogaus ir piliečio teises paskelbimas",
+      "Absoliutinės monarchijos žlugimas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Pirmasis pasaulinis karas įvyko gerokai vėliau."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie kultūrą yra neteisingas?",
+    "correct": "Kultūra visur identiška",
+    "wrong": [
+      "Kultūra apima tiek materialinius, tiek nematerialinius reiškinius",
+      "Kultūra yra dinamiška ir kintanti",
+      "Kultūra daro įtaką elgsenai"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kultūros skiriasi pagal laiką, vietą, tradicijas."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie kalbas yra neteisingas?",
+    "correct": "Kalbos struktūra yra universaliai identiška",
+    "wrong": [
+      "Kalbos kinta laikui bėgant",
+      "Kalbos gali skolintis žodžius iš kitų kalbų",
+      "Kalbos gali išnykti"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kalbų struktūra skiriasi, nėra universalaus šablono."
+  },
+  {
+    "q": "Kuri iš šių upių yra ilgiausia Azijoje?",
+    "correct": "Jangdzė",
+    "wrong": [
+      "Jenisėjus",
+      "Geltonoji upė",
+      "Mekongas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Jangdzė ilgis siekia apie 6300 km, ji teka vien Kinijos teritorijoje."
+  },
+  {
+    "q": "Kiek šalių ribojasi su Vokietija?",
+    "correct": "8",
+    "wrong": [
+      "6",
+      "7",
+      "9"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Vokietija ribojasi su Danija, Lenkija, Čekija, Austrija, Šveicarija, Prancūzija, Liuksemburgu ir Nyderlandais."
+  },
+  {
+    "q": "Kurioje šalyje stovi Teotihuakano griuvėsiai?",
+    "correct": "Meksikoje",
+    "wrong": [
+      "Peru",
+      "Gvatemaloje",
+      "Kolumbijoje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Teotihuakanas – viena didžiausių prieškolumbinių miestų, klestėjo II–VII a."
+  },
+  {
+    "q": "Kuri iš šių kalnų grandinių yra ilgiausia pasaulyje?",
+    "correct": "Andai",
+    "wrong": [
+      "Himalajai",
+      "Alpės",
+      "Uralas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Andų kalnai driekiasi apie 7000 km per visą Pietų Amerikos vakarinį pakraštį."
+  },
+  {
+    "q": "Kurioje Lietuvos vietoje buvo pirmasis viešas elektros apšvietimas?",
+    "correct": "Rietavas",
+    "wrong": [
+      "Vilnius",
+      "Kaunas",
+      "Klaipėda"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1892 m. Rietave įžiebtos pirmosios elektros lemputės Lietuvoje."
+  },
+  {
+    "q": "Kuris Lietuvos kunigaikštis buvo Jogailos tėvas?",
+    "correct": "Algirdas",
+    "wrong": [
+      "Kęstutis",
+      "Mindaugas",
+      "Gediminas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Algirdas valdė 1345–1377 m., buvo vienas galingiausių Gediminaičių."
+  },
+  {
+    "q": "Kurios šalies valstybinėje vėliavoje vaizduojamas Kalavijo ordino kryžius?",
+    "correct": "Latvijos",
+    "wrong": [
+      "Estijos",
+      "Lietuvos",
+      "Lenkijos"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Latvijos herbas ir simbolika susiję su viduramžių ordinais."
+  },
+  {
+    "q": "Kuri Lietuvos upė teka priešinga kryptimi nei dauguma?",
+    "correct": "Šventoji",
+    "wrong": [
+      "Nemunas",
+      "Merkys",
+      "Nevėžis"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Ji teka į šiaurę, į Baltijos jūrą, o ne į Nemuną."
+  },
+  {
+    "q": "Kuris senovės lietuvių dievas buvo susijęs su namų židiniu?",
+    "correct": "Gabija",
+    "wrong": [
+      "Perkūnas",
+      "Žemyna",
+      "Patrimpas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Gabija buvo globėja ugnies ir namų šilumos."
+  },
+  {
+    "q": "Kuri šalis pirmoji pripažino atkurtą Lietuvos nepriklausomybę 1991 m.?",
+    "correct": "Islandija",
+    "wrong": [
+      "Švedija",
+      "Danija",
+      "Vokietija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Islandija pripažino Lietuvą 1991 m. vasario 11 d."
+  },
+  {
+    "q": "Kuriais metais buvo įkurta Vilniaus universitetas?",
+    "correct": "1579",
+    "wrong": [
+      "1582",
+      "1575",
+      "1583"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Universitetą įsteigė Steponas Batoras, tai vienas seniausių Rytų Europoje."
+  },
+  {
+    "q": "Kurio Lietuvos valdovo laikais pirmą kartą oficialiai panaikinta baudžiava?",
+    "correct": "Aleksandro II",
+    "wrong": [
+      "Stanislovo Augusto Poniatovskio",
+      "Aleksandro",
+      "Mykolo I"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1861 m. carinė valdžia panaikino baudžiavą Lietuvos teritorijoje valdant Aleksandrui II."
+  },
+  {
+    "q": "Kuri iš šių tautų NIEKADA nevaldė Vilniaus?",
+    "correct": "Rusai",
+    "wrong": [
+      "Švedai",
+      "Lenkai",
+      "Napoleoninė Prancūzija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Švedai puldinėjo Žemaitiją ir Kuršą, bet Vilniaus neokupavo."
+  },
+  {
+    "q": "Kurio Lietuvos rašytojo tikrasis vardas buvo Vincas Mickevičius?",
+    "correct": "Krėvė",
+    "wrong": [
+      "Maironis",
+      "Kudirka",
+      "Vaižgantas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Vincas Krėvė-Mickevičius – vienas žymiausių XX a. pradžios lietuvių rašytojų."
+  },
+  {
+    "q": "Kuris Lietuvos miestelis turėjo pirmąją elektrinę kaimo vietovėje?",
+    "correct": "Rietavas",
+    "wrong": [
+      "Kėdainiai",
+      "Ukmergė",
+      "Telšiai"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Rietavas 1892 m. įžiebė lemputes dvaro elektrinės dėka – pirmasis toks atvejis Lietuvoje."
+  },
+  {
+    "q": "Kurio Lietuvos kunigaikščio vardu pavadintas Maskvos Didysis kunigaikštis po krikšto?",
+    "correct": "Švitrigailos",
+    "wrong": [
+      "Jogailos",
+      "Algirdo",
+      "Vytauto"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Švitrigaila tapo vienu iš pavyzdinių vardų Maskvos valdovams priėmus krikštą XV a."
+  },
+  {
+    "q": "Kurios valstybės pinigai cirkuliavo Lietuvoje po Pirmojo pasaulinio karo iki lito įvedimo?",
+    "correct": "Vokietijos",
+    "wrong": [
+      "Rusijos",
+      "Lenkijos",
+      "Švedijos"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1918–1922 m. Lietuvoje naudotos ostmarkės (vadintos auksinais), vėliau jas pakeitė litas."
+  },
+  {
+    "q": "Kuriais metais buvo sukurta pirmoji lietuviška spaustuvė Mažojoje Lietuvoje?",
+    "correct": "1547",
+    "wrong": [
+      "1579",
+      "1568",
+      "1523"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Martynas Mažvydas 1547 m. Karaliaučiuje išleido pirmąją lietuvišką knygą."
+  },
+  {
+    "q": "Kurioje vietoje vyko pirmasis Dainų šventės renginys?",
+    "correct": "Kaune",
+    "wrong": [
+      "Vilniuje",
+      "Klaipėdoje",
+      "Šiauliuose"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1924 m. Kaune įvyko pirmoji Dainų šventė – ši tradicija tęsiasi iki šiol."
+  },
+  {
+    "q": "Kurio Lietuvos regiono tautinis kostiumas pasižymi tamsiai mėlynais sijonais su baltais raštais?",
+    "correct": "Žemaitijos",
+    "wrong": [
+      "Aukštaitijos",
+      "Dzūkijos",
+      "Suvalkijos"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Žemaičių kostiumai skiriasi sodriomis spalvomis ir masyvesniais ornamentais nei kitų regionų."
+  },
+  {
+    "q": "Kurioje Lietuvos vietoje gimė Jonas Basanavičius?",
+    "correct": "Ožkabaliuose",
+    "wrong": [
+      "Marijampolėje",
+      "Vilkaviškyje",
+      "Kudirkos Naumiestyje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Ožkabalių kaimas (netoli Vilkaviškio) – Basanavičiaus gimtinė ir jo muziejus šiandien."
+  },
+  {
+    "q": "Kuris iš šių rašytojų niekada nerašė lietuviškai?",
+    "correct": "Adomas Mickevičius",
+    "wrong": [
+      "Maironis",
+      "Donelaitis",
+      "Krėvė"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Mickevičius rašė lenkų kalba, nors kilęs iš Lietuvos Didžiosios Kunigaikštystės."
+  },
+  {
+    "q": "Kuri Lietuvos upė teka per tris istorinius regionus (Aukštaitiją, Dzūkiją, Suvalkiją)?",
+    "correct": "Nemunas",
+    "wrong": [
+      "Neris",
+      "Merkys",
+      "Šventoji"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1410 m. liepos 15 d. sąjungininkų kariuomenė sumušė Kryžiuočių ordiną."
+  },
+  {
+    "q": "Kuris Lietuvos miestas XIX a. pabaigoje buvo vadinamas „Šiaurės Jeruzale“?",
+    "correct": "Vilnius",
+    "wrong": [
+      "Kaunas",
+      "Šiauliai",
+      "Panevėžys"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Vilnius turėjo didžiulę žydų bendruomenę ir buvo svarbus religinis centras Europoje."
+  },
+  {
+    "q": "Kuri Lietuvos bažnyčia turi aukščiausią bokštą šalyje?",
+    "correct": "Šv. apaštalų Petro ir Povilo",
+    "wrong": [
+      "Kauno Kristaus Prisikėlimo",
+      "Vilniaus Šv. Jonų",
+      "Švč. Mergelės Marijos Dangun Ėmimo"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Šiaulių bažnyčios bokštas siekia 70 m, aukščiausias Lietuvoje."
+  },
+  {
+    "q": "Kuris Lietuvos kaimas buvo pirmasis paskelbtas architektūriniu draustiniu dėl autentiškos planinės struktūros?",
+    "correct": "Zervynos",
+    "wrong": [
+      "Nida",
+      "Palūšė",
+      "Marcinkonys"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Zervynos Dzūkijoje saugomos dėl tradicinio gatvinio kaimo plano ir medinės architektūros."
+  },
+  {
+    "q": "Kuriame Lietuvos mieste buvo išrasta ir pagaminta pirmoji lietuviška televizija (1957 m.)?",
+    "correct": "Kaune",
+    "wrong": [
+      "Vilniuje",
+      "Šiauliuose",
+      "Panevėžyje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kauno radijo gamykla pagamino pirmuosius televizorius „KTR“."
+  },
+  {
+    "q": "Kuriais metais įkurta Lietuvos Mokslų Akademija?",
+    "correct": "1939",
+    "wrong": [
+      "1922",
+      "1951",
+      "1918"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Įkurta nepriklausomybės laikotarpiu, netrukus prieš okupaciją."
+  },
+  {
+    "q": "Kuri iš šių Lietuvos pilių yra seniausia išlikusi mūrinė pilis?",
+    "correct": "Medininkų",
+    "wrong": [
+      "Trakų salos",
+      "Kauno",
+      "Vilniaus"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Medininkų pilis datuojama XIII a. pab.–XIV a. pr. ir yra viena didžiausių gynybinių pilių regione."
+  },
+  {
+    "q": "Kurioje Lietuvos vietoje rasta seniausia žmogaus gyvenvietė?",
+    "correct": "Kretuono",
+    "wrong": [
+      "Biržų",
+      "Kernavės",
+      "Šventosios"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kretuono gyvenvietės liekanos datuojamos apie 9000 m. pr. Kr., tai viena seniausių archeologinių vietų šalyje."
+  },
+  {
+    "q": "Kurio Lietuvos didiko rūmai XVIII a. garsėjo viena turtingiausių bibliotekų Europoje?",
+    "correct": "Radvilų Nesvyžiuje",
+    "wrong": [
+      "Sapiegiški Antakalnyje",
+      "Oginskių Plungėje",
+      "Pacų Pažaislyje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Nesvyžiaus Radvilų biblioteka turėjo apie 20 000 knygų, daug rankraščių ir žemėlapių."
+  },
+  {
+    "q": "Kuri kalva Vilniuje buvo pagrindinė pagoniškojo kulto vieta iki krikšto?",
+    "correct": "Kreivoji kalva",
+    "wrong": [
+      "Gedimino kalnas",
+      "Šventaragio slėnis",
+      "Bekešo kalnas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kreivoji kalva šalia Gedimino kalno buvo laikoma šventviete ir naudota apeigoms."
+  },
+  {
+    "q": "Kurio Lietuvos karaliaus karūnavimas įvyko 1253 m.?",
+    "correct": "Mindaugo",
+    "wrong": [
+      "Gedimino",
+      "Algirdo",
+      "Vytauto"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Mindaugas buvo vienintelis Lietuvos karalius, karūnuotas liepos 6 d., tai valstybės dienos pagrindas."
+  },
+  {
+    "q": "Kurioje srityje Lietuva tarpukariu pirmavo Baltijos šalyse?",
+    "correct": "Aviacijoje",
+    "wrong": [
+      "Pramonėje",
+      "Laivyboje",
+      "Kostelio Klausimynas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Lietuvos karo aviacija buvo viena moderniausių regione, turėjo savą gamybą ir mokyklas."
+  },
+  {
+    "q": "Kurioje Lietuvos vietoje vyko garsusis 1863 m. sukilimo mūšis prieš carinę kariuomenę?",
+    "correct": "Kražiuose",
+    "wrong": [
+      "Biržuose",
+      "Tytuvėnuose",
+      "Ablingoje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kražių apylinkėse vyko vienas aršiausių sukilimo mūšių Lietuvoje."
+  },
+  {
+    "q": "Kuris Lietuvos upės slėnis vadinamas „Lietuviškuoju kanjonu“ dėl stačių šlaitų?",
+    "correct": "Dubysos",
+    "wrong": [
+      "Šventosios",
+      "Merkio",
+      "Minijos"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Dubysos slėnis pasižymi išraiškingu reljefu, stačiais šlaitais ir giliais vingiais."
+  },
+  {
+    "q": "Kurio Lietuvos šviesuolio veikla labiausiai prisidėjo prie spaudos draudimo panaikinimo 1904 m.?",
+    "correct": "Jonas Šliūpas",
+    "wrong": [
+      "Basanavičiaus",
+      "Kudirkos",
+      "Tumo-Vaižganto"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Jonas Šliūpas aktyviai veikė emigracijoje ir tarptautiniuose sluoksniuose dėl spaudos laisvės klausimo."
+  },
+  {
+    "q": "Kurios religijos šventykla tarpukariu veikė Kaune be pertraukų?",
+    "correct": "Islamo",
+    "wrong": [
+      "Judaizmo",
+      "Stačiatikių",
+      "Protestantų"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kauno mečetė buvo aktyvi ir po nepriklausomybės atkūrimo, tai viena seniausių musulmonų bendruomenių šalyje."
+  },
+  {
+    "q": "Kuri Lietuvos tvirtovė laikoma didžiausia carinės Rusijos gynybine sistema už jos pagrindinių sienų?",
+    "correct": "Kauno",
+    "wrong": [
+      "Vilniaus",
+      "Šiaulių",
+      "Alytaus"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kauno tvirtovė pastatyta XIX a. pab., su daugybe fortų, laikyta strategiškai kritine vieta."
+  },
+  {
+    "q": "Kuris iš šių miestų buvo vienas svarbiausių lietuvių knygnešių veiklos centrų?",
+    "correct": "Tilžė",
+    "wrong": [
+      "Rietavas",
+      "Anykščiai",
+      "Šilalė"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Tilžėje veikė lietuviškos spaudos leidyklos ir knygnešių tinklai."
+  },
+  {
+    "q": "Kurioje srityje lietuviai ypač pasižymėjo pasaulinėje parodoje Paryžiuje 1937 m.?",
+    "correct": "Architektūroje",
+    "wrong": [
+      "Žemės ūkyje",
+      "Aviacijoje",
+      "Fotografijoje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Lietuvos paviljonas pelnė Grand Prix už modernią architektūrą."
+  },
+  {
+    "q": "Kurio Lietuvos kaimo apylinkėse rastas garsusis Žalvario amžiaus lobis su spiralėmis?",
+    "correct": "Narkūnų",
+    "wrong": [
+      "Kernavės",
+      "Paveisininkų",
+      "Šventosios"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Narkūnų lobis Utenos rajone laikomas vienu turtingiausių žalvario radinių Lietuvoje."
+  },
+  {
+    "q": "Kuris Lietuvos regionas turi savitą tarmę, labiausiai nutolusią nuo bendrinės kalbos?",
+    "correct": "Žemaitija",
+    "wrong": [
+      "Dzūkija",
+      "Suvalkija",
+      "Aukštaitija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Žemaičių tarmė tokia savita, kad laikoma atskira kalbos atšaka, sunkiai suprantama ne žemaičiams."
+  },
+  {
+    "q": "Kurio Lietuvos valdovo įsakymu buvo pastatyta Trakų Salos pilis?",
+    "correct": "Vytauto",
+    "wrong": [
+      "Kęstučio",
+      "Algirdo",
+      "Gedimino"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Vytautas XIV a. pab. pradėjo statybas kaip gynybinę ir reprezentacinę rezidenciją."
+  },
+  {
+    "q": "Kurioje vietoje buvo paskelbtas 1905 m. Didysis Vilniaus seimas?",
+    "correct": "Vilniaus miesto salėje",
+    "wrong": [
+      "Katedros aikštėje",
+      "Kauno rotušėje",
+      "Rokiškyje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Vilniaus miesto salėje 2000 delegatų reikalavo autonomijos carinėje imperijoje."
+  },
+  {
+    "q": "Kurio Lietuvos didiko iniciatyva XVII a. įkurtas Pažaislio vienuolynas?",
+    "correct": "Pacų",
+    "wrong": [
+      "Radvilų",
+      "Oginskių",
+      "Sapiegiškių"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kristupas Zigmantas Pacas finansavo barokinį Pažaislio vienuolyną kaip prestižinį objektą."
+  },
+  {
+    "q": "Kurio Lietuvos miesto herbe pavaizduota meška?",
+    "correct": "Šiaulių",
+    "wrong": [
+      "Panevėžio",
+      "Utenos",
+      "Kėdainių"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Šiaulių herbas su meška ir grandine atsirado XVII a., simbolizuoja miesto ištvermę."
+  },
+  {
+    "q": "Kuri Lietuvos sala yra didžiausia pagal plotą?",
+    "correct": "Rusnė",
+    "wrong": [
+      "Kiaulės Nugara",
+      "Virvyčia",
+      "Pabiržė"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Rusnės sala Nemuno deltoje – vienintelė tikra sala, gyvenama ištisus metus."
+  },
+  {
+    "q": "Kurioje vietoje buvo įkurta pirmoji lietuviška kino studija po Antrojo pasaulinio karo?",
+    "correct": "Vilniuje",
+    "wrong": [
+      "Kaune",
+      "Klaipėdoje",
+      "Panevėžyje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1940-ųjų pabaigoje Vilniuje įkurta Lietuvos kino studija, pradėjusi profesionalią kino gamybą."
+  },
+  {
+    "q": "Kuris iš šių gamtos objektų yra seniausias žinomas medis Lietuvoje?",
+    "correct": "Stelmužės ąžuolas",
+    "wrong": [
+      "Punios šilas",
+      "Rambyno pušys",
+      "Tytuvėnų liepos"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Stelmužės ąžuolui apie 1000–1500 metų, tai vienas seniausių Europoje."
+  },
+  {
+    "q": "Kurio Lietuvos miesto aikštėje buvo pirmą kartą iškelta Trispalvė 1919 m.?",
+    "correct": "Kauno",
+    "wrong": [
+      "Vilniaus",
+      "Klaipėdos",
+      "Šiaulių"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kaune vasario 16-osios minėjimo metu iškelta trispalvė tapo valstybingumo simboliu."
+  },
+  {
+    "q": "Kas parašė romaną „Ana Karenina“?",
+    "correct": "Levas Tolstojus",
+    "wrong": [
+      "Fiodoras Dostojevskis",
+      "Antonas Čechovas",
+      "Aleksandras Puškinas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Romanas išleistas 1878 m., vienas garsiausių rusų literatūros kūrinių."
+  },
+  {
+    "q": "Kuri medžiaga buvo pagrindinė pirmųjų elektros lemputės siūlelių sudedamoji dalis?",
+    "correct": "Anglis",
+    "wrong": [
+      "Volframas",
+      "Varis",
+      "Plienas"
+    ],
+    "cat": "Technologijos",
+    "diff": "hard",
+    "note": "Edisono lemputės naudojo anglies siūlus, volframas atsirado vėliau."
+  },
+  {
+    "q": "Kas sukūrė polonezą „Atsisveikinimas su Tėvyne“?",
+    "correct": "Mykolas Kleopas Oginskis",
+    "wrong": [
+      "Stanislovas Moniuška",
+      "Fryderykas Chopinas",
+      "Jonas Basanavičius"
+    ],
+    "cat": "Muzika",
+    "diff": "hard",
+    "note": "Kūrinys tapo XIX a. lietuvių ir lenkų patriotizmo simboliu."
+  },
+  {
+    "q": "Kurioje šalyje gimė fizikas Albertas Einšteinas?",
+    "correct": "Vokietijoje",
+    "wrong": [
+      "Šveicarijoje",
+      "Austrijoje",
+      "JAV"
+    ],
+    "cat": "Mokslas",
+    "diff": "medium",
+    "note": "Gimė Ulme, Vokietijoje 1879 m."
+  },
+  {
+    "q": "Kokia valiuta naudojama Japonijoje?",
+    "correct": "Jenos",
+    "wrong": [
+      "Juanis",
+      "Vonas",
+      "Batas"
+    ],
+    "cat": "Ekonomika",
+    "diff": "easy",
+    "note": "Jenos simbolis ¥."
+  },
+  {
+    "q": "Kas parašė „Dieviškąją komediją“?",
+    "correct": "Dantė Aligjeris",
+    "wrong": [
+      "Giovanni Boccaccio",
+      "Francesco Petrarca",
+      "Ludovico Ariosto"
+    ],
+    "cat": "Literatūra",
+    "diff": "hard",
+    "note": "Parašyta 1308–1320 m., laikoma italų literatūros šedevru."
+  },
+  {
+    "q": "Kas nutiko 1453 m., simbolizuojant viduramžių pabaigą Europoje?",
+    "correct": "Konstantinopolio žlugimas",
+    "wrong": [
+      "Renesanso pradžia",
+      "Reformacijos pradžia",
+      "Kolumbo kelionė"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "Osmanų imperija užėmė miestą, žymėdama Bizantijos pabaigą."
+  },
+  {
+    "q": "Kuri valstybė pirmoji įteisino moterų kandidatavimą į parlamentą?",
+    "correct": "Suomija",
+    "wrong": [
+      "Prancūzija",
+      "JAV",
+      "Naujoji Zelandija"
+    ],
+    "cat": "Politika",
+    "diff": "hard",
+    "note": "1906 m. Suomija suteikė moterims pilnas politines teises."
+  },
+  {
+    "q": "Kas yra parašęs muziką JAV himnui?",
+    "correct": "John Stafford Smith",
+    "wrong": [
+      "Francis Scott Key",
+      "George Washington",
+      "John Philip Sousa"
+    ],
+    "cat": "Muzika",
+    "diff": "hard",
+    "note": "Francis Scott Key parašė žodžius, bet muzika kilo iš anglų dainos."
+  },
+  {
+    "q": "Kuri Europos šalis pirmoji įvedė eurą kaip nacionalinę valiutą?",
+    "correct": "Vokietija",
+    "wrong": [
+      "Prancūzija",
+      "Ispanija",
+      "Italija"
+    ],
+    "cat": "Ekonomika",
+    "diff": "medium",
+    "note": "1999 m. euras įvestas elektroninėje formoje, 2002 – grynaisiais."
+  },
+  {
+    "q": "Kokia yra tradicinė japonų sriuba, gaminama iš fermentuotų sojų?",
+    "correct": "Miso",
+    "wrong": [
+      "Ramen",
+      "Pho",
+      "Tom Yum"
+    ],
+    "cat": "Maistas",
+    "diff": "medium",
+    "note": "Miso sriuba gaminama iš fermentuotų sojų pastos ir dashi sultinio."
+  },
+  {
+    "q": "Kas sukūrė teoriją, kad žemynai juda „kontinentinio dreifo teoriją“?",
+    "correct": "Alfredas Wegeneris",
+    "wrong": [
+      "Charles Darwin",
+      "Isaac Newton",
+      "James Hutton"
+    ],
+    "cat": "Mokslas",
+    "diff": "hard",
+    "note": "Wegenerio teorija 1912 m. buvo laikoma radikalia, bet vėliau patvirtinta."
+  },
+  {
+    "q": "Kuri šalis pirmoji įteisino vienalytes santuokas?",
+    "correct": "Nyderlandai",
+    "wrong": [
+      "Kanada",
+      "Ispanija",
+      "Švedija"
+    ],
+    "cat": "Politika",
+    "diff": "hard",
+    "note": "Įteisinta 2001 m."
+  },
+  {
+    "q": "Kuri šalis pirmoji įgyvendino privalomą pradinį švietimą visiems vaikams?",
+    "correct": "Prūsija",
+    "wrong": [
+      "Prancūzija",
+      "Didžioji Britanija",
+      "JAV"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "Prūsijoje privalomas mokslas įvestas 1717 m."
+  },
+  {
+    "q": "Kokia yra pagrindinė fotosintezės dujų išmetimo medžiaga?",
+    "correct": "Deguonis",
+    "wrong": [
+      "Anglies dioksidas",
+      "Azotas",
+      "Vandenilis"
+    ],
+    "cat": "Mokslas",
+    "diff": "medium",
+    "note": "Fotosintezės metu augalai sugeria CO₂ ir išskiria O₂."
+  },
+  {
+    "q": "Kuris rašytojas sukūrė „Šerloko Holmso“ personažą?",
+    "correct": "Arthur Conan Doyle",
+    "wrong": [
+      "Agatha Christie",
+      "Edgar Allan Poe",
+      "Charles Dickens"
+    ],
+    "cat": "Literatūra",
+    "diff": "medium",
+    "note": "Pirmasis pasakojimas išleistas 1887 m."
+  },
+  {
+    "q": "Kas yra sukūręs operą „Aida“?",
+    "correct": "Giuseppe Verdi",
+    "wrong": [
+      "Mozartas",
+      "Puccini",
+      "Bachas"
+    ],
+    "cat": "Muzika",
+    "diff": "medium",
+    "note": "„Aida“ sukurta 1871 m. Egipto valdovo užsakymu."
+  },
+  {
+    "q": "Kuris iš šių metalų yra lengviausias?",
+    "correct": "Liitis",
+    "wrong": [
+      "Aliuminis",
+      "Geležis",
+      "Varis"
+    ],
+    "cat": "Mokslas",
+    "diff": "hard",
+    "note": "Liitis yra lengviausias kietasis metalas, naudojamas baterijoms."
+  },
+  {
+    "q": "Kas buvo pirmasis žmogus, kuris iškėlė Lietuvos trispalvę Gedimino pilies bokšte 1919 m.?",
+    "correct": "Simono Daukanto pulkas",
+    "wrong": [
+      "Prezidentas Smetona",
+      "Jonas Basanavičius",
+      "Lietuvos kariuomenės savanoriai"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "Tai įvyko 1919 m. sausio 1 d., simbolizuodamas valstybės atgimimą."
+  },
+  {
+    "q": "Kuri šalis išrado porcelianą?",
+    "correct": "Kinija",
+    "wrong": [
+      "Japonija",
+      "Graikija",
+      "Egiptas"
+    ],
+    "cat": "Kultūra",
+    "diff": "medium",
+    "note": "Porcelianas buvo gaminamas Kinijoje jau VII–VIII a."
+  },
+  {
+    "q": "Kuri šalis turi daugiausiai kaimyninių valstybių?",
+    "correct": "Kinija",
+    "wrong": [
+      "Rusija",
+      "Brazilija",
+      "Vokietija"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Kinija ribojasi su 14 šalių."
+  },
+  {
+    "q": "Kuri šalis pirmoji įgyvendino visuotinį balsavimą vyrams ir moterims vienu metu?",
+    "correct": "Naujoji Zelandija",
+    "wrong": [
+      "Suomija",
+      "Prancūzija",
+      "JAV"
+    ],
+    "cat": "Politika",
+    "diff": "hard",
+    "note": "1893 m. Naujoji Zelandija įteisino balsavimą moterims."
+  },
+  {
+    "q": "Kas buvo pirmasis žmogus, pasiekęs Pietų ašigalį?",
+    "correct": "Roaldas Amundsenas",
+    "wrong": [
+      "Robertas Scottas",
+      "Shackletonas",
+      "Edmundas Hillary"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Amundsenas pasiekė Pietų ašigalį 1911 m. gruodžio 14 d"
+  },
+  {
+    "q": "Kurioje šalyje kilo gotikos architektūros stilius?",
+    "correct": "Prancūzijoje",
+    "wrong": [
+      "Italijoje",
+      "Vokietijoje",
+      "Ispanijoje"
+    ],
+    "cat": "Kultūra",
+    "diff": "hard",
+    "note": "Gotikos stilius gimė XII a. Paryžiaus apylinkėse."
+  },
+  {
+    "q": "Kuri šalis yra didžiausia kavos vartotoja pasaulyje vienam gyventojui?",
+    "correct": "Suomija",
+    "wrong": [
+      "Italija",
+      "JAV",
+      "Brazilija"
+    ],
+    "cat": "Ekonomika",
+    "diff": "hard",
+    "note": "Suomių vidutinė metinė norma daugiau nei 10 kg vienam žmogui."
+  },
+  {
+    "q": "Kas buvo pirmoji moteris kosmose?",
+    "correct": "Valentina Tereškova",
+    "wrong": [
+      "Sally Ride",
+      "Svetlana Savickaja",
+      "Mae Jemison"
+    ],
+    "cat": "Mae Jemison",
+    "diff": "hard",
+    "note": "1963 m. birželį Tereškova tapo pirmąja moterimi kosmose."
+  },
+  {
+    "q": "Kuri valstybė yra laikoma pirmąja konstitucine monarchija pasaulyje?",
+    "correct": "Didžioji Britanija",
+    "wrong": [
+      "Prancūzija",
+      "Ispanija",
+      "Nyderlandai"
+    ],
+    "cat": "Politika",
+    "diff": "hard",
+    "note": "1688 m. Šlovingoji revoliucija ir 1689 m. Teisių aktas įtvirtino konstitucinę monarchiją."
+  },
+  {
+    "q": "Kuriais metais buvo išrastas internetas?",
+    "correct": "1969",
+    "wrong": [
+      "1975",
+      "1972",
+      "1967"
+    ],
+    "cat": "Technologijos",
+    "diff": "hard",
+    "note": "1969 m. sukurta ARPANET sistema – interneto protėvis."
+  },
+  {
+    "q": "Kuris iš šių miestų buvo įkurtas anksčiausiai?",
+    "correct": "Damaske",
+    "wrong": [
+      "Roma",
+      "Londonas",
+      "Paryžius"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Damaskas laikomas vienu seniausių nuolat apgyvendintų miestų pasaulyje (nuo 3 tūkst. pr. m. e.)."
+  },
+  {
+    "q": "Kuri tauta sukūrė pirmąją rašto sistemą, panaudotą administracijai ir literatūrai?",
+    "correct": "Šumerai",
+    "wrong": [
+      "Egiptiečiai",
+      "Hetitai",
+      "Babiloniečiai"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "Šumerų dantiraštis buvo naudojamas dar 4 tūkst. pr. m. e."
+  },
+  {
+    "q": "Kuri religija turi „Keturias kilnias tiesas“ ir „Aštuonialypį kelią“ kaip pagrindinius mokymus?",
+    "correct": "Budizmas",
+    "wrong": [
+      "Hinduizmas",
+      "Džainizmas",
+      "Konfucianizmas"
+    ],
+    "cat": "Religijos",
+    "diff": "medium",
+    "note": "Tai Budos mokymo pagrindas."
+  },
+  {
+    "q": "Kuris Europos miestas pirmasis įvedė požeminį metro?",
+    "correct": "Londonas",
+    "wrong": [
+      "Paryžius",
+      "Berlynas",
+      "Viena"
+    ],
+    "cat": "Technologijos",
+    "diff": "medium",
+    "note": "1863 m. atidarytas „Metropolitan Railway“"
+  },
+  {
+    "q": "Kuris miestas yra žemiausiai virš jūros lygio esantis pasaulyje?",
+    "correct": "Jerichas",
+    "wrong": [
+      "Amsterdamas",
+      "Kairas",
+      "Doha"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Jerichas yra apie 258 m žemiau jūros lygio prie Negyvosios jūros."
+  },
+  {
+    "q": "Kurioje šalyje gimė Nobelio premijos įkūrėjas Alfredas Nobelis?",
+    "correct": "Švedijoje",
+    "wrong": [
+      "Norvegijoje",
+      "Vokietijoje",
+      "Šveicarijoje"
+    ],
+    "cat": "Istorija",
+    "diff": "medium",
+    "note": "Alfredas Nobelis gimė Stokholme 1833 m."
+  },
+  {
+    "q": "Kuri šalis valdė dabartinės Indonezijos teritoriją kolonijų laikais?",
+    "correct": "Nyderlandai",
+    "wrong": [
+      "Portugalija",
+      "Didžioji Britanija",
+      "Ispanija"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "Nyderlandų Rytų Indijos kompanija valdė teritoriją nuo XVII a."
+  },
+  {
+    "q": "Kuris garsus mokslininkas buvo aklas savo gyvenimo pabaigoje?",
+    "correct": "Galilėjus Galilėjus",
+    "wrong": [
+      "Isaakas Niutonas",
+      "Nikola Tesla",
+      "Albertas Einšteinas"
+    ],
+    "cat": "Mokslas",
+    "diff": "medium",
+    "note": "Galilėjus apako 1637 m., likus keleriems metams iki mirties."
+  },
+  {
+    "q": "Kuri iš šių kalbų turi oficialų statusą tiek Europoje, tiek Pietų Amerikoje?",
+    "correct": "Olandų",
+    "wrong": [
+      "Prancūzų",
+      "Anglų",
+      "Ispanų"
+    ],
+    "cat": "Ispanų",
+    "diff": "hard",
+    "note": "Olandų kalba vartojama Nyderlanduose ir Suriname"
+  },
+  {
+    "q": "Kurioje valstybėje gimė filosofas Immanuelis Kantas?",
+    "correct": "Prūsijoje",
+    "wrong": [
+      "Austrijoje",
+      "Šveicarijoje",
+      "Prancūzijoje"
+    ],
+    "cat": "Filosofija",
+    "diff": "hard",
+    "note": "Kantas gimė Karaliaučiuje (dab. Kaliningradas), tuometinėje Prūsijoje."
+  },
+  {
+    "q": "Kuri iš šių kalbų turi „trigubą rašybos sistemą“ (hiragana, katakana ir kanji)?",
+    "correct": "Japonų",
+    "wrong": [
+      "Korėjiečių",
+      "Kinų",
+      "Vietnamiečių"
+    ],
+    "cat": "Kalbos",
+    "diff": "medium",
+    "note": "Japonų kalboje kartu naudojamos trys rašto sistemos."
+  },
+  {
+    "q": "Kuris imperatorius padalijo Romos imperiją į Rytų ir Vakarų dalis?",
+    "correct": "Teodosijus I",
+    "wrong": [
+      "Konstantinas Didysis",
+      "Augustas",
+      "Neronas"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "Po Teodosijaus mirties 395 m. imperija galutinai padalyta jo sūnums Arkadijui ir Honorijui."
+  },
+  {
+    "q": "Kuri šalis neturi oficialios valstybinės kalbos, nors viena kalba dominuoja?",
+    "correct": "JAV",
+    "wrong": [
+      "Kanada",
+      "Jungtinė Karalystė",
+      "Australija"
+    ],
+    "cat": "Kalbos",
+    "diff": "medium",
+    "note": "Anglų kalba dominuoja, bet JAV Konstitucijoje nėra nustatyta oficiali kalba."
+  },
+  {
+    "q": "Kuris miestas buvo pirmoji JAV sostinė?",
+    "correct": "Niujorkas",
+    "wrong": [
+      "Vašingtonas",
+      "Filadelfija",
+      "Bostonas"
+    ],
+    "cat": "Istorija",
+    "diff": "medium",
+    "note": "Niujorkas buvo laikina sostinė 1789–1790 m."
+  },
+  {
+    "q": "Kuris lotyniškas posakis reiškia „laikas bėga“?",
+    "correct": "Tempus fugit",
+    "wrong": [
+      "Carpe diem",
+      "Cogito ergo sum",
+      "Veni vidi vici"
+    ],
+    "cat": "Kalbos",
+    "diff": "hard",
+    "note": "Posakis vartojamas nuo senovės Romos laikų, reiškia laikinumo suvokimą."
+  },
+  {
+    "q": "Kuri šalis pirmoji panaikino monarchiją po Pirmojo pasaulinio karo?",
+    "correct": "Vokietija",
+    "wrong": [
+      "Austrija",
+      "Rusija",
+      "Italija"
+    ],
+    "cat": "Istorija",
+    "diff": "hard",
+    "note": "1918 m. Vokietijos kaizeris Vilhelmas II atsisakė sosto, įkurta Veimaro respublika."
+  },
+  {
+    "q": "Kuris Europos miestas ilgą laiką buvo žinomas kaip Hanza sąjungos centras?",
+    "correct": "Liubekas",
+    "wrong": [
+      "Hamburgas",
+      "Amsterdamas",
+      "Kopenhaga"
+    ],
+    "cat": "Ekonomika",
+    "diff": "hard",
+    "note": "Liubekas buvo Hanzos „karalienė“, XIII–XVI a. prekybos tinklo širdis."
+  },
+  {
+    "q": "Kurioje šalyje yra Angkoro Wat šventykla?",
+    "correct": "Kambodžoje",
+    "wrong": [
+      "Tailande",
+      "Laose",
+      "Vietname"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Angkoro Wat didžiausias religinis statinys pasaulyje."
+  },
+  {
+    "q": "Kuri yra ilgiausia žinoma urvų sistema pasaulyje?",
+    "correct": "Mammoth Urvas",
+    "wrong": [
+      "Postojnos urvas",
+      "Škocjano urvai",
+      "Waitomo urvai"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Kentukyje, ištirtų praėjimų ilgis viršija 600 km."
+  },
+  {
+    "q": "Kuri dykuma laikoma seniausia pasaulyje?",
+    "correct": "Namibo",
+    "wrong": [
+      "Sachara",
+      "Gobi",
+      "Kalaharis"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Namibo amžius vertinamas dešimtimis milijonų metų."
+  },
+  {
+    "q": "Kuriai kalbai būdingos dvi oficialios standartinės rašybos formos valstybiniu lygiu?",
+    "correct": "Norvegų",
+    "wrong": [
+      "Olandų",
+      "Serbų",
+      "Katalonų"
+    ],
+    "cat": "Kalbos",
+    "diff": "hard",
+    "note": "Bokmål ir Nynorsk yra dvi oficialios normos"
+  },
+  {
+    "q": "Kuri šalis turi didžiausią elektros gamybos dalį iš geoterminės energijos?",
+    "correct": "Islandija",
+    "wrong": [
+      "Italija",
+      "Japonija",
+      "Naujoji Zelandija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Islandijoje geotermija ir hidroenergija sudaro beveik visą generaciją."
+  },
+  {
+    "q": "Kuri sala laikoma tankiausiai apgyvendinta pasaulyje?",
+    "correct": "Java",
+    "wrong": [
+      "Honkongas",
+      "Sicilija",
+      "Sumatra"
+    ],
+    "cat": "Geografija",
+    "diff": "hard",
+    "note": "Javoje gyvena per 150 mln. žmonių."
+  },
+  {
+    "q": "Kuri šalis turi seniausią vis dar veikiančią monarchiją?",
+    "correct": "Japonija",
+    "wrong": [
+      "Didžioji Britanija",
+      "Danija",
+      "Tailandas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Japonijos imperatorių dinastija datuojama 660 m. pr. m. e."
+  },
+  {
+    "q": "Kuri dykuma garsėja didžiausiais temperatūros svyravimais tarp dienos ir nakties?",
+    "correct": "Gobio",
+    "wrong": [
+      "Sacharos",
+      "Kalahario",
+      "Sonoros"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Temperatūra gali svyruoti iki 35–40 °C per parą."
+  },
+  {
+    "q": "Kuris miestas laikomas pasaulio parfumerijos sostine?",
+    "correct": "Grasas",
+    "wrong": [
+      "Paryžius",
+      "Roma",
+      "Milano"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Graso miestas nuo XVII a. garsėja kvepalų gamyba."
+  },
+  {
+    "q": "Kuris iš šių metalų buvo žinomas ir naudojamas seniausiai?",
+    "correct": "Varis",
+    "wrong": [
+      "Geležis",
+      "Auksas",
+      "Alavas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Varis naudotas jau prieš 10 000 metų, dar prieš geležies erą."
+  },
+  {
+    "q": "Kuri šalis pirmoji uždraudė plastiko maišelius nacionaliniu mastu?",
+    "correct": "Bangladešas",
+    "wrong": [
+      "Norvegija",
+      "Vokietija",
+      "Kanada"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "2002 m. Bangladešas uždraudė plastikinius maišelius dėl užtvindymo problemų."
+  },
+  {
+    "q": "Kuri šalis pirmoji įsteigė nacionalinį parką?",
+    "correct": "JAV",
+    "wrong": [
+      "Kanada",
+      "Norvegija",
+      "Naujoji Zelandija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1872 m. Yellowstone tapo pirmuoju nacionaliniu parku pasaulyje."
+  },
+  {
+    "q": "Kuri kalba turi ilgiausią žodį pasaulyje pagal oficialų žodyną?",
+    "correct": "Vokiečių",
+    "wrong": [
+      "Suomių",
+      "Islandų",
+      "Anglų"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Vokiečių kalba leidžia jungti žodžius neribotai, yra žodžių su >60 raidžių."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie kalbas yra teisingas?",
+    "correct": "Japonų kalba turi 3 rašto sistemas",
+    "wrong": [
+      "Lietuvių kalba turi 10 linksnių",
+      "Prancūzų kalboje nėra veiksmažodžių laikų",
+      "Anglų kalba yra senesnė už graikų"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuris iš šių miestų yra aukščiausiai virš jūros lygio?",
+    "correct": "La Paz",
+    "wrong": [
+      "Maskva",
+      "Berlynas",
+      "Berlynas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kurioje šalyje oficiali kalba yra portugalų, bet sostinė nėra Lisabona?",
+    "correct": "Brazilija",
+    "wrong": [
+      "Ispanija",
+      "Angola",
+      "Mozambikas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuris iš šių įvykių įvyko anksčiausiai?",
+    "correct": "Pirmoji elektrinė lemputė",
+    "wrong": [
+      "Berlyno sienos griūtis",
+      "Pirmasis žmogus Mėnulyje",
+      "Pirmasis „iPhone“ pristatymas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuris miestas nėra valstybinė sostinė?",
+    "correct": "Ciurichas",
+    "wrong": [
+      "Bernas",
+      "Otava",
+      "Vašingtonas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Ciurichas yra didžiausias Šveicarijos miestas, bet ne sostinė."
+  },
+  {
+    "q": "Kuris iš šių valstybių vėliavų simbolių neturi religinės reikšmės?",
+    "correct": "Japonijos saulė",
+    "wrong": [
+      "Turkijos mėnulis ir žvaigždė",
+      "Šveicarijos kryžius",
+      "Izraelio Dovydo žvaigždė"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Japonijos vėliava simbolizuoja saulę, o ne religiją."
+  },
+  {
+    "q": "Kuris iš šių šalių neturi nė vieno nuolat gyvenamo salyno?",
+    "correct": "Austrija",
+    "wrong": [
+      "Norvegija",
+      "Japonija",
+      "Indonezija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Austrija yra sausumos šalis be salų."
+  },
+  {
+    "q": "Kuris iš šių miestų istoriškai buvo didžiausias prekybos centras Šilko kelyje?",
+    "correct": "Samarkandas",
+    "wrong": [
+      "Pekinas",
+      "Bagdadas",
+      "Roma"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Samarkandas buvo vienas pagrindinių Rytų–Vakarų prekybos centrų."
+  },
+  {
+    "q": "Kuris iš šių miestų geografiškai yra arčiausiai 0° ilgumos ir 0° platumos susikirtimo taško?",
+    "correct": "Akra",
+    "wrong": [
+      "Lagosas",
+      "Londonas",
+      "Kaire"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "0°/0° taškas yra Gvinėjos įlankoje; Akra yra netoliese."
+  },
+  {
+    "q": "Kuris teiginys apie kalbas yra teisingas?",
+    "correct": "Prancūzų kalboje nėra linksnių",
+    "wrong": [
+      "Arabų kalba turi daugiau linksnių nei lietuvių",
+      "Suomių kalba priklauso indoeuropiečių šeimai",
+      "Ispanų kalba turi tonus kaip kinų"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Prancūzų kalba remiasi linksnių likučiais, bet neturi gramatinių linksnių sistemos kaip lietuvių."
+  },
+  {
+    "q": "Kuris iš šių miestų yra seniausias?",
+    "correct": "Jeruzalė",
+    "wrong": [
+      "Roma",
+      "Atėnai",
+      "Stambulas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Jeruzalė gyvavo dar prieš klasikinį Antikos laikotarpį."
+  },
+  {
+    "q": "Kuris teiginys apie technologijas yra teisingas?",
+    "correct": "Telegrafas egzistavo anksčiau nei telefonas",
+    "wrong": [
+      "Radijas buvo sukurtas po televizijos",
+      "Internetas egzistavo prieš pirmąjį palydovą",
+      "Elektrinė lemputė išrasta XX a."
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Telegrafas buvo pagrindinė komunikacijos priemonė dar XIX a."
+  },
+  {
+    "q": "Kuris miestas turi sostinės statusą, bet nėra didžiausias šalies miestas?",
+    "correct": "Otava",
+    "wrong": [
+      "Londonas",
+      "Tokijas",
+      "Roma"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Otava – Kanados sostinė, bet Torontas didesnis."
+  },
+  {
+    "q": "Kuris teiginys apie kalbas yra teisingas?",
+    "correct": "Islandų kalba beveik nepakito nuo viduramžių",
+    "wrong": [
+      "Vengrų kalba priklauso slavų kalboms",
+      "Lietuvių kalba kilusi iš lotynų",
+      "Baskų kalba yra indoeuropiečių šeimos narė"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Islandų kalba išlaikė archajišką gramatiką ir rašybą."
+  },
+  {
+    "q": "Kuris iš šių miestų buvo svarbiausias islamo mokslo centras viduramžiais?",
+    "correct": "Bagdadas",
+    "wrong": [
+      "Stambulas",
+      "Teheranas",
+      "Dubajus"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Bagdadas buvo Abasidų kalifato mokslo centras, „Išminties namai“."
+  },
+  {
+    "q": "Kuris iš šių rašto tipų laikomas vienu iš seniausių?",
+    "correct": "Kuneiforminis raštas",
+    "wrong": [
+      "Kirilica",
+      "Lotyniškas raštas",
+      "Arabų raštas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kuneiformas naudotas Mesopotamijoje nuo IV tūkst. pr. Kr."
+  },
+  {
+    "q": "Kuris teiginys apie Europos miestus yra teisingas?",
+    "correct": "Stokholmas yra arčiau Šiaurės ašigalio nei Oslas",
+    "wrong": [
+      "Ciurichas yra Šveicarijos sostinė",
+      "Berlynas yra šiauriausias iš Skandinavijos sostinių",
+      "Briuselis yra aukščiau jūros lygio nei Viena"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Stokholmas iš tikrųjų šiauriau nei Oslas."
+  },
+  {
+    "q": "Kuris įvykis įvyko paskiausiai?",
+    "correct": "Berlyno sienos griūtis",
+    "wrong": [
+      "Pirmasis palydovas",
+      "Pirmasis žmogus kosmose",
+      "Pirmoji spalvota televizija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Sienos griūtis 1989 m., po kosminių įvykių."
+  },
+  {
+    "q": "Kuris teiginys apie baskų kalbą yra teisingas?",
+    "correct": "Ji neturi giminingų kalbų",
+    "wrong": [
+      "Tai indoeuropiečių kalba",
+      "Ji kilusi iš lotynų kalbos",
+      "Ji turi toninę sistemą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Baskų kalba yra izoliuota, neturinti giminingų kalbų."
+  },
+  {
+    "q": "Kuris įvykis įvyko anksčiausiai?",
+    "correct": "Garo variklio patentavimas",
+    "wrong": [
+      "Pirmasis geležinkelis",
+      "Radijo išradimas",
+      "Televizijos išradimas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuris teiginys apie prancūzų kalbą yra teisingas?",
+    "correct": "Ji kilusi iš lotynų kalbos",
+    "wrong": [
+      "Prancūzų kalba turi septynis linksnius",
+      "Ji priklauso germanų kalbų šeimai",
+      "Ji turi toninę sistemą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Prancūzų kalba yra romanų kalba, kilusi iš lotynų."
+  },
+  {
+    "q": "Kuris iš šių terminų neturi tiesioginio ryšio su globalizacijos procesu?",
+    "correct": "Lokalizacija kaip priešinga tendencija",
+    "wrong": [
+      "Kapitalo judėjimas tarp valstybių",
+      "Tarptautinė prekyba",
+      "Kultūrų sąveika per migraciją"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Lokalizacija yra priešinga globalizacijai, ne jos dalis."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie demokratiją yra logiškai neteisingas, nors skamba įtikinamai?",
+    "correct": "Demokratijoje visada garantuojamos visos žmogaus teisės",
+    "wrong": [
+      "Demokratijoje valdžia kyla iš piliečių",
+      "Demokratijoje egzistuoja rinkimų sistema",
+      "Demokratijoje valdžia keičiasi pagal nustatytas taisykles"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Demokratijos buvimas negarantuoja visų teisių apsaugos"
+  },
+  {
+    "q": "Kuris iš šių reiškinių nėra tiesioginė ekonominės integracijos forma?",
+    "correct": "Kalendorinės reformos",
+    "wrong": [
+      "Muitų sąjungos",
+      "Vieninga rinka",
+      "Bendros valiutos įvedimas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kalendoriaus reforma nesusijusi su ekonomine integracija."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie mokslą yra netikslus?",
+    "correct": "Hipotezės laikomos absoliučiai teisingomis",
+    "wrong": [
+      "Mokslas remiasi empiriniu tikrinimu",
+      "Teorijos turi būti falsifikuojamos",
+      "Stebėjimai yra duomenų šaltinis"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Hipotezės nėra absoliučios tiesos — jos tikrinamos ir gali būti atmestos."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie rinką yra neteisingas?",
+    "correct": "Valstybė niekada neturi jokio vaidmens rinkoje",
+    "wrong": [
+      "Laisvoji rinka remiasi savanoriška mainų sistema",
+      "Paklausa ir pasiūla daro įtaką kainoms",
+      "Rinkos dalyviai reaguoja į paskatas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Net laisvoje rinkoje egzistuoja reguliavimas, teisės ir institucijos."
+  },
+  {
+    "q": "Kuris iš šių terminų nėra susijęs su socialine mobilumu?",
+    "correct": "Paveldėtas turtas",
+    "wrong": [
+      "Karjeros kilimas",
+      "Išsilavinimas",
+      "Migracija dėl geresnių galimybių"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Paveldėjimas nereiškia mobilumo — tai statuso perdavimas."
+  },
+  {
+    "q": "Klausimas: Kuris iš šių teiginių apie informaciją yra logiškai neteisingas?",
+    "correct": "Informacijos kiekis visada reiškia geresnį sprendimų priėmimą",
+    "wrong": [
+      "Informacija gali būti tikslinama ir tikrinama",
+      "Informacija gali būti tiek objektyvi, tiek šališka",
+      "Dezinformacija yra tyčinis klaidinimas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Daug informacijos ≠ geri sprendimai, svarbi kokybė."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie ekonomiką yra neteisingas?",
+    "correct": "Ekonomikos augimas visada reiškia geresnę gyvenimo kokybę",
+    "wrong": [
+      "Infliacija reiškia bendrą kainų lygio kilimą",
+      "Defliacija yra kainų mažėjimo procesas",
+      "Pinigų politika daro įtaką rinkoms"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Ekonomikos augimas gali būti nelygus ir neteikti naudos visiems."
+  },
+  {
+    "q": "Kuris iš šių terminų nėra susijęs su technologine pažanga?",
+    "correct": "Žvaigždžių horoskopų sudarymas",
+    "wrong": [
+      "Inovacijos",
+      "Patentinės teisės",
+      "Žemės ūkio produktyvumo didinimas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Horoskopai neturi technologinio pagrindo."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie žinias yra neteisingas?",
+    "correct": "Žinios visada yra objektyvios",
+    "wrong": [
+      "Žinios gali būti perduodamos formaliai ir neformaliai",
+      "Žinios gali būti kolektyvinės arba individualios",
+      "Žinios gali būti kaupiamos kartų laikotarpiu"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Žinios gali būti subjektyvios, kultūriškai konstruotos."
+  },
+  {
+    "q": "Kuris iš šių reiškinių nėra valstybės funkcija?",
+    "correct": "Meteorų trajektorijų skaičiavimas",
+    "wrong": [
+      "Gynyba",
+      "Viešųjų gėrybių teikimas",
+      "Kultūrinių normų palaikymas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Meteorų stebėjimas nėra pagrindinė valstybės funkcija."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie švietimą yra neteisingas?",
+    "correct": "Švietimas visada panaikina socialinę nelygybę",
+    "wrong": [
+      "Švietimas perduoda žinias, vertybes ir normas",
+      "Švietimas gali būti tiek formalus, tiek neformalus",
+      "Švietimo sistemos gali būti centralizuotos arba decentralizuotos"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Švietimas dažnai mažina nelygybę, bet negarantuoja jos panaikinimo."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie industrializaciją yra netikslus?",
+    "correct": "Ji iš karto pagerino darbininkų gyvenimo sąlygas",
+    "wrong": [
+      "Ji skatino masinę urbanizaciją",
+      "Ji prisidėjo prie gamybos mechanizavimo",
+      "Ji sukūrė naujas socialines klases"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Iš pradžių darbo sąlygos buvo prastos; pagerėjimas įvyko tik vėliau."
+  },
+  {
+    "q": "Kuris iš šių įvykių nebuvo tiesioginė Antrojo pasaulinio karo pasekmė?",
+    "correct": "Romos imperijos žlugimas",
+    "wrong": [
+      "Jungtinių Tautų įkūrimas",
+      "Šaltojo karo pradžia",
+      "Europos ekonominė rekonstrukcija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Romos imperija žlugo gerokai anksčiau – V a."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie Europos kolonializmą yra netikslus?",
+    "correct": "Jis visada vyko taikiai ir savanoriškai",
+    "wrong": [
+      "Jis skatino pasaulinės prekybos plėtrą",
+      "Jis buvo lydimas kultūrinės ekspansijos",
+      "Jis turėjo ilgalaikių socialinių pasekmių"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kolonizacija dažnai buvo prievartinė, lydima karinių konfliktų."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie pinigus yra logiškai klaidingas?",
+    "correct": "Pinigai visada turi materialų pavidalą",
+    "wrong": [
+      "Pinigai veikia kaip vertės matas",
+      "Pinigai gali būti mainų priemonė",
+      "Pinigai gali būti vertės kaupimo priemonė"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Dauguma šiuolaikinių pinigų yra skaitmeniniai, ne materialūs."
+  },
+  {
+    "q": "Kuris iš šių įvykių neturi tiesioginio ryšio su Prancūzijos revoliucija?",
+    "correct": "Pirmojo pasaulinio karo pradžia",
+    "wrong": [
+      "Feodalinių privilegijų panaikinimas",
+      "Deklaracijos apie žmogaus ir piliečio teises paskelbimas",
+      "Absoliutinės monarchijos žlugimas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Pirmasis pasaulinis karas įvyko gerokai vėliau."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie kultūrą yra neteisingas?",
+    "correct": "Kultūra visur identiška",
+    "wrong": [
+      "Kultūra apima tiek materialinius, tiek nematerialinius reiškinius",
+      "Kultūra yra dinamiška ir kintanti",
+      "Kultūra daro įtaką elgsenai"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kultūros skiriasi pagal laiką, vietą, tradicijas."
+  },
+  {
+    "q": "Kuris iš šių teiginių apie kalbas yra neteisingas?",
+    "correct": "Kalbos struktūra yra universaliai identiška",
+    "wrong": [
+      "Kalbos kinta laikui bėgant",
+      "Kalbos gali skolintis žodžius iš kitų kalbų",
+      "Kalbos gali išnykti"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kalbų struktūra skiriasi, nėra universalaus šablono."
+  },
+  {
+    "q": "Kuris teiginys apie Europos sostines yra teisingas?",
+    "correct": "Lisabona yra piečiau nei Roma",
+    "wrong": [
+      "Atėnai yra piečiausia sostinė Europoje",
+      "Roma yra piečiausia Vakarų Europos sostinė",
+      "Lisabona ir Roma yra tame pačiame platumyje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Lisabona ~38.7°N, Roma ~41.9°N"
+  },
+  {
+    "q": "Kuris teiginys apie istorinius įvykius yra teisingas?",
+    "correct": "Berlyno siena griuvo anksčiau nei įvyko pirmasis Gulfo karas",
+    "wrong": [
+      "Gulfo karas įvyko prieš Berlyno sienos griūtį",
+      "Abu įvykiai įvyko tais pačiais metais",
+      "Siena griuvo po Irako invazijos į Kuveitą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Siena – 1989; Golfo karas – 1990–1991"
+  },
+  {
+    "q": "Kuris teiginys apie Europos upes yra teisingas?",
+    "correct": "Dunojaus upė teka per daugiau šalių nei Reino upė",
+    "wrong": [
+      "Reinas teka per daugiau šalių nei Dunojus",
+      "Dunojaus ilgis trumpesnis už Reino",
+      "Reinas yra ilgiausia Europos upė"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Dunojus – ~10 šalių; Reinas – daug mažiau"
+  },
+  {
+    "q": "Kuris dujų teiginys teisingas esant toms pačioms sąlygoms?",
+    "correct": "Helis lengvesnis už orą",
+    "wrong": [
+      "Helis sunkesnis už orą",
+      "CO₂ lengvesnis už orą",
+      "Argonas lengvesnis už helį"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuris teiginys apie istorijos datas teisingas?",
+    "correct": "Gulfo karas prasidėjo po euro įvedimo, nes finansinės sankcijos to reikalavo.",
+    "wrong": [
+      "Mastrichto sutartis įsigaliojo anksčiau nei Berlyno sienos griūtis.",
+      "Euro grynieji įvesti 1992 m., kartu su ES įkūrimu.",
+      "Berlyno siena griuvo 1989 m., o euro grynieji pasirodė tik 2002 m"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuris teiginys apie ekonomiką teisingas?",
+    "correct": "BVP nominalus ir BVP pagal PPP matuoja skirtingai, todėl šalių rikiuotė gali skirtis.",
+    "wrong": [
+      "Valiutos fiksuotas kursas automatiškai reiškia narystę valiutinėje sąjungoje.",
+      "Prekybos balanso perteklius garantuoja biudžeto perteklių, nes abu matuoja tą patį rodiklį.",
+      "Infliacija ir palūkanų norma yra tas pats rodiklis, bet skirtingai skaičiuojamas."
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuris teiginys apie fizikos pojūčius teisingas?",
+    "correct": "Laisvo kritimo būsenoje svoris nejaučiamas, nors gravitacija veikia; masė nekinta.",
+    "wrong": [
+      "„Svoris“ ir „masė“ sinonimai, nes abu matuojami kilogramais.",
+      "Svorio nebuvimas“ orbitoje reiškia, kad gravitacija ten nulinė.",
+      "Astronautai praranda masę, nes kosmose nėra trinties."
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuri religija yra monoteistinė?",
+    "correct": "Sikizmas",
+    "wrong": [
+      "Hinduizmas",
+      "Šintoizmas",
+      "Budizmas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Sikhizmas – vienas Dievas."
+  },
+  {
+    "q": "Ką reiškė operacijos „Barbarossa“ kodinis pavadinimas?",
+    "correct": "Tai buvo Vokietijos puolimas prieš SSRS",
+    "wrong": [
+      "Tai buvo sąjungininkų desantas į Normandiją",
+      "Tai buvo Vokietijos planas užimti Balkanus",
+      "Tai buvo SSRS kontrpuolimas Lenkijoje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1941 birželio 22, puolimas į rytus."
+  },
+  {
+    "q": "Ką simbolizavo Breton Woods susitarimas?",
+    "correct": "JAV dolerio susiejimą su auksu",
+    "wrong": [
+      "JAV dolerio atsiejimą nuo aukso",
+      "Europos bendros valiutos sukūrimą",
+      "Tarptautinės darbo organizacijos reformą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1944 doleris ir auksas"
+  },
+  {
+    "q": "Kas nutiko per Versalio sutarties pasirašymą?",
+    "correct": "Vokietija prisiėmė karo kaltę ir reparacijas",
+    "wrong": [
+      "Sąjungininkai įkūrė Jungtinių Tautų organizaciją",
+      "SSRS ir Vokietija pasirašė gynybos paktą",
+      "Vokietija prijungė Austriją prie Trečiojo Reicho"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1919, reparacijos, karo kaltės straipsnis."
+  },
+  {
+    "q": "Kokia valiuta buvo naudojama Vokietijoje prieš eurą?",
+    "correct": "Vokietijos markė buvo nacionalinė valiuta",
+    "wrong": [
+      "Guldenas buvo pagrindinė Vokietijos valiuta",
+      "Šilingas",
+      "Frankas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Deutsche Mark iki 2002."
+  },
+  {
+    "q": "Kokia buvo pagrindinė Šaltojo karo „geležinės uždangos“ reikšmė?",
+    "correct": "Ji simbolizavo politinį ir karinį Europos padalijimą",
+    "wrong": [
+      "Ji buvo SSRS statyta fizinė siena per Vokietiją",
+      "Tai buvo NATO inicijuota ekonominė blokada prieš SSRS",
+      "Tai buvo JAV planas įvesti bendrą gynybos sistemą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Politinė metafora, ne faktinė siena"
+  },
+  {
+    "q": "Kodėl 1929 m. akcijų rinkos griūtis JAV turėjo pasaulinį poveikį?",
+    "correct": "JAV ekonomika buvo glaudžiai susijusi su pasaulio finansais",
+    "wrong": [
+      "Europa tuo metu buvo visiškai izoliuota nuo JAV",
+      "Poveikis buvo ribotas, nes nebuvo globalios prekybos",
+      "Krizė turėjo įtakos tik JAV bankų sistemai"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Globalios skolos, prekybos ryšiai."
+  },
+  {
+    "q": "Kodėl Sueco kanalas yra strategiškai svarbus?",
+    "correct": "Jis jungia Viduržemio ir Raudonąją jūras",
+    "wrong": [
+      "Jis jungia Atlanto ir Indijos vandenynus",
+      "Jis yra vienintelis kelias į Arktį",
+      "Jis skiria Ispaniją nuo Maroko"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Jungia Europą su Azijos maršrutais."
+  },
+  {
+    "q": "Kokia buvo „Maršalo plano“ esmė po Antrojo pasaulinio karo?",
+    "correct": "Ekonominė Europos atstatymo programa JAV iniciatyva",
+    "wrong": [
+      "Karinis SSRS atsakomasis planas Europai užimti",
+      "JAV siekis įvesti dolerį kaip valiutą",
+      "Politinė sąjunga tarp Prancūzijos ir Vokietijos"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Ekonominė pagalba, 1948–1952."
+  },
+  {
+    "q": "Kodėl Panamos kanalas svarbus pasaulinei prekybai?",
+    "correct": "Jis sutrumpina kelią tarp Ramiojo ir Atlanto",
+    "wrong": [
+      "Jis jungia Indijos vandenyną su Viduržemio jūra",
+      "Jis leidžia išvengti Sueco kanalo naudojimo",
+      "Jis yra vienintelis kelias į Afriką"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Strateginis jūrų kelias."
+  },
+  {
+    "q": "Kodėl Amazonės baseinas svarbus pasaulio klimatui?",
+    "correct": "Jis sugeria milžiniškus kiekius anglies dvideginio",
+    "wrong": [
+      "Jis sukuria nuolatinį šaltą klimatą Europoje",
+      "Tai vienintelė vieta, kur formuojasi musonai",
+      "Jis reguliuoja Atlanto vandenyno potvynius"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "„Žemės plaučiai“."
+  },
+  {
+    "q": "Kodėl Grenlandija nėra atskira valstybė?",
+    "correct": "Ji priklauso Danijai kaip autonominė teritorija",
+    "wrong": [
+      "Ji yra Švedijos administracinė sritis",
+      "Ji priklauso Kanados federalinei valdžiai",
+      "Ji yra nepriklausoma nuo 1950 m."
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Autonomija, bet Danijos valdžia."
+  },
+  {
+    "q": "Kuri šalis pirmoji panaikino karališkąją šeimą?",
+    "correct": "Prancūzija per revoliuciją",
+    "wrong": [
+      "Italija Renesanso laikotarpiu",
+      "Ispanija po Antrojo pasaulinio karo",
+      "Olandija XIX a. pradžioje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1792 m. panaikinta monarchija."
+  },
+  {
+    "q": "Kuris mūšis laikomas lūžio tašku Rytų fronte?",
+    "correct": "Stalingrado mūšis",
+    "wrong": [
+      "Maskvos mūšis",
+      "Leningrado mūšis",
+      "Kursko mūšis"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1942–1943, didelis Vokietijos pralaimėjimas."
+  },
+  {
+    "q": "Kuri šalis nėra ES narė?",
+    "correct": "Norvegija",
+    "wrong": [
+      "Austrija",
+      "Vokietija",
+      "Ispanija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuri šalis kontroliuoja Gibraltaro sąsiaurį?",
+    "correct": "Jungtinė Karalystė",
+    "wrong": [
+      "Ispanija",
+      "Prancūzija",
+      "Marokas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kur buvo pasirašyta NATO steigimo sutartis?",
+    "correct": "Vašingtone",
+    "wrong": [
+      "Briuselyje",
+      "Paryžiuje",
+      "Londone"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1949 m. balandžio 4 d."
+  },
+  {
+    "q": "Kuri valstybė 1957 m. buvo viena iš šešių Europos Ekonominės Bendrijos steigėjų?",
+    "correct": "Italija dalyvavo kaip steigėja nuo pat pradžių",
+    "wrong": [
+      "Didžioji Britanija pasirašė steigimo sutartį Romoje",
+      "Norvegija",
+      "Austrija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuri šalis turi ilgiausią geležinkelių tinklą pasaulyje?",
+    "correct": "Jungtinės Amerikos Valstijos",
+    "wrong": [
+      "Rusija",
+      "Kinija",
+      "Kanada"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Daugiau kaip 250 000 km bėgių."
+  },
+  {
+    "q": "Kokia buvo pagrindinė Berlyno sienos paskirtis?",
+    "correct": "Sustabdyti žmonių bėgimą iš Rytų į Vakarus",
+    "wrong": [
+      "Apsaugoti Rytų Vokietiją nuo NATO atakų",
+      "Sukurti ekonominę zoną Vokietijos centre",
+      "Skatinti turizmą tarp dviejų sektorių"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Fizinė ir ideologinė barjera."
+  },
+  {
+    "q": "Kuri šalis turi didžiausią salą pasaulyje?",
+    "correct": "Danija",
+    "wrong": [
+      "Kanada",
+      "Australija",
+      "Rusija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kokia buvo euro įvedimo ekonominė priežastis?",
+    "correct": "Sumažinti valiutų svyravimus ir skatinti prekybą",
+    "wrong": [
+      "Pakeisti dolerį kaip pasaulio valiutą",
+      "Suvienodinti mokesčių sistemas visoje ES",
+      "Įvesti bendrą karinę politiką"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "urioje šalyje buvo išrastas spausdinimas su kilnojamaisiais šriftais?",
+    "correct": "Kinijoje, Songų dinastijos laikais",
+    "wrong": [
+      "Vokietijoje Gutenbergo laikais",
+      "Prancūzijoje Renesanso pradžioje",
+      "Italijoje, Venecijos spaustuvėse"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Bi Sheng išradimas ~1040 m."
+  },
+  {
+    "q": "Kuris Europos miestas garsėja kasmetiniu „Oktoberfest“ festivaliu?",
+    "correct": "Miunchenas Vokietijoje",
+    "wrong": [
+      "Viena Austrijoje",
+      "Frankfurtas prie Maino",
+      "Ciurichas Šveicarijoje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Didžiausias alaus festivalis pasaulyje."
+  },
+  {
+    "q": "Kokia šalis yra žinoma dėl oficialiai pripažintos kačių populiacijos parlamentuose?",
+    "correct": "Jungtinė Karalystė turi „Chief Mouser“ pareigas",
+    "wrong": [
+      "Prancūzija kasmet renka „katės prezidentą“",
+      "Italijoje katės turi balsavimo teisę",
+      "Olandijoje draudžiama turėti kates valdžios pastatuose"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl Antarktida neturi oficialios vyriausybės?",
+    "correct": "Ją valdo tarptautinė sutartis, draudžianti suverenitetą",
+    "wrong": [
+      "Ją kontroliuoja tik Jungtinės Tautos",
+      "Ji yra Australijos federacijos dalis",
+      "Ji padalyta į nuolatines karines zonas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1959 m. Antarktidos sutartis."
+  },
+  {
+    "q": "Kuri šalis turi didžiausią gyventojų tankį Europoje?",
+    "correct": "Monakas yra tankiausiai apgyvendinta valstybė",
+    "wrong": [
+      "Nyderlandai užima pirmą vietą",
+      "Belgija yra tankiausia ES šalis",
+      "Šveicarija viršija visas kitas šalis pagal tankį"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "25 000 žmonių/km²."
+  },
+  {
+    "q": "Kodėl 1917 m. Rusijoje įvyko bolševikų perversmas?",
+    "correct": "Karas, ekonominė krizė ir nepasitenkinimas caru sudarė sąlygas revoliucijai",
+    "wrong": [
+      "SSRS planavo ekspansiją į Europą per perversmą",
+      "Prancūzija organizavo sukilimą iš užsienio",
+      "JAV įsikišo ir nuvertė monarchiją"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Spalio revoliucija."
+  },
+  {
+    "q": "Kodėl Japonijos ekonomika po Antrojo pasaulinio karo sparčiai augo?",
+    "correct": "JAV parama ir technologijų diegimas skatino modernizaciją",
+    "wrong": [
+      "Japonija nacionalizavo visas Vakarų įmones",
+      "SSRS finansavo rekonstrukciją Ramiojo vandenyno regione",
+      "Japonija išvengė karo padarinių dėl neutralumo"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "„Ekonominis stebuklas“ dėl JAV paramos ir reformų."
+  },
+  {
+    "q": "Kuris mūšis laikomas Napoleono galios lūžio tašku?",
+    "correct": "Vaterlo mūšis 1815 m. buvo galutinis pralaimėjimas",
+    "wrong": [
+      "Trafalgaro mūšis",
+      "Borodino mūšis",
+      "Leipcigo mūšis"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Vaterlo – pabaiga Napoleono valdymui."
+  },
+  {
+    "q": "Kuri šalis pirmoji įvedė privalomą sveikatos draudimą nacionaliniu mastu?",
+    "correct": "Vokietija XIX a. pabaigoje pradėjo sistemą",
+    "wrong": [
+      "Jungtinė Karalystė po Antrojo pasaulinio karo",
+      "Prancūzija per Pirmąjį pasaulinį karą",
+      "Švedija tarpukariu kaip socialinį eksperimentą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Bismarcko reformos 1880-aisiais"
+  },
+  {
+    "q": "Kodėl Islandijoje nėra nuolatinių miškų?",
+    "correct": "Dėl šalto klimato ir dirvožemio erozijos po apgyvendinimo",
+    "wrong": [
+      "Nes sala buvo natūraliai dykynė nuo ledynmečio",
+      "Dėl nuolatinių vulkaninių išsiveržimų, deginusių miškus",
+      "Nes vikingai niekada nenaudojo medienos statyboms"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Žmonės iškirto miškus, erozija sutrukdė ataugti."
+  },
+  {
+    "q": "Kuris miestas tapo pirmąja šalis sostine, priėmusia visapusišką anglies neutralumo strategiją?",
+    "correct": "Kopenhaga",
+    "wrong": [
+      "Berlynas",
+      "Paryžius",
+      "Oslas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Kopenhaga – ambicingas tikslas tapti pirmąja neutraliąja sostine"
+  },
+  {
+    "q": "Kuri valstybė pirmoji Europoje įteisino vienalytes santuokas?",
+    "correct": "Nyderlandai įteisino jas 2001 m",
+    "wrong": [
+      "Danija buvo pirmoji dar XX a. 9 deš.",
+      "Švedija padarė tai kartu su Norvegija",
+      "Ispanija priėmė įstatymą dar prieš Nyderlandus"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "2001 m. Nyderlandai – pirmoji šalis pasaulyje."
+  },
+  {
+    "q": "Kodėl Islandijoje nėra uodų populiacijos?",
+    "correct": "Klimatas ir sezoninis užšalimas nutraukia jų veisimosi ciklą",
+    "wrong": [
+      "Vulkaninė veikla nužudo vabzdžių kiaušinėlius",
+      "Vėjai neleidžia atskristi iš Europos",
+      "Salos dirvožemis netinkamas vabzdžiams daugintis"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuri šalis tapo pirmąja Afrikoje, paskelbusia nepriklausomybę XX a. viduryje?",
+    "correct": "Gana paskelbė nepriklausomybę 1957 m.",
+    "wrong": [
+      "Nigerija paskelbė 1954 m.",
+      "Kenija paskelbė 1960 m.",
+      "Tanzanija paskelbė dar prieš Antrąjį pasaulinį karą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuri kalba laikoma artimiausia lotynų kalbai iš dabartinių romanų kalbų?",
+    "correct": "Italų kalba išlaikė daugiausia lotyniškų bruožų",
+    "wrong": [
+      "Prancūzų kalba yra fonetiškai arčiausia",
+      "Ispanų kalba turi identišką gramatiką",
+      "Rumunų kalba yra nepakitusi nuo antikos"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl Venecija buvo svarbi Viduramžių laikais?",
+    "correct": "Ji kontroliavo prekybą tarp Europos ir Rytų",
+    "wrong": [
+      "Ji valdė visą Viduržemio jūrą",
+      "Ji buvo popiežiaus karinis centras",
+      "Ji buvo Šiaurės Europos prekybos mazgas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Prekybos ir jūrų galybė."
+  },
+  {
+    "q": "Kodėl Šveicarija nedalyvavo nė viename iš dviejų pasaulinių karų?",
+    "correct": "Ji išlaikė ilgalaikę neutraliteto politiką",
+    "wrong": [
+      "Geografinė padėtis neleido kariams pereiti sienos",
+      "Ji pasirašė slaptą gynybos sutartį su SSRS",
+      "NATO užtikrino jos apsaugą dar prieš susikūrimą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Neutralitetas – nacionalinė politika nuo XIX a."
+  },
+  {
+    "q": "Kodėl 1347–1351 m. Europoje įvyko masinė demografinė krizė?",
+    "correct": "Juodoji mirtis sunaikino trečdalį gyventojų",
+    "wrong": [
+      "Didžioji sausra sunaikino derlių",
+      "Šimtametis karas privertė masiškai emigruoti",
+      "Pasaulinė ekonominė krizė sukėlė badą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl JAV įstojo į Prisijunge pasaulinį karą 1917 m.?",
+    "correct": "Vokietijos povandeninis karas ir Zimmermanno telegrama paskatino sprendimą",
+    "wrong": [
+      "JAV buvo įpareigotos pagal NATO sutartį",
+      "Prancūzija oficialiai paprašė karių po Versalio sutarties",
+      "Rusija atakavo JAV laivus Atlante"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl Lisabona laikoma vienu strategiškai svarbiausių uostų Europoje?",
+    "correct": "Ji yra prie Atlanto ir kontroliuoja įplaukas į Viduržemio jūrą",
+    "wrong": [
+      "Ji yra tiesiogiai sujungta su Šiaurės jūra kanalu",
+      "Tai vienintelis neužšąlantis uostas Pietų Europoje",
+      "Tai pagrindinis Šiaurės Europos eksporto centras"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl JAV ir SSRS pradėjo kosmoso lenktynes XX a. viduryje?",
+    "correct": "Siekdamos technologinio ir politinio dominavimo",
+    "wrong": [
+      "Dėl tiesioginio karinio konflikto kosmose",
+      "Kad sukurtų bendrą palydovų sistemą gynybai",
+      "Nes Jungtinės Tautos pareikalavo skrydžių į Mėnulį"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl Venesuela, turėdama dideles naftos atsargas, patyrė ekonominį nuosmukį XXI a.?",
+    "correct": "Politinis nestabilumas ir netvari priklausomybė nuo naftos",
+    "wrong": [
+      "Tarptautinis embargas draudė eksportą į Aziją",
+      "Klimato pokyčiai sunaikino naftos išgavimą",
+      "ES atsisakė pirkti naftą dėl valiutos krizės"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuri šalis pirmoji pripažino JAV nepriklausomybę?",
+    "correct": "Marokas",
+    "wrong": [
+      "Prancūzija",
+      "Nyderlandai",
+      "Ispanija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1777 m. Marokas pripažino JAV."
+  },
+  {
+    "q": "Kodėl Italija turi dvi nepriklausomas valstybes savo teritorijoje?",
+    "correct": "Dėl istorinių religinių ir politinių procesų",
+    "wrong": [
+      "Nes jos dalį okupavo Prancūzija po karo",
+      "Dėl Romos imperijos sprendimo XIX a",
+      "Tai buvusios kolonijos, grąžintos po Antrojo pasaulinio karo"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl Renesansas prasidėjo Italijoje?",
+    "correct": "Miestų-valstybių klestėjimas skatino kultūros atgimimą",
+    "wrong": [
+      "nes Popiežius finansavo vien religinius karus",
+      "Šiaurės šalys eksportavo menininkus į Italiją",
+      "Italija buvo vienintelė neištikta maro"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl Didžioji Britanija 2016 m. nusprendė pasitraukti iš ES (Brexit)?",
+    "correct": "Dėl politinių debatų dėl suvereniteto ir migracijos",
+    "wrong": [
+      "Nes ES sustabdė svarbius prekybos susitarimus su JAV",
+      "Dėl NATO spaudimo reformuoti ekonomiką",
+      "Nes euro įvedimas tapo privalomas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl Osmanų imperija žlugo po Pirmojo pasaulinio karo?",
+    "correct": "Karo pralaimėjimas ir vidaus krizės",
+    "wrong": [
+      "Pramoninė revoliucija sunaikino ekonomiką",
+      "Klimato pokyčiai sugriovė žemės ūkį",
+      "Imperija savanoriškai suskilo į respublikas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl JAV pilietinis karas kilo 1861 m.?",
+    "correct": "Konfliktas dėl vergovės ir valstijų teisių",
+    "wrong": [
+      "Britų įsikišimas ir kolonijų kontrolė",
+      "Teritorinis ginčas su Meksika",
+      "Ekonominė krizė dėl aukso"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuri šalis įkūrė pirmą koloniją Šiaurės Amerikoje?",
+    "correct": "Ispanija",
+    "wrong": [
+      "Prancūzija",
+      "Didžioji Britanija",
+      "Portugalija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Floridos kolonijos XVI a."
+  },
+  {
+    "q": "Kodėl Antarktida yra šalčiausias žemynas?",
+    "correct": "Aukštas vidutinis aukštis ir poliarinė padėtis",
+    "wrong": [
+      "Žemyną dengia aukšti kalnai",
+      "Vandenynų srovės šildo pakraščius",
+      "Saulės spinduliai atsispindi nuo miškų"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl Viduramžiais miestai statydavo gynybines sienas?",
+    "correct": "Apsaugai nuo išorinių grėsmių ir mokesčių kontrolės",
+    "wrong": [
+      "Vandens paskirstymo sistemai sukurti",
+      "Religinėms procesijoms organizuoti",
+      "Siekiant apsaugoti nuo klimato kaitos"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Apsauga ir kontrolė."
+  },
+  {
+    "q": "Kuri valstybė pastatė Eifelio bokštą?",
+    "correct": "Prancūzija",
+    "wrong": [
+      "Belgija",
+      "Italija",
+      "Šveicarija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl Japonija pasirinko izoliacijos politiką Edo laikotarpiu?",
+    "correct": "Siekdama riboti užsienio įtaką ir prekybą",
+    "wrong": [
+      "Dėl karinio silpnumo prieš Kiniją",
+      "Kad išvengtų klimato pokyčių",
+      ") Norėdama apsaugoti nuo religinių reformų Europoje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl Vokietija buvo suskaldyta po Antrojo pasaulinio karo?",
+    "correct": "Sąjungininkai padalijo ją į okupacines zonas",
+    "wrong": [
+      "Vokietija pati pasiskirstė regionais",
+      "SSRS prarado teritorijas Vakaruose",
+      "NATO atskyrė pramonines sritis"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kuri šalis buvo pagrindinė kolonijinė galia Lotynų Amerikoje?",
+    "correct": "Ispanija",
+    "wrong": [
+      "Prancūzija",
+      "Portugalija",
+      "Olandija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl Napoleonas žlugo invazijos į Rusiją metu?",
+    "correct": "Logistikos problemos ir žiemos sąlygos",
+    "wrong": [
+      "SSRS priešinosi branduolinėmis priemonėmis",
+      "Rusija turėjo didesnį laivyną",
+      "Prancūzijos imperija iširo dėl taikos sutarčių"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl Paryžiaus Bastilijos šturmas 1789 m. laikomas simboliniu įvykiu?",
+    "correct": "Jis žymėjo absoliutinės monarchijos pabaigos pradžią",
+    "wrong": [
+      "Tai buvo pirmasis Napoleono mūšis",
+      "Tai buvo paskutinė karaliaus pergalė",
+      "Tai įvyko po Respublikos įkūrimo"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Prancūzijos revoliucijos pradžia."
+  },
+  {
+    "q": "Kuri šalis valdė Filipinus iki XX a. pradžios?",
+    "correct": "Ispanija",
+    "wrong": [
+      "Didžioji Britanija",
+      "Nyderlandai",
+      "Portugalija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Ispanijos kolonija nuo XVI a. iki 1898 m."
+  },
+  {
+    "q": "Kodėl Sidnėjus nėra Australijos sostinė?",
+    "correct": "Buvo pasirinktas neutralus Kanberos variantas tarp dviejų miestų",
+    "wrong": [
+      "Sidnėjus buvo kolonijinis miestas be statuso",
+      "Melburnas atmetė sostinės vaidmenį",
+      "Britų valdžia uždraudė turėti sostinę pakrantėje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Politinis kompromisas tarp Sidnėjaus ir Melburno."
+  },
+  {
+    "q": "Kuri Europos valstybė turi ilgiausią krantinę?",
+    "correct": "Norvegija",
+    "wrong": [
+      "Italija",
+      "Graikija",
+      "Jungtinė Karalystė"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": ""
+  },
+  {
+    "q": "Kodėl 1494 m. Tordesiljas sutartis buvo reikšminga?",
+    "correct": "Ji padalijo pasaulį tarp Ispanijos ir Portugalijos",
+    "wrong": [
+      "Ji įkūrė pirmą tarptautinę teismų sistemą",
+      "Ji nustatė pirmą jūrų navigacijos kodeksą",
+      "Ji įteisino popiežiaus valdžią Europoje"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Linija Atlante tarp kolonijų sferų."
+  },
+  {
+    "q": "Kuri religija turi daugiausia pasekėjų pasaulyje?",
+    "correct": "Krikščionybė",
+    "wrong": [
+      "Islamas",
+      "Hinduizmas",
+      "Budizmas"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "~2,3 mlrd. sekėjų."
+  },
+  {
+    "q": "Kodėl Didysis barjerinis rifas nyksta?",
+    "correct": "Klimato kaita ir koralų balinimas",
+    "wrong": [
+      "Intensyvi žvejyba koralus sunaikino fiziškai",
+      "Naftos išsiliejimai padengė rifą",
+      "Užtvankos nutraukė vandens tiekimą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Vandenynų atšilimas"
+  },
+  {
+    "q": "Kuri Europos šalis turėjo kolonijų Pietų Amerikoje kartu su Ispanija?",
+    "correct": "Portugalija",
+    "wrong": [
+      "Prancūzija",
+      "Didžioji Britanija",
+      "Nyderlandai"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Brazilija – pagrindinė Portugalijos kolonija."
+  },
+  {
+    "q": "Kodėl vikingai buvo svarbūs Europos istorijoje?",
+    "correct": "Jie skatino prekybą ir kolonizaciją",
+    "wrong": [
+      "Jie valdė visą Europą politiniu lygmeniu",
+      "Jie buvo pirmieji naudoti paraką",
+      "Jie įkūrė Šventąją Romos imperiją"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Prekybos keliai, įsikūrimai, kultūrinė įtaka."
+  },
+  {
+    "q": "Kodėl Bizantijos imperija išliko ilgiau nei Vakarų Romos?",
+    "correct": "Stipri administracija ir strateginė sostinė",
+    "wrong": [
+      "Dėl geografinės izoliacijos nuo priešo",
+      "Ji išvengė religinių konfliktų",
+      "Ji turėjo branduolinį arsenalą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Konstantinopolis, ekonomika ir organizacija."
+  },
+  {
+    "q": "Kodėl Portugalija anksti pradėjo jūrų tyrinėjimus?",
+    "correct": "Geografinė padėtis skatino plaukimą į Atlantą",
+    "wrong": [
+      "Ji turėjo didžiausią laivyną pasaulyje",
+      "Ji buvo izoliuota nuo prekybos kelių",
+      "Ji turėjo sąjungą su Osmanų imperija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Atlanto pakrantė, inovacijos."
+  },
+  {
+    "q": "Kuri kalba priklauso indoeuropiečių kalbų šeimai?",
+    "correct": "Lietuvių",
+    "wrong": [
+      "Arabų",
+      "Suomių",
+      "Hebrajų"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Viena archajiškiausių šios šeimos kalbų."
+  },
+  {
+    "q": "Kodėl Nikolos Koperniko teorija buvo revoliucinė?",
+    "correct": "Ji pakeitė geocentrinį pasaulėvaizdį heliocentriniu",
+    "wrong": [
+      "Ji įrodė Žemės plokštumą",
+      "Ji rėmėsi viduramžių dogmomis",
+      "Ji paskelbta kartu su Galilėjumi"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Saulė – visatos centras."
+  },
+  {
+    "q": "Kodėl Vokietija susivienijo 1990 m.?",
+    "correct": "SSRS žlugimas ir sutarimas dėl VDR integracijos",
+    "wrong": [
+      "NATO užėmė Rytų Vokietiją kariniu būdu",
+      "Prancūzija perdavė savo teritoriją",
+      "Vakarų Vokietija pralaimėjo referendumą"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "Berlyno sienos griūtis + politiniai susitarimai."
+  },
+  {
+    "q": "Kuri šalis pirmoji panaudojo paraką kare?",
+    "correct": "Kinija",
+    "wrong": [
+      "Persija",
+      "Osmanų imperija",
+      "Vokietija"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "IX–X a. Kinijos kariuomenė."
+  },
+  {
+    "q": "Kuri šalis pirmoji legalizavo abortus nacionaliniu mastu XX a. pradžioje?",
+    "correct": "SSRS",
+    "wrong": [
+      "Prancūzija",
+      "Švedija",
+      "Kanada"
+    ],
+    "cat": "",
+    "diff": "hard",
+    "note": "1920 m. SSRS."
+  },
+  {
+    "q": "Kuri valstybė vienintelė Afrikoje yra visiškai apsupta kitos valstybės?",
+    "correct": "Lesotas",
+    "wrong": [
+      "Eswatini",
+      "Botsvana",
+      "Burundis"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Lesotas yra visiškai apsuptas Pietų Afrikos Respublikos."
+  },
+  {
+    "q": "Kuri jūrų srovė šaldo Vakarų Grenlandijos ir Labrado ora?",
+    "correct": "Labradoro srovė",
+    "wrong": [
+      "Golfo srovė",
+      "Kanarsko srovė",
+      "Kalifornijos srovė"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Šalta subarktinių platumų srovė leidžiasi pietų link palei Labradoro pusiasalį."
+  },
+  {
+    "q": "Kuris ežeras yra giliausias pasaulyje pagal gylį ir tūrį kartu?",
+    "correct": "Bajkalas",
+    "wrong": [
+      "Tanganika",
+      "Kaspijos jūra",
+      "Vostoko ežeras"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Bajkalas Sibire: ~1642 m gylis ir didžiausias gėlo vandens tūris."
+  },
+  {
+    "q": "Kuri sala yra didžiausia atogrąžų salynų valstybėje pagal sausumos plotą?",
+    "correct": "Borneo",
+    "wrong": [
+      "Javos sala",
+      "Sumatra",
+      "Sulavesis"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Borneo yra didžiausia salyno sala, padalinta tarp Indonezijos, Malaizijos ir Brunėjaus."
+  },
+  {
+    "q": "Kuri valstybė turi daugiausia aktyvių ugnikalnių?",
+    "correct": "Indonezija",
+    "wrong": [
+      "Japonija",
+      "Čilė",
+      "Islandija"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Indonezija guli Ramiojo vandenyno „ugnies žiede“."
+  },
+  {
+    "q": "Kuris paukštis gali stabiliai skristi atbulai?",
+    "correct": "Kolibris",
+    "wrong": [
+      "Žalvarnis",
+      "Kregždė",
+      "Gandrai"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Kolibriai dėl sparnų mechanikos gali skristi atgal ir „kabėti“ vietoje."
+  },
+  {
+    "q": "Kuri gyvenvietė laikoma aukščiausiai esančiu miestu?",
+    "correct": "La Rinconada",
+    "wrong": [
+      "Lhasa",
+      "Potosi",
+      "El Alto"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Peru miestas virš 5000 m aukščio Anduose."
+  },
+  {
+    "q": "Kuri vandenyno įduba yra giliausia Žemėje?",
+    "correct": "Marianų",
+    "wrong": [
+      "Tonga",
+      "Kurilų–Kamčiatkos",
+      "Puerto Riko"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Čelendžerio slėnis siekia ~10 900 m."
+  },
+  {
+    "q": "Kuri šalis pirmoji išleido popierinius pinigus valstybiniu mastu?",
+    "correct": "Kinija",
+    "wrong": [
+      "Persija",
+      "Italija",
+      "Egiptas"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Songų dinastija XI–XII a. įtvirtino banknotus."
+  },
+  {
+    "q": "Kuris medis pasiekia didžiausią aukštį iš visų gyvų medžių rūšių?",
+    "correct": "Sekvoja (coast redwood)",
+    "wrong": [
+      "Kaliforninė sekvoja (giant sequoia)",
+      "Daglazija",
+      "Eukaliptas"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Pakrantės sekvojos viršija 110 m aukštį."
+  },
+  {
+    "q": "Kurioje kalnų grandinėje stūkso aukščiausia viršūnė už Himalajų ribų?",
+    "correct": "Karakorumas",
+    "wrong": [
+      "Andai",
+      "Pamirai",
+      "Kordiljeros"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "K2 (8611 m) – Karakorume, ne Himalajuose."
+  },
+  {
+    "q": "Kuri jūra labiausiai nusenka dėl vandens pritekėjimo trūkumo ir garavimo?",
+    "correct": "Aralo jūra",
+    "wrong": [
+      "Kaspijos jūra",
+      "Negyvoji jūra",
+      "Azovo jūra"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "XX a. antroje pusėje drastiškai sumažėjo dėl upių nukreipimo."
+  },
+  {
+    "q": "Kuri sala laikoma didžiausiu koraliniu atolu pagal plotą?",
+    "correct": "Kiritimati",
+    "wrong": [
+      "Funafuti",
+      "Kwajalein",
+      "Aldabra"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Kiritimati (Kalėdų sala Kiribatyje) yra didžiausias koralinis atolas."
+  },
+  {
+    "q": "Kuris vitaminas daugiausia sintetinamas odoje veikiant saulės šviesai?",
+    "correct": "Vitaminas D",
+    "wrong": [
+      "Vitaminas C",
+      "Vitaminas B12",
+      "Vitaminas K"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "spinduliai inicijuoja vitamino D sintezę."
+  },
+  {
+    "q": "Kuris cheminis elementas yra skystas kambario temperatūroje, jei neskaičiuosime gyvsidabrio?",
+    "correct": "Bromas",
+    "wrong": [
+      "Galijus",
+      "Cezis",
+      "Indis"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Bromas skystas ~20–25 °C, galijus tirpsta kiek aukščiau."
+  },
+  {
+    "q": "Kuris miestų duetas yra sujungtas ilgiausiu geležinkelio maršrutu be persėdimų (klasikiniu maršrutu)?",
+    "correct": "Maskva–Vladivostokas",
+    "wrong": [
+      "Pekinas–Lasa",
+      "Čikaga–Los Andželas",
+      "Sidnėjus–Pertas"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Transsibiro magistralė – ilgiausias nepertraukiamas maršrutas."
+  },
+  {
+    "q": "Kuris vandens telkinys laikomas seniausiu gėlo vandens ežeru?",
+    "correct": "Bajkalas",
+    "wrong": [
+      "Tanganika",
+      "Titikaka",
+      "Malavio ežeras"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Bajkalas yra labai senas tektoninės kilmės ežeras."
+  },
+  {
+    "q": "Kuri žemyno dalis neturi vietinių gyvačių rūšių?",
+    "correct": "Visos išvardytos",
+    "wrong": [
+      "Airija",
+      "Islandija",
+      "Naujoji Zelandija"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Airijoje, Islandijoje ir Naujojoje Zelandijoje nėra vietinių gyvačių."
+  },
+  {
+    "q": "Kuri valstybė yra didžiausia kakavos pupelių gamintoja?",
+    "correct": "Kodas d'Ivuaro (Dramblio Kaulo Krantas)",
+    "wrong": [
+      "Brazilija",
+      "Indonezija",
+      "Gana"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Šalis nuolat pirmauja pasaulinėje kakavos rinkoje."
+  },
+  {
+    "q": "Kuris sąsiauris skiria Aziją nuo Šiaurės Amerikos?",
+    "correct": "Beringo",
+    "wrong": [
+      "Malakos",
+      "Boso",
+      "Hormuzo"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Beringo sąsiauris jungia Čiukčių ir Beringo jūras."
+  },
+  {
+    "q": "Kuri masto sistema šiandien naudojama oficialiai nusakyti žemės drebėjimų momentinę magnitudę?",
+    "correct": "Momentinė magnitudė (Mw)",
+    "wrong": [
+      "Rihterio",
+      "Merkalio",
+      "Kanamorio"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Mw pakeitė klasikinę Rihterio skalę dideliems įvykiams."
+  },
+  {
+    "q": "Kuri valstybė laikoma didžiausia archipelago valstybe pagal salų skaičių, turinti vien tik salinę teritoriją?",
+    "correct": "Indonezija",
+    "wrong": [
+      "Filipinai",
+      "Japonija",
+      "Norvegija"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Indonezija – archipelago valstybė su tūkstančiais salų."
+  },
+  {
+    "q": "Kuris miestas garsėja pasaulyje didžiausiu miesto parke esančiu aitvarų festivaliu pietų Azijoje?",
+    "correct": "Ahmedabadas",
+    "wrong": [
+      "Kolombas",
+      "Daka",
+      "Katmandu"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Indijos Ahmedabade vyksta tarptautinis aitvarų festivalis (Uttarayan)."
+  },
+  {
+    "q": "Kuri sala vandenyne garsėja kaip „pasaulio prieskonių sala“ dėl muskato ir gvazdikėlių istorijos?",
+    "correct": "Malukų",
+    "wrong": [
+      "Zanzibaro",
+      "Reunjono",
+      "Mahe"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Malukai Indonezijoje buvo ankstyvas prieskonių prekybos centras."
+  },
+  {
+    "q": "Kuri valstybė įteisino elektroninį piliečių identitetą kaip nacionalinę paslaugą ankstyviausiai Europoje?",
+    "correct": "Estija",
+    "wrong": [
+      "Suomija",
+      "Danija",
+      "Nyderlandai"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Estijos e-ID ir e-valstybė tapo tarptautiniu standartu."
+  },
+  {
+    "q": "Kuri dykuma laikoma sausiausia pagal kritulius ilgalaikėje skalėje?",
+    "correct": "Atakama",
+    "wrong": [
+      "Namibo",
+      "Sahara",
+      "Gobis"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Yra vietų, kur per dešimtmečius beveik nelijo."
+  },
+  {
+    "q": "Kuri žuvų grupė garsėja ilgiausiomis sezoninėmis migracijomis į Nerštavietes Sargaso regione?",
+    "correct": "Europiniai unguriai",
+    "wrong": [
+      "Lašišos",
+      "Skumbrės",
+      "Paltusai"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Unguriai migruoja tūkstančius kilometrų iki Sargaso jūros."
+  },
+  {
+    "q": "Kuris žemės paviršiaus taškas Afrikoje yra žemiausias?",
+    "correct": "Asalo ežeras",
+    "wrong": [
+      "Kataros įduba",
+      "Džibučio įduba",
+      "Danakilio įduba"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Džibutyje esantis Asalo ežeras ~155 m žemiau jūros lygio."
+  },
+  {
+    "q": "Kuri valstybė pirmoji paleido dirbtinį Žemės palydovą?",
+    "correct": "SSRS",
+    "wrong": [
+      "JAV",
+      "Prancūzija",
+      "Japonija"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "„Sputnik 1“ 1957 m. pradėjo kosminę erą."
+  },
+  {
+    "q": "Kuris branduolio dalelės tipas neturi elektrinio krūvio?",
+    "correct": "Neutronas",
+    "wrong": [
+      "Protonas",
+      "Elektronas",
+      "Pozitronas"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Neutronas yra neutralus; protonas teigiamas, elektronas neigiamas."
+  },
+  {
+    "q": "Kuri sala Ramiajame vandenyne garsėja akmeninėmis pinigų monolitų plokštėmis?",
+    "correct": "Japas",
+    "wrong": [
+      "Guamas",
+      "Taiti",
+      "Nauru"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Rai akmenys – tradicinė pinigų forma Mikronezijoje."
+  },
+  {
+    "q": "Kuri kalba turi klikčiojamuosius priebalsius ir priklauso khoisanų grupei?",
+    "correct": "Nama",
+    "wrong": [
+      "Zulu",
+      "Amharų",
+      "Somalių"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Khoisanų kalbose būdingi „klik“ garsai."
+  },
+  {
+    "q": "Kuri dykuma Kinijoje garsėja „dainuojančiomis“ kopomis ir Mėnulio ežeru?",
+    "correct": "Taklamakano",
+    "wrong": [
+      "Gobis",
+      "Badain Džaranas",
+      "Ordoso"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Viena didžiausių smėlio dykumų Azijoje."
+  },
+  {
+    "q": "Kurioje šalyje atsirado skaitymo ir rašymo kryptis iš dešinės į kairę aramėjų tradicijoje?",
+    "correct": "Sirija",
+    "wrong": [
+      "Irakas",
+      "Libanas",
+      "Palestina"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Rašto tradicija Levante paplito plačiai"
+  },
+  {
+    "q": "Kurioje šalyje gimė flamenco muzika ir šokis?",
+    "correct": "Ispanija",
+    "wrong": [
+      "Portugalija",
+      "Prancūzija",
+      "Marokas"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Andalūzija flamenco ištakos."
+  },
+  {
+    "q": "Kuris mineralas yra pagrindinis smėlio stikliškumo komponentas?",
+    "correct": "Kvarcas",
+    "wrong": [
+      "Kalcitas",
+      "Feldšpatas",
+      "Gipsas"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "SiO₂ grūdai dominuoja daugelyje smėlių."
+  },
+  {
+    "q": "Kuri valstybė turi didžiausią naftos atsargų kiekį pasaulyje pagal patvirtintas atsargas?",
+    "correct": "Venesuela",
+    "wrong": [
+      "Saudo Arabija",
+      "Kanada",
+      "Iranas"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Orinoko baseino sunkioji nafta sudaro dideles atsargas."
+  },
+  {
+    "q": "Kuri jūros rūšis laikoma jauniausia geologine prasme Europoje?",
+    "correct": "Baltijos jūra",
+    "wrong": [
+      "Juodoji jūra",
+      "Viduržemio jūra",
+      "Adrijos jūra"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Susiformavo po paskutinio ledynmečio."
+  },
+  {
+    "q": "Kuri kalnų viršukalnė yra aukščiausia Afrikoje?\"",
+    "correct": "Kilimandžaras",
+    "wrong": [
+      "Kenija",
+      "Ruwenzori (Stanley)",
+      "Mulu"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "5895 m, Tanzanijoje"
+  },
+  {
+    "q": "Kuri Europos sala turi aktyvų ugnikalnį Etna?",
+    "correct": "Sicilija",
+    "wrong": [
+      "Sardinija",
+      "Kreta",
+      "Kipras"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Etna, didžiausias aktyvus ugnikalnis Europoje."
+  },
+  {
+    "q": "Kuri valstybė turi aukščiausią krioklį pasaulyje pagal laisvo kritimo aukštį?",
+    "correct": "Venesuela",
+    "wrong": [
+      "Brazilija",
+      "Zimbabvė",
+      "Kanada"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Anchelio (Angel) krioklys 900 m."
+  },
+  {
+    "q": "Kuri šalis yra „dvipolis“ valstybės valdymo prasme, turi dvi sostines be vienos oficialios konstitucinės sostinės?",
+    "correct": "Pietų Afrika",
+    "wrong": [
+      "Bolivija",
+      "Nyderlandai",
+      "Malaizija"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Keiptaunas ir Blumfonteinas ."
+  },
+  {
+    "q": "Kuri šalis pagal plotą didžiausia Afrikoje?",
+    "correct": "Alžyras",
+    "wrong": [
+      "Sudanas",
+      "Libija",
+      "Kongo"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Nuo Sudano pasidalijimo 2011 m. Alžyras tapo didžiausias."
+  },
+  {
+    "q": "Kuri valstybė pirmoji pripažino JAV nepriklausomybę XVIII a.?",
+    "correct": "Marokas",
+    "wrong": [
+      "Prancūzija",
+      "Nyderlandai",
+      "Ispanija"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Sultonas Mohamedas III 1777 m. pripažino JAV nepriklausomybę."
+  },
+  {
+    "q": "Kurioje šalyje buvo sukurta pirmoji moderni spausdinimo mašina su judančiomis raidėmis Europoje?",
+    "correct": "Vokietijoje",
+    "wrong": [
+      "Prancūzijoje",
+      "Italijoje",
+      "Anglijoje"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Johannesas Gutenbergas sukūrė spaudos presą XV a. viduryje."
+  },
+  {
+    "q": "Kuri gyvūnų rūšis laikoma ilgiausiai migruojančia žinduolių rūšimi?",
+    "correct": "Kuprotasis banginis",
+    "wrong": [
+      "Mėlynasis banginis",
+      "Delfinas",
+      "Orka"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Kuprotieji banginiai kasmet migruoja tūkstančius kilometrų tarp maitinimosi ir veisimosi vietų."
+  },
+  {
+    "q": "Kuri kalnų viršukalnė yra aukščiausia Šiaurės Amerikoje?",
+    "correct": "Denalis",
+    "wrong": [
+      "Logano kalnas",
+      "Orizaba",
+      "Rainiero kalnas"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Denalis (6190 m) Aliaskoje yra aukščiausias Šiaurės Amerikos taškas."
+  },
+  {
+    "q": "Kurioje šalyje kilo pramoninė revoliucija XVIII a.?",
+    "correct": "Jungtinėje Karalystėje",
+    "wrong": [
+      "Prancūzijoje",
+      "Vokietijoje",
+      "Belgijoje"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Pramoninė revoliucija prasidėjo Anglijoje, paskui išplito Europoje."
+  },
+  {
+    "q": "Kuris pasaulio muziejus yra lankomiausias?",
+    "correct": "Luvras",
+    "wrong": [
+      "Metropoliteno muziejus",
+      "Britų muziejus",
+      "Vatikano muziejai"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Paryžiaus Luvras kasmet sulaukia dešimčių milijonų lankytojų."
+  },
+  {
+    "q": "Kurioje šalyje buvo išrasta dinamitas?",
+    "correct": "Švedijoje",
+    "wrong": [
+      "Vokietijoje",
+      "JAV",
+      "Kinijoje"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Alfredas Nobelis išrado dinamitą Švedijoje 1867 m."
+  },
+  {
+    "q": "Kurioje šalyje yra didžiausias koralinis rifas pasaulyje?",
+    "correct": "Australijoje",
+    "wrong": [
+      "Indonezijoje",
+      "Filipinuose",
+      "Maldyvuose"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Didysis barjerinis rifas tęsiasi daugiau nei 2000 km palei Australijos pakrantę."
+  },
+  {
+    "q": "Kuri upė laikoma švenčiausia hinduistams?",
+    "correct": "Gangas",
+    "wrong": [
+      "Bramaputra",
+      "Indas",
+      "Godavarė"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Gango upė laikoma šventa ir turi didelę religinę reikšmę"
+  },
+  {
+    "q": "Kuri valstybė Europoje neturi oro uosto?",
+    "correct": "Andora",
+    "wrong": [
+      "San Marinas",
+      "Liuksemburgas",
+      "Monakas"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Andoroje nėra oro uosto, naudojami kaimyninių šalių oro uostai."
+  },
+  {
+    "q": "Kuri šalis turi ilgiausią pakrantę pasaulyje?",
+    "correct": "Kanada",
+    "wrong": [
+      "Rusija",
+      "Indonezija",
+      "Australija"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Kanados pakrantės ilgis viršija 200 000 km."
+  },
+  {
+    "q": "Kuri šalis pirmoji panaikino vergiją valstybiniu mastu?",
+    "correct": "Haitis",
+    "wrong": [
+      "Didžioji Britanija",
+      "Prancūzija",
+      "JAV"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Po 1791–1804 m. revoliucijos Haitis tapo pirmąja šalimi, panaikinusia vergiją visoje teritorijoje."
+  },
+  {
+    "q": "Kuris gyvūnas laikomas didžiausiu sausumos plėšrūnu?",
+    "correct": "Baltasis lokys",
+    "wrong": [
+      "Liūtas",
+      "Tigras",
+      "Grizlis"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Suaugęs patinas gali sverti iki 700 kg."
+  },
+  {
+    "q": "Kuri valstybė laikoma pasaulinio šachmatų žaidimo lydere pagal čempionų skaičių?",
+    "correct": "Rusija/SSRS",
+    "wrong": [
+      "JAV",
+      "Indija",
+      "Vokietija"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "SSRS šachmatų mokykla dominavo didžiąją XX a. dalį."
+  },
+  {
+    "q": "Kurioje šalyje kilo samba šokis?",
+    "correct": "Brazilijoje",
+    "wrong": [
+      "Ispanijoje",
+      "Portugalijoje",
+      "Kuboje"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Samba šokis atsirado iš afrikietiškų ritmų ir tapo Rio simboliu"
+  },
+  {
+    "q": "Kuri šalis laikoma modernios operos gimtine?",
+    "correct": "Italija",
+    "wrong": [
+      "Prancūzija",
+      "Vokietija",
+      "Austrija"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Pirmosios operos buvo sukurtos Florencijoje XVI–XVII a. sandūroje"
+  },
+  {
+    "q": "Kuri planeta turi daugiausiai palydovų?",
+    "correct": "Saturnas",
+    "wrong": [
+      "Jupiteris",
+      "Marsas",
+      "Uranas"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Saturnas šiuo metu turi daugiau nei 80 patvirtintų palydovų."
+  },
+  {
+    "q": "Kuri upė teka per Paryžių?",
+    "correct": "Sena",
+    "wrong": [
+      "Rona",
+      "Dunojaus",
+      "Dunojaus"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Sena teka per Paryžiaus centrą ir yra miesto simbolis."
+  },
+  {
+    "q": "Kuri šalis garsėja Moai statulomis?",
+    "correct": "Čilė",
+    "wrong": [
+      "Peru",
+      "Japonija",
+      "Meksika"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Velykų sala, priklausanti Čilei, garsėja milžiniškomis Moai statulomis."
+  },
+  {
+    "q": "Kuris garsus fizikas suformulavo tris judėjimo dėsnius?",
+    "correct": "Izaokas Niutonas",
+    "wrong": [
+      "Albertas Einšteinas",
+      "Galilėjus",
+      "Nikola Tesla"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Niutono dėsniai sudaro klasikinės mechanikos pagrindą."
+  },
+  {
+    "q": "Kuris rašytojas parašė romaną „1984“?",
+    "correct": "George Orwell",
+    "wrong": [
+      "Aldous Huxley",
+      "Ray Bradbury",
+      "Jules Verne"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Romane vaizduojama totalitarinė ateities visuomenė."
+  },
+  {
+    "q": "Kuri valstybė turi seniausią rašytinę konstituciją, vis dar galiojančią šiandien?",
+    "correct": "JAV",
+    "wrong": [
+      "Šveicarija",
+      "Prancūzija",
+      "Japonija"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "1787 m. JAV konstitucija galioja iki šiol su pataisomis."
+  },
+  {
+    "q": "Kuri šalis laikoma modernios olimpinės ugnies estafetės pradėjimo vieta?",
+    "correct": "Vokietija",
+    "wrong": [
+      "Graikija",
+      "JAV",
+      "Prancūzija"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "1936 m. Berlyno olimpiadoje pirmą kartą buvo surengta ugnies estafetė."
+  },
+  {
+    "q": "Kuris garsus paveikslas buvo pavogtas iš Luvro 1911 m.?",
+    "correct": "Mona Liza",
+    "wrong": [
+      "Paskutinė vakarienė",
+      "Gernika",
+      "Rėkiantis"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Vincenzo Perugia pavogė paveikslą ir po dvejų metų buvo sučiuptas."
+  },
+  {
+    "q": "Kurioje šalyje kilo tango šokis?",
+    "correct": "Argentinoje",
+    "wrong": [
+      "Brazilijoje",
+      "Ispanijoje",
+      "Portugalijoje"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Tango atsirado XIX a. pabaigoje Buenos Airėse, darbininkų rajonuose."
+  },
+  {
+    "q": "Kuri šalis garsėja festivalio „Bėgimas su buliais“ tradicija?",
+    "correct": "Ispanija",
+    "wrong": [
+      "Meksika",
+      "Portugalija",
+      "Argentina"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Pamplonos festivalis vyksta nuo XIV a."
+  },
+  {
+    "q": "Kuri kalnų grandinė driekiasi per JAV vakarinę pakrantę?",
+    "correct": "Siera Nevados",
+    "wrong": [
+      "Apalačai",
+      "Andai",
+      "Alpės"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Siera Nevados grandinė tęsiasi per Kaliforniją ir Nevados valstiją."
+  },
+  {
+    "q": "Kuri šalis turi ilgiausią geležinkelio tunelį pasaulyje?",
+    "correct": "Šveicarija",
+    "wrong": [
+      "Japonija",
+      "Kinija",
+      "Norvegija"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Gothardo bazinis tunelis siekia 57 km."
+  },
+  {
+    "q": "Kuri „mažiausia“ žemyno valstybė neturi sausumos sienos su jokiu kitu žemynu?",
+    "correct": "Australija",
+    "wrong": [
+      "Antarktida",
+      "Grenlandija",
+      "Madagaskaras"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Australija yra žemynas ir valstybė; Grenlandija ir Madagaskaras salos, Antarktida ne valstybė."
+  },
+  {
+    "q": "Kuri Europos valstybė oficialiai turi sostinę X, bet vyriausybė dirba Y mieste?",
+    "correct": "Nyderlandai",
+    "wrong": [
+      "Šveicarija",
+      "Vokietija",
+      "Belgija"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Sostinė Amsterdamas, vyriausybė Hagoje."
+  },
+  {
+    "q": "Kuris metalas turi didžiausią elektrinį laidumą, bet dažniau laidininkams naudojamas kitas?",
+    "correct": "Sidabras",
+    "wrong": [
+      "Vario",
+      "Auksas",
+      "Auksas"
+    ],
+    "cat": "Bendra",
+    "diff": "medium",
+    "note": "Sidabras brangus ir chemiškai jautresnis; praktikoje dažniau varis naudojamas"
+  },
+  {
+    "q": "Kuriame amžiuje pirmą kartą rašytiniuose šaltiniuose paminėta Lietuva?",
+    "correct": "XI",
+    "wrong": [
+      "IX",
+      "X",
+      "XII"
+    ],
+    "note": "Lietuva pirmą kartą paminėta 1009 m.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri Lietuvos sostinė buvo pirmoji iki Vilniaus? XIII a.",
+    "correct": "Kernavė",
+    "wrong": [
+      "Kaunas",
+      "Trakai",
+      "Šiauliai"
+    ],
+    "note": "Kernavė laikoma pirmąja Lietuvos sostine XIII a.",
+    "cat": ""
+  },
+  {
+    "q": "Kas buvo vadinamas „Lietuvos metraštininku“?",
+    "correct": "Maciejus Stryjkowskis",
+    "wrong": [
+      "Martynas Mažvydas",
+      "Albertas Goštautas",
+      "Kristijonas Donelaitis"
+    ],
+    "note": "Maciejus Stryjkowskis parašė pirmąją spausdintą Lietuvos istoriją.",
+    "cat": ""
+  },
+  {
+    "q": "Kuriame amžiuje buvo išleistas pirmasis lietuviškas elementorius?",
+    "correct": "XVI a.",
+    "wrong": [
+      "XV a.",
+      "XVII a.",
+      "XVIII a."
+    ],
+    "note": "1547 m. Martynas Mažvydas išleido „Katekizmą“ – pirmąją lietuvišką knygą.",
+    "cat": ""
+  },
+  {
+    "q": "Kas buvo Lietuvos Didžiosios Kunigaikštystės kancleris, parengęs 1529 m. Statutą?",
+    "correct": "Albertas Goštautas",
+    "wrong": [
+      "Jonas Goštautas",
+      "Radvila Juodasis",
+      "Petras Skarga"
+    ],
+    "note": "Albertas Goštautas. Pirmasis Lietuvos Statutas buvo vienas pažangiausių teisynų Europoje.",
+    "cat": ""
+  },
+  {
+    "q": "Kada buvo pasirašyta Lietuvos ir Lenkijos Krėvos sutartis?",
+    "correct": "1385",
+    "wrong": [
+      "1367",
+      "1392",
+      "1401"
+    ],
+    "note": "1385 m. Krėvos sutartis sudarė sąlygas Jogailai tapti Lenkijos karaliumi.",
+    "cat": ""
+  },
+  {
+    "q": "Kuriame mieste 1864 m. buvo pakartas sukilimo vadas Z. Sierakauskas?",
+    "correct": "Kaune",
+    "wrong": [
+      "Vilniuje",
+      "Gardine",
+      "Rygoje"
+    ],
+    "note": "Kaune . Zigmantas Sierakauskas buvo vienas iš 1863 m. sukilimo vadų Lietuvoje.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri partija XX a. pradžioje Lietuvoje pirmoji skelbė nepriklausomybės idėją?",
+    "correct": "Lietuvos socialdemokratų partija",
+    "wrong": [
+      "Tautininkų sąjunga",
+      "Lenkų liaudies partija",
+      "Krikščionių demokratų partija"
+    ],
+    "note": "LSDP dar XIX a. pabaigoje kėlė tautinės nepriklausomybės klausimą.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri Lietuvos kariuomenės pergalė 1919 m. sustabdė bolševikų veržimąsi į šalies gilumą?",
+    "correct": "Ukmergės mūšis",
+    "wrong": [
+      "Širvintų mūšis",
+      "Žalgirio mūšis",
+      "Rygos mūšis"
+    ],
+    "note": "1919 m. Ukmergės mūšyje lietuviai sustabdė bolševikus.",
+    "cat": ""
+  },
+  {
+    "q": "Kas buvo Lietuvos partizanų vadinamas „Vanagu“?",
+    "correct": "Adolfas Ramanauskas",
+    "wrong": [
+      "Juozas Lukša",
+      "Jonas Žemaitis",
+      "Antanas Kraujelis"
+    ],
+    "note": "Adolfas Ramanauskas-Vanagas buvo vienas žymiausių rezistencijos vadų.",
+    "cat": ""
+  },
+  {
+    "q": "Kurioje pilyje buvo nužudytas Lietuvos didysis kunigaikštis Kęstutis?",
+    "correct": "Krėvos pilyje",
+    "wrong": [
+      "Vilniaus pilyje",
+      "Trakų pilyje",
+      "Gardino pilyje"
+    ],
+    "note": "1382 m. Krėvos pilyje Kęstutis žuvo įkalintas Jogailos šalininkų.",
+    "cat": ""
+  },
+  {
+    "q": "Klausimas: Kuris Lietuvos Didysis Kunigaikštis įvedė pirmąjį Lietuvos pinigą – sidabrinį dinarą?",
+    "correct": "Vytautas",
+    "wrong": [
+      "Algirdas",
+      "Mindaugas",
+      "Jogaila"
+    ],
+    "note": "XV a. pradžioje Vytautas įvedė pirmuosius lietuviškus pinigus",
+    "cat": ""
+  },
+  {
+    "q": "Kuri Lietuvos didikų giminė buvo viena įtakingiausių XVI–XVII a.?",
+    "correct": "Radvila",
+    "wrong": [
+      "Sapiega",
+      "Tiškevičius",
+      "Goštautas"
+    ],
+    "note": "Radvilos turėjo didžiules žemes ir lemiamą įtaką politikoje.",
+    "cat": ""
+  },
+  {
+    "q": "Kas buvo pirmasis lietuvių poetas, rašęs lotynų kalba ir vadinamas „Lietuvių Horacijumi“?",
+    "correct": "Motiejus Kazimieras Sarbievijus",
+    "wrong": [
+      "Kristijonas Donelaitis",
+      "Martynas Mažvydas",
+      "Mikalojus Daukša"
+    ],
+    "note": "Sarbievijus XVII a. buvo pripažintas poetas visoje Europoje.",
+    "cat": ""
+  },
+  {
+    "q": "Koks buvo pirmasis lietuviškas laikraštis, leistas užsienyje per spaudos draudimą?",
+    "correct": "„Aušra“",
+    "wrong": [
+      "„Varpas“",
+      "„Šviesa“",
+      "„Lietuvos Aidas“"
+    ],
+    "note": "„Aušra“ leista 1883–1886 m. Ragainėje ir Tilžėje.",
+    "cat": ""
+  },
+  {
+    "q": "Kas buvo pirmasis Lietuvos partizanų vyriausiasis vadovas po Antrojo pasaulinio karo?",
+    "correct": "Jonas Žemaitis-Vytautas",
+    "wrong": [
+      "Adolfas Ramanauskas-Vanagas",
+      "Juozas Lukša-Daumantas",
+      "Antanas Kraujelis-Siaubūnas"
+    ],
+    "note": "Jonas Žemaitis buvo Lietuvos laisvės kovos sąjūdžio tarybos prezidiumo pirmininkas.",
+    "cat": ""
+  },
+  {
+    "q": "Kas buvo pirmasis žmogus, išvertęs Šventąjį Raštą į lietuvių kalbą?",
+    "correct": "Jonas Bretkūnas",
+    "wrong": [
+      "Mikalojus Daukša",
+      "Martynas Mažvydas",
+      "Kristijonas Donelaitis"
+    ],
+    "note": "Jonas Bretkūnas XVI a. pabaigoje išvertė visą Bibliją, nors ji nebuvo išspausdinta.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris Lietuvos rašytojas parašė pirmąją lietuvišką poeziją „Metai“?",
+    "correct": "Kristijonas Donelaitis",
+    "wrong": [
+      "Jonas Jablonskis",
+      "Antanas Baranauskas",
+      "Vincas Kudirka"
+    ],
+    "note": "„Metai“ parašyti XVIII a. viduryje, tai lietuvių literatūros klasika.",
+    "cat": ""
+  },
+  {
+    "q": "Kuriais metais buvo įvesta nacionalinė valiuta – litas?",
+    "correct": "1922",
+    "wrong": [
+      "1920",
+      "1925",
+      "1927"
+    ],
+    "note": "1922 m. įvestas litas, susietas su auksu.",
+    "cat": ""
+  },
+  {
+    "q": "Kas vadinamas pirmuoju profesionaliu Lietuvos istoriku?",
+    "correct": "Simonas Daukantas",
+    "wrong": [
+      "Jonas Basanavičius",
+      "Jonas Jablonskis",
+      "Motiejus Valančius"
+    ],
+    "note": "Simonas Daukantas XIX a. parašė lietuvių tautos istorijas lietuvių kalba.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri Lietuvos vieta buvo paskutinė tvirtovė, pasidavusi kryžiuočiams?",
+    "correct": "Pilėnai",
+    "wrong": [
+      "Klaipėda",
+      "Medininkai",
+      "Kaunas"
+    ],
+    "note": "Pilėnų gynėjai 1336 m. pasirinko mirtį vietoj nelaisvės.",
+    "cat": ""
+  },
+  {
+    "q": "Kuriame mūšyje 1514 m. lietuviai ir lenkai sumušė Maskvos kariuomenę?",
+    "correct": "Oršos mūšis",
+    "wrong": [
+      "Pabaisko mūšis",
+      "Salaspilio mūšis",
+      "Durbės mūšis"
+    ],
+    "note": "Oršos mūšis 1514 m. buvo svarbi Lietuvos ir Lenkijos pergalė prieš Maskvą.",
+    "cat": ""
+  },
+  {
+    "q": "Kas vadinamas pirmuoju lietuvių istorijos rašytoju, sukūrusiu „Lietuvos istoriją“?",
+    "correct": "Simonas Daukantas",
+    "wrong": [
+      "Jonas Jablonskis",
+      "Motiejus Valančius",
+      "Martynas Mažvydas"
+    ],
+    "note": "Daukantas XIX a. pirmasis parašė istoriją lietuvių kalba.",
+    "cat": ""
+  },
+  {
+    "q": "Kas buvo Lietuvos prezidentas, pasirašęs 1990 m. kovo 11-osios Nepriklausomybės aktą?",
+    "correct": "Tarybos nariai",
+    "wrong": [
+      "Algirdas Brazauskas",
+      "Vytautas Landsbergis",
+      "Vytautas Landsbergis"
+    ],
+    "note": "Aktą pasirašė visi Tarybos nariai, vadovaujami Vytauto Landsbergio.",
+    "cat": ""
+  },
+  {
+    "q": "Kuriame mieste gimė dailininkas ir kompozitorius Mikalojus Konstantinas Čiurlionis?",
+    "correct": "Druskininkuose",
+    "wrong": [
+      "Kaune",
+      "Vilniuje",
+      "Panevėžyje"
+    ],
+    "note": "Čiurlionis gimė 1875 m. Druskininkuose.",
+    "cat": ""
+  },
+  {
+    "q": "Kuriais metais vyko „Baltijos kelias“?",
+    "correct": "1989",
+    "wrong": [
+      "1988",
+      "1987",
+      "1990"
+    ],
+    "note": "1989 m. rugpjūčio 23 d. Baltijos šalių gyventojai sudarė 600 km gyvą grandinę.",
+    "cat": ""
+  },
+  {
+    "q": "Kas buvo pirmasis Lietuvos olimpinis čempionas?",
+    "correct": "Romas Ubartas",
+    "wrong": [
+      "Virgilijus Alekna",
+      "Arvydas Sabonis",
+      "Dainius Šalenga"
+    ],
+    "note": "Romas Ubartas 1992 m. Barselonoje laimėjo auksą disko metime.",
+    "cat": ""
+  },
+  {
+    "q": "Kuriais metais buvo pastatytas Vilniaus televizijos bokštas?",
+    "correct": "1974",
+    "wrong": [
+      "1975",
+      "1978",
+      "1971"
+    ],
+    "note": "TV bokštas iškilo 1974 m., tapo 1991 m. Sausio įvykių simboliu.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri kalba buvo pagrindinė raštvedyboje LDK iki XVII a.?",
+    "correct": "Rusėnų",
+    "wrong": [
+      "Lietuvių",
+      "Lenkų",
+      "Lotynų"
+    ],
+    "note": "Raštvedybai daugiausia naudota rusėnų kalba.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri upė yra ilgiausia pasaulyje?",
+    "correct": "Amazonė",
+    "wrong": [
+      "Nilas",
+      "Jangdzė",
+      "Misisipė"
+    ],
+    "note": "Amazonė dažnai ginčijama su Nilu, bet naujausi matavimai rodo, kad Amazonė ilgesnė.",
+    "cat": ""
+  },
+  {
+    "q": "Kurioje šalyje buvo išrastas šachmatų žaidimas?",
+    "correct": "Indijoje",
+    "wrong": [
+      "Persijoje",
+      "Kinijoje",
+      "Arabijoje"
+    ],
+    "note": "Šachmatai kilo iš Indijos žaidimo „čaturanga“.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris žmogus pirmasis nusileido Mėnulyje?",
+    "correct": "Neil Armstrong",
+    "wrong": [
+      "Buzz Aldrin",
+      "Jurijus Gagarinas",
+      "Michael Collins"
+    ],
+    "note": "1969 m. liepos 20 d. Neil Armstrong žengė pirmasis.",
+    "cat": ""
+  },
+  {
+    "q": "Kurioje šalyje kilo renesanso kultūra?",
+    "correct": "Italijoje",
+    "wrong": [
+      "Prancūzijoje",
+      "Ispanijoje",
+      "Anglijoje"
+    ],
+    "note": "Renesansas gimė Italijoje XIV a.",
+    "cat": ""
+  },
+  {
+    "q": "Kas buvo pirmasis žmogus, išskridęs į kosmosą?",
+    "correct": "Jurijus Gagarinas",
+    "wrong": [
+      "Neil Armstrong",
+      "Germanas Titovas",
+      "Valentina Tereškova"
+    ],
+    "note": "urijus Gagarinas 1961 m. balandžio 12 d. aplink Žemę apskrido „Vostok-1“.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri yra didžiausia pasaulio sala?",
+    "correct": "Grenlandija",
+    "wrong": [
+      "Australija",
+      "Naujoji Gvinėja",
+      "Borneo"
+    ],
+    "note": "Australija laikoma žemynu, todėl didžiausia sala yra Grenlandija.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri žmogaus kūno dalis turi daugiausia kaulų?",
+    "correct": "Ranka",
+    "wrong": [
+      "Pėda",
+      "Stuburas",
+      "Galva"
+    ],
+    "note": "rankoje 27, pėdoje 26 kaulai – abu variantai arti, bet rankoje daugiau.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri jūra yra giliausia pasaulyje?",
+    "correct": "Filipinų",
+    "wrong": [
+      "Juodoji",
+      "Viduržemio",
+      "Karibų"
+    ],
+    "note": "Filipinų jūra giliausia pasaulyje, joje – Marianų įduba.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis vadinama „Tūkstančio ežerų kraštu“?",
+    "correct": "Suomija",
+    "wrong": [
+      "Kanada",
+      "Švedija",
+      "Norvegija"
+    ],
+    "note": "Suomija turi daugiau kaip 180 tūkstančių ežerų.",
+    "cat": ""
+  },
+  {
+    "q": "Koks yra didžiausias žmogaus vidaus organas?",
+    "correct": "Kepenys",
+    "wrong": [
+      "Plaučiai",
+      "Širdis",
+      "Inkstai"
+    ],
+    "note": "Kepenys yra didžiausias vidaus organas, apie 1,5 kg.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis garsėja kaip kavos kilmės vieta?",
+    "correct": "Etiopija",
+    "wrong": [
+      "Brazilija",
+      "Kolumbija",
+      "Jemenas"
+    ],
+    "note": "Kavos augalas kilęs iš Etiopijos regiono.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis pagamina daugiausia šokolado pasaulyje?",
+    "correct": "Vokietija",
+    "wrong": [
+      "Šveicarija",
+      "Belgija",
+      "Prancūzija"
+    ],
+    "note": "Vokietija yra didžiausia šokolado gamintoja Europoje ir pasaulyje.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri upė teka per Londoną?",
+    "correct": "Temzė",
+    "wrong": [
+      "Sena",
+      "Elbė",
+      "Reinas"
+    ],
+    "note": "Temzė yra svarbiausia Londono upė.",
+    "cat": ""
+  },
+  {
+    "q": "Kurioje šalyje gimė „Olimpinės žaidynės“?",
+    "correct": "Graikijoje",
+    "wrong": [
+      "Italijoje",
+      "Egipte",
+      "Turkijoje"
+    ],
+    "note": "Pirmosios olimpinės žaidynės vyko Senovės Graikijoje, Olimpijoje.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis pirmoji panaudojo paraką kare?",
+    "correct": "Kinija",
+    "wrong": [
+      "Mongolija",
+      "Persija",
+      "Japonija"
+    ],
+    "note": "Parakas išrastas Kinijoje, ir ten pradėtas naudoti karuose.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri valstybė yra didžiausia pagal plotą?",
+    "correct": "Rusija",
+    "wrong": [
+      "Kanada",
+      "Kinija",
+      "JAV"
+    ],
+    "note": "Rusija užima daugiau nei 17 mln. km².",
+    "cat": ""
+  },
+  {
+    "q": "Kuri jūra yra sūriausia pasaulyje?",
+    "correct": "Raudonoji",
+    "wrong": [
+      "Juodoji",
+      "Viduržemio",
+      "Baltijos"
+    ],
+    "note": "Raudonoji jūra turi didžiausią druskingumą dėl garavimo.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris žmogaus raumuo yra stipriausias pagal santykinę jėgą?",
+    "correct": "Liežuvis",
+    "wrong": [
+      "Širdis",
+      "Šlaunies raumuo",
+      "Dvigalvis žasto raumuo"
+    ],
+    "note": "Liežuvis, nors mažas, yra stipriausias pagal savo dydį.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis turi daugiausia salų?",
+    "correct": "Švedija",
+    "wrong": [
+      "Norvegija",
+      "Indonezija",
+      "Filipinai"
+    ],
+    "note": "Švedija turi virš 260 tūkstančių salų – daugiau nei bet kuri kita valstybė.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis pirmoji suteikė moterims teisę balsuoti?",
+    "correct": "Naujoji Zelandija",
+    "wrong": [
+      "Suomija",
+      "Norvegija",
+      "Šveicarija"
+    ],
+    "note": "1893 m. Naujoji Zelandija pirmoji įteisino moterų rinkimų teisę.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis yra didžiausia kavos eksportuotoja pasaulyje?",
+    "correct": "Brazilija",
+    "wrong": [
+      "Kolumbija",
+      "Vietnamas",
+      "Etiopija"
+    ],
+    "note": "Brazilija jau daugiau nei 150 metų pirmauja kavos eksporto rinkoje.",
+    "cat": ""
+  },
+  {
+    "q": "Koks gyvūnas yra Australijos simbolis?",
+    "correct": "Kengūra",
+    "wrong": [
+      "Koala",
+      "Emu",
+      "Dingo"
+    ],
+    "note": "Kengūra yra nacionalinis Australijos simbolis.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris vandenynas mažiausias?",
+    "correct": "Arkties",
+    "wrong": [
+      "Atlanto",
+      "Indijos",
+      "Ramusis"
+    ],
+    "note": "Arkties vandenynas yra mažiausias.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri iš šių kalbų priklauso romanų grupei?",
+    "correct": "Ispanų",
+    "wrong": [
+      "Lenkų",
+      "Vokiečių",
+      "Suomių"
+    ],
+    "note": "Ispanų kalba yra romanų grupės kalba.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri kalba turi daugiausiai raidžių savo abėcėlėje?",
+    "correct": "Khmerų",
+    "wrong": [
+      "Rusų",
+      "Graikų",
+      "Gruzinų"
+    ],
+    "note": "Khmerų kalbos abėcėlė turi 74 raides.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis garsėja didžiausiu pasaulyje piramidžių skaičiumi?",
+    "correct": "Sudanas",
+    "wrong": [
+      "Egiptas",
+      "Meksika",
+      "Peru"
+    ],
+    "note": "Sudane piramidžių daugiau nei Egipte.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris žmogaus organas gamina insuliną?",
+    "correct": "Kasos liauka",
+    "wrong": [
+      "Kepenys",
+      "Inkstai",
+      "Skydliaukė"
+    ],
+    "note": "Insuliną gamina kasa.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis yra didžiausia Afrikoje?",
+    "correct": "Alžyras",
+    "wrong": [
+      "Egiptas",
+      "Sudanas",
+      "Pietų Afrika"
+    ],
+    "note": "Alžyras užima daugiau nei 2,3 mln. km².",
+    "cat": ""
+  },
+  {
+    "q": "Kurioje šalyje kilo tango šokis?",
+    "correct": "Argentinoje",
+    "wrong": [
+      "Ispanijoje",
+      "Brazilijoje",
+      "Italijoje"
+    ],
+    "note": "Tango šaknys – Buenos Airėse, Argentina",
+    "cat": ""
+  },
+  {
+    "q": "Kuris metalas naudojamas elektros laiduose dėl laidumo?",
+    "correct": "Varis",
+    "wrong": [
+      "Geležis",
+      "Aliuminis",
+      "Sidabras"
+    ],
+    "note": "Varis dėl gerų laidumo savybių plačiausiai naudojamas.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis turi daugiausiai ugnikalnių?",
+    "correct": "Indonezija",
+    "wrong": [
+      "Japonija",
+      "Čilė",
+      "Islandija"
+    ],
+    "note": "Indonezijoje daugiau nei 130 aktyvių ugnikalnių",
+    "cat": ""
+  },
+  {
+    "q": "Koks yra greičiausias paukštis pasaulyje?",
+    "correct": "Sakalas keleivis",
+    "wrong": [
+      "Albatrosas",
+      "Erelis",
+      "Kolibris"
+    ],
+    "note": "Sakalas keleivis skrieja iki 390 km/h.",
+    "cat": ""
+  },
+  {
+    "q": "Kas yra Didžiojo kanjono valstija JAV?",
+    "correct": "Arizona",
+    "wrong": [
+      "Kalifornija",
+      "Nevada",
+      "Juta"
+    ],
+    "note": "Didysis kanjonas yra Arizonoje.",
+    "cat": ""
+  },
+  {
+    "q": "Kur yra didžiausias dykumos plotas pasaulyje?",
+    "correct": "Antarktida",
+    "wrong": [
+      "Sachara",
+      "Gobi",
+      "Kalaharis"
+    ],
+    "note": "Antarktida laikoma šalčiausia ir didžiausia dykuma.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri iš šių kalbų yra oficiali JT kalba?",
+    "correct": "Arabų",
+    "wrong": [
+      "Japonų",
+      "Hindi",
+      "Portugalų"
+    ],
+    "note": "T oficialios kalbos – anglų, prancūzų, ispanų, rusų, arabų, kinų.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris metalas yra brangiausias pasaulyje?",
+    "correct": "Rodis",
+    "wrong": [
+      "Auksas",
+      "Platina",
+      "Sidabras"
+    ],
+    "note": "Rodis rinkoje vertinamas aukščiau už auksą.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri valstybė yra mažiausia pasaulyje pagal plotą?",
+    "correct": "Vatikanas",
+    "wrong": [
+      "Monakas",
+      "San Marinas",
+      "Andora"
+    ],
+    "note": "Vatikanas – tik 0,44 km².",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis išrado šokoladą?",
+    "correct": "Meksika",
+    "wrong": [
+      "Šveicarija",
+      "Belgija",
+      "Peru"
+    ],
+    "note": "Majai ir actekai pirmieji gamino kakavos gėrimus.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris miestas vadinamas „Miestu ant septynių kalvų“?",
+    "correct": "Roma",
+    "wrong": [
+      "Paryžius",
+      "Stambulas",
+      "Maskva"
+    ],
+    "note": "Roma nuo senovės vadinama miestu ant 7 kalvų.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris Lietuvos ežeras yra didžiausias pagal plotą?",
+    "correct": "Drūkšiai",
+    "wrong": [
+      "Dusios ežeras",
+      "Galvė",
+      "Vištytis"
+    ],
+    "note": "Drūkšiai – 44,8 km².",
+    "cat": ""
+  },
+  {
+    "q": "Kurioje šalyje yra Sidnėjaus operos rūmai?",
+    "correct": "Australija",
+    "wrong": [
+      "Naujoji Zelandija",
+      "Kanada",
+      "JAV"
+    ],
+    "note": "Sidnėjaus opera – Australijos simbolis.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris miestas garsėja „Agurkų švente“?",
+    "correct": "Kėdainiai",
+    "wrong": [
+      "Kaunas",
+      "Alytus",
+      "Utena"
+    ],
+    "note": "Kėdainiai",
+    "cat": ""
+  },
+  {
+    "q": "Kurioje Lietuvos vietoje yra „Raganų kalnas“?",
+    "correct": "Neringoje",
+    "wrong": [
+      "Palangoje",
+      "Šventojoje",
+      "Anykščiuose"
+    ],
+    "note": "Neringos Raganų kalnas garsėja medžio skulptūromis.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris gėrimas yra seniausias pasaulyje alkoholinio tipo?",
+    "correct": "Alus",
+    "wrong": [
+      "Vynas",
+      "Midus",
+      "Degtinė"
+    ],
+    "note": "Alaus pėdsakai siekia 5000 m. pr. Kr.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris iš šių miestų yra aukščiausiai virš jūros lygio?",
+    "correct": "Meksikas",
+    "wrong": [
+      "Madridas",
+      "Roma",
+      "Atėnai"
+    ],
+    "note": "Meksikas ~2250 m; Madridas ~667 m; Roma ir Atėnai dar žemiau.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis turi daugiausiai oficialių kalbų?",
+    "correct": "Pietų Afrika",
+    "wrong": [
+      "Indija",
+      "Šveicarija",
+      "Kanada"
+    ],
+    "note": "Pietų Afrikoje – 11 oficialių kalbų.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris iš šių gyvūnų nėra žinduolis?",
+    "correct": "Krokodilas",
+    "wrong": [
+      "Delfinas",
+      "Ruonis",
+      "Šikšnosparnis"
+    ],
+    "note": "Krokodilas – roplys, kiti trys – žinduoliai.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri valstybė turi seniausią vėliavą, be didelių pakeitimų naudojamą iki šiol?",
+    "correct": "Danija",
+    "wrong": [
+      "Japonija",
+      "Graikija",
+      "Norvegija"
+    ],
+    "note": "Danijos „Dannebrog“ naudojama nuo XIII a.",
+    "cat": ""
+  },
+  {
+    "q": "Kurio iš šių miestų plotas yra didžiausias?",
+    "correct": "Maskva",
+    "wrong": [
+      "Tokijas",
+      "Niujorkas",
+      "Londonas"
+    ],
+    "note": "Maskvos plotas > 2500 km², daugiau nei kitų išvardintų.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris miestas turi didžiausią metro sistemą pagal ilgį?",
+    "correct": "Šanchajus",
+    "wrong": [
+      "Niujorkas",
+      "Pekinas",
+      "Maskva"
+    ],
+    "note": "Šanchajus viršijo 800 km ilgio.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri kalba turi daugiausiai žodžių?",
+    "correct": "Anglų",
+    "wrong": [
+      "Ispanų",
+      "Kinų",
+      "Arabų"
+    ],
+    "note": "Anglų kalboje daugiau nei milijonas žodžių įskaitant variantus.",
+    "cat": ""
+  },
+  {
+    "q": "Kurioje šalyje kilo olimpinės žaidynės?",
+    "correct": "Graikija",
+    "wrong": [
+      "Roma",
+      "Egiptas",
+      "Turkija"
+    ],
+    "note": "Senovės Graikijos Olimpijoje.",
+    "cat": ""
+  },
+  {
+    "q": "Kurioje šalyje yra Everesto kalnas?",
+    "correct": "Nepalas",
+    "wrong": [
+      "Indija",
+      "Butanas",
+      "Pakistanas"
+    ],
+    "note": "Everestas yra Nepalo ir Kinijos pasienyje.",
+    "cat": ""
+  },
+  {
+    "q": "Kurioje šalyje yra Viktorijos krioklys?",
+    "correct": "Zimbabvė",
+    "wrong": [
+      "Kenija",
+      "Pietų Afrika",
+      "Tanzanija"
+    ],
+    "note": "Viktorijos krioklys yra tarp Zimbabvės ir Zambijos.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris žmogus laikomas elektros lemputės išradėju?",
+    "correct": "Tomas Edisonas",
+    "wrong": [
+      "Nikola Tesla",
+      "Benjaminas Franklinas",
+      "Aleksandras Bellas"
+    ],
+    "note": "Edisonas sukūrė praktišką lemputę.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris miestas buvo vadinamas Bizantija?",
+    "correct": "Konstantinopolis",
+    "wrong": [
+      "Aleksandrija",
+      "Atėnai",
+      "Roma"
+    ],
+    "note": "Bizantija vėliau tapo Konstantinopoliu, šiandien Stambulas.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris iš šių kalnų masyvų yra jauniausias geologiškai?",
+    "correct": "Himalajai",
+    "wrong": [
+      "Uralas",
+      "Andai",
+      "Alpos"
+    ],
+    "note": "Himalajai susiformavo prieš ~50 mln. metų, tebėra „jauni“.",
+    "cat": ""
+  },
+  {
+    "q": "Kurioje šalyje buvo išrastas kompasas?",
+    "correct": "Kinija",
+    "wrong": [
+      "Graikija",
+      "Egiptas",
+      "Indija"
+    ],
+    "note": "Kompasas išrastas Kinijoje Hanų dinastijos laikais.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris miestas buvo Osmanų imperijos sostinė?",
+    "correct": "Stambulas",
+    "wrong": [
+      "Ankara",
+      "Damaskas",
+      "Bagdadas"
+    ],
+    "note": "Osmanų sostinė buvo Konstantinopolis/Stambulas.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris miestas buvo pirmoji Rusijos sostinė?",
+    "correct": "Novgorodas",
+    "wrong": [
+      "Sankt Peterburgas",
+      "Maskva",
+      "Kijevas"
+    ],
+    "note": "Pirmąja sostine laikomas Novgorodas IX a., prieš perkėlimą į Kijevą.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris mokslininkas atrado gravitacijos dėsnį?",
+    "correct": "Isaacas Newtonas",
+    "wrong": [
+      "Albertas Einšteinas",
+      "Galileo Galilėjus",
+      "Nikola Tesla"
+    ],
+    "note": "Newtonas aprašė visuotinės traukos dėsnį 1687 m.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri jūra yra labiausiai užteršta pasaulyje?",
+    "correct": "Juodoji",
+    "wrong": [
+      "Baltijos",
+      "Viduržemio",
+      "Aralo"
+    ],
+    "note": "Juodoji jūra turi mažiausią deguonies kiekį gylyje. Todel ji labiausiai užteršta .",
+    "cat": ""
+  },
+  {
+    "q": "Kuris šachmatų figūros ėjimas vadinamas „rokiruote“?",
+    "correct": "Karaliaus ir bokšto vietų pakeitimas",
+    "wrong": [
+      "Bokšto perėjimas per pėstininką",
+      "Karaliaus judėjimas į priekį",
+      "Žirgo perėjimas už karalienės"
+    ],
+    "note": "Rokiruotė – vienintelis dvigubas ėjimas šachmatuose. Karaliaus ir bokšto vietų pakeitimas",
+    "cat": ""
+  },
+  {
+    "q": "Kuri Europos sostinė yra arčiausiai Atlanto vandenyno?",
+    "correct": "Dublinas",
+    "wrong": [
+      "Lisabona",
+      "Madridas",
+      "Londonas"
+    ],
+    "note": "Dublinas tiesiogiai stovi prie Atlanto pakrantės.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris žmogus sukūrė teoriją apie evoliuciją?",
+    "correct": "Charles Darwin",
+    "wrong": [
+      "Isaacas Newtonas",
+      "Louis Pasteur",
+      "Gregor Mendel"
+    ],
+    "note": "Darwino „Rūšių kilmė“ išleista 1859 m.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris pasaulio miestas turi daugiausiai tiltų?",
+    "correct": "Hamburgas",
+    "wrong": [
+      "Amsterdamas",
+      "Venecija",
+      "Sankt Peterburgas"
+    ],
+    "note": "Hamburge virš 2 400 tiltų – daugiau nei Venecijoje ar Amsterdame.",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis turi daugiausia laiko juostų (įskaitant užjūrio teritorijas)?",
+    "correct": "Prancūzija",
+    "wrong": [
+      "JAV",
+      "Rusija",
+      "Kanada"
+    ],
+    "note": "Prancūzija, Su visomis teritorijomis – 12 laiko juostų. ",
+    "cat": ""
+  },
+  {
+    "q": "Kuri šalis pirmoji išleido popierinius pinigus?",
+    "correct": "Kinija",
+    "wrong": [
+      "Anglija",
+      "Persija",
+      "Italija"
+    ],
+    "note": "Tangų dinastija (VII a.) – pirmieji popieriniai pinigai.",
+    "cat": ""
+  },
+  {
+    "q": "Kurioje šalyje kilo regbio sportas?",
+    "correct": "Anglija",
+    "wrong": [
+      "Airija",
+      "Škotija",
+      "Prancūzija"
+    ],
+    "note": "Regbio ištakos – XIX a. Anglijoje.",
+    "cat": ""
+  },
+  {
+    "q": "Kurioje šalyje gimė šampanas?",
+    "correct": "Prancūzija",
+    "wrong": [
+      "Italija",
+      "Ispanija",
+      "Vokietija"
+    ],
+    "note": "Prancūzija, Tik iš Šampanės regiono vynas gali vadintis šampanu.",
+    "cat": ""
+  },
+  {
+    "q": "Kuris gyvūnas gali šokinėti aukščiau už savo kūno ilgį daugiau nei 100 kartų?",
+    "correct": "Blusa",
+    "wrong": [
+      "Skruzdėlė",
+      "Žiogas",
+      "Katė"
+    ],
+    "note": "Blusos šuolis siekia iki 200 kartų jų kūno ilgį.",
+    "cat": ""
+  },
+  {
+    "q": "Kurio Lietuvos kunigaikščio valdoma buvo pasiekta didžiausia LDK teritorinė galia?",
+    "correct": "Vytauto Didžiojo",
+    "wrong": [
+      "Algirdo",
+      "Švitrigailos",
+      "Kęstučio"
+    ],
+    "cat": "Lietuva",
+    "diff": "hard",
+    "note": "Politinis pikas XIV–XV a. sandūroje."
+  },
+  {
+    "q": "Kuriame mieste 1579 m. įsteigtas Vilniaus universitetas pradėjo veikti kaip akademija?",
+    "correct": "Vilniuje",
+    "wrong": [
+      "Krokuvoje",
+      "Kaune",
+      "Rygoje"
+    ],
+    "cat": "Lietuva",
+    "diff": "hard",
+    "note": "Steigėjas – jėzuitai, Stepono Batoro privilegija."
+  },
+  {
+    "q": "Kokiu vardu žinoma 1863–1864 m. sukilimo Lietuvoje ir Lenkijoje figūra Konstantinas Kalinauskas?",
+    "correct": "Kastuś Kalinoŭski",
+    "wrong": [
+      "Juzefas Piłsudskis",
+      "Antanas Mackevičius",
+      "Zigmantas Sierakauskas"
+    ],
+    "cat": "Lietuva",
+    "diff": "hard",
+    "note": "Baltarusų nacionalinio judėjimo simbolis."
+  },
+  {
+    "q": "Kuriame leidinyje 1904 m. panaikinus spaudos draudimą pradėta legaliai spausdinti lietuvišką tekstą lotyniškais rašmenimis?",
+    "correct": "„Varpas“ ir kiti periodiniai leidiniai",
+    "wrong": [
+      "„Aušra“ (tuo metu nebeleista)",
+      "„Lietuvos aidas“",
+      "„Naujasis lietuvis“"
+    ],
+    "cat": "Lietuva",
+    "diff": "hard",
+    "note": "1904–1905 m. prasidėjo legalioji spauda."
+  },
+  {
+    "q": "Kuris tarpukario architektas suprojektavo Kauno Prisikėlimo bažnyčią?",
+    "correct": "Karolis Reisonas",
+    "wrong": [
+      "Vladimiras Dubeneckis",
+      "Stasys Kudokas",
+      "Mykolas Songaila"
+    ],
+    "cat": "Lietuva",
+    "diff": "hard",
+    "note": "Modernizmo ikona, statyba pradėta 1934 m."
+  },
+  {
+    "q": "Kuris lietuvių kalbos tarmės arealas laikomas didžiausiu pagal plotą?",
+    "correct": "Vakarų aukštaičių",
+    "wrong": [
+      "Šiaurės žemaičių",
+      "Pietų aukštaičių",
+      "Dūnininkų žemaičių"
+    ],
+    "cat": "Kalba",
+    "diff": "hard",
+    "note": "Aukštaičių arealas apima didelę dalį Lietuvos."
+  },
+  {
+    "q": "Kuris kalbininkas parengė pirmąjį didįjį „Lietuvių kalbos žodyną“ (20 tomų)?",
+    "correct": "Kazimieras Būga (darbus pradėjo), tęsta J. Balčikonio ir kt.",
+    "wrong": [
+      "Jonas Jablonskis",
+      "Antanas Salys",
+      "Zigmas Zinkevičius"
+    ],
+    "cat": "Kalba",
+    "diff": "hard",
+    "note": "LKŽe – elektroninė versija šiandien."
+  },
+  {
+    "q": "Kurio dainiaus rinkinyje pasirodė eilėraštis „Trakų pilis“?",
+    "correct": "Maironio",
+    "wrong": [
+      "Salomėjos Nėries",
+      "Kazio Binkio",
+      "Henriko Radausko"
+    ],
+    "cat": "Literatūra",
+    "diff": "hard",
+    "note": "Lietuvių romantizmo kanonas."
+  },
+  {
+    "q": "Koks Antano Škėmos romanas laikomas egzistencializmo klasika lietuvių literatūroje?",
+    "correct": "„Balta drobulė“",
+    "wrong": [
+      "„Tūla“",
+      "„Sukilėliai“",
+      "„Dievų miškas“"
+    ],
+    "cat": "Literatūra",
+    "diff": "hard",
+    "note": "Išleista 1958 m. tremtyje."
+  },
+  {
+    "q": "Kas sukūrė baletą „Eglė žalčių karalienė“?",
+    "correct": "Eduardas Balsys",
+    "wrong": [
+      "Jeronimas Kačinskas",
+      "Balys Dvarionas",
+      "Juozas Gruodis"
+    ],
+    "cat": "Muzika",
+    "diff": "hard",
+    "note": "Premjera 1960 m."
+  },
+  {
+    "q": "Kuris atlikėjas pirmasis laimėjo „Euroviziją“ Lietuvai?",
+    "correct": "Dar niekas – Lietuva nėra laimėjusi",
+    "wrong": [
+      "Monika Liu",
+      "LT United",
+      "The Roop"
+    ],
+    "cat": "Popkultūra",
+    "diff": "medium",
+    "note": "Geriausi rezultatai – 6 vieta (2006)."
+  },
+  {
+    "q": "Kuri laida išpopuliarino frazę „Visi mes – Lietuvos dalis“?",
+    "correct": "„Lietuvos balsas“ (šūkio leitmotyvas vėlesniuose sezonuose)",
+    "wrong": [
+      "„Du balsai – viena širdis“",
+      "„X Faktorius“",
+      "„Lietuvos talentai“"
+    ],
+    "cat": "TV",
+    "diff": "medium",
+    "note": "Formatai adaptuoti iš tarptautinių."
+  },
+  {
+    "q": "Koks kino režisierius sukūrė filmą „Lošėjas“ apie greitosios pagalbos mediką Vilniuje?",
+    "correct": "Ignas Jonynas",
+    "wrong": [
+      "Šarūnas Bartas",
+      "Kristijonas Vildžiūnas",
+      "Giedrė Beinoriūtė"
+    ],
+    "cat": "Kinas",
+    "diff": "hard",
+    "note": "Filmas pasirodė 2013 m."
+  },
+  {
+    "q": "Kuriame mieste saugomas originalus Leonardo da Vinčio „Paskutinės vakarienės“ freskos kūrinys?",
+    "correct": "Milane",
+    "wrong": [
+      "Florencijoje",
+      "Romoje",
+      "Venecijoje"
+    ],
+    "cat": "Kultūra",
+    "diff": "medium",
+    "note": "Dominikonų Santa Maria delle Grazie vienuolynas."
+  },
+  {
+    "q": "Koks institutas suteikia Michelin žvaigždes restoranams?",
+    "correct": "„Michelin Guide“ redakcija",
+    "wrong": [
+      "Gault&Millau taryba",
+      "Le Cordon Bleu",
+      "Académie Culinaire"
+    ],
+    "cat": "Gastronomija",
+    "diff": "medium",
+    "note": "Žvaigždės – nepriklausomų inspektorių vertinimas."
+  },
+  {
+    "q": "Kurio kompozitoriaus „Ugnies paukštė“ yra baletas?",
+    "correct": "Igorio Stravinskio",
+    "wrong": [
+      "Sergejaus Prokofjevo",
+      "Maurice'o Ravelio",
+      "Claude'o Debussy"
+    ],
+    "cat": "Muzika",
+    "diff": "hard",
+    "note": "Premjera 1910 m., Paryžius."
+  },
+  {
+    "q": "Koks audinys žmogaus kūne atsakingas už impulsų perdavimą iš smegenų į raumenis?",
+    "correct": "Motoriniai neuronai",
+    "wrong": [
+      "Limfinės ląstelės",
+      "Osteocitai",
+      "Mikroglija"
+    ],
+    "cat": "Mokslas",
+    "diff": "hard",
+    "note": "Somatinė nervų sistema."
+  },
+  {
+    "q": "Kurioje ląstelės struktūroje daugiausia sintetinami baltymai?",
+    "correct": "Ribosomose",
+    "wrong": [
+      "Lizomosomose",
+      "Peroksisomose",
+      "Goldžio aparate"
+    ],
+    "cat": "Mokslas",
+    "diff": "medium",
+    "note": "mRNR transliacija ribosomose."
+  },
+  {
+    "q": "Kuris dujų mišinys daugiausia sudaro Žemės stratosferos ozono sluoksnį?",
+    "correct": "Ozonas O₃",
+    "wrong": [
+      "O₂ ir CO₂",
+      "Azotas N₂",
+      "Vandenilio mišinys"
+    ],
+    "cat": "Mokslas",
+    "diff": "medium",
+    "note": "Ozono maksimumas ~15–35 km aukštyje."
+  },
+  {
+    "q": "Kokiame organe sintetinamas daugiausia žmogaus kraujo albumino?",
+    "correct": "Kepenyse",
+    "wrong": [
+      "Inkstuose",
+      "Blužnyje",
+      "Kaulų čiulpuose"
+    ],
+    "cat": "Mokslas",
+    "diff": "hard",
+    "note": "Pagrindinis plazmos baltymas."
+  },
+  {
+    "q": "Kokio ežero pakrantėje yra miestai Ženeva ir Lozana?",
+    "correct": "Ženevos ežero",
+    "wrong": [
+      "Bodeno ežero",
+      "Komos ežero",
+      "Gardo ežero"
+    ],
+    "cat": "Geografija",
+    "diff": "medium",
+    "note": "Prancūzijos–Šveicarijos pasienis."
+  },
+  {
+    "q": "Kokia dykuma tęsiasi per Botsvaną, Namibiją ir Pietų Afriką?",
+    "correct": "Kalaharis",
+    "wrong": [
+      "Namibas",
+      "Atakama",
+      "Sahara"
+    ],
+    "cat": "Geografija",
+    "diff": "medium",
+    "note": "Pusdykumė pietinėje Afrikoje."
+  },
+  {
+    "q": "Koks sąsiauris skiria Europą nuo Afrikos prie Ispanijos ir Maroko?",
+    "correct": "Gibraltaro sąsiauris",
+    "wrong": [
+      "Bosforas",
+      "Dardanelai",
+      "Mesinos sąsiauris"
+    ],
+    "cat": "Geografija",
+    "diff": "medium",
+    "note": "Siauriausia vieta ~14 km."
+  },
+  {
+    "q": "Kur stūkso Uluru (Ayers Rock)?",
+    "correct": "Australijoje",
+    "wrong": [
+      "JAV",
+      "Namibijoje",
+      "Mongolijoje"
+    ],
+    "cat": "Geografija",
+    "diff": "easy",
+    "note": "Šventasis Anangu monolitas."
+  },
+  {
+    "q": "Kuri TV platforma išpopuliarino serialą „Stranger Things“?",
+    "correct": "„Netflix“",
+    "wrong": [
+      "„HBO“",
+      "„Disney+“",
+      "„Amazon Prime Video“"
+    ],
+    "cat": "TV",
+    "diff": "easy",
+    "note": "Debiutas 2016 m."
+  },
+  {
+    "q": "Koks filmas laimėjo „Oskarą“ už geriausią filmą 2020 m. (už 2019 m.)?",
+    "correct": "„Parazitas“",
+    "wrong": [
+      "„1917“",
+      "„Jokeris“",
+      "„Vieną kartą Holivude“"
+    ],
+    "cat": "Kinas",
+    "diff": "medium",
+    "note": "Pirmasis neangliškas laureatas."
+  },
+  {
+    "q": "Koks kūrėjas režisavo „Dunkirką“ ir „Tamsos riterį“?",
+    "correct": "Christopher Nolan",
+    "wrong": [
+      "Denis Villeneuve",
+      "Sam Mendes",
+      "Ridley Scott"
+    ],
+    "cat": "Kinas",
+    "diff": "easy",
+    "note": "Blokiniai, bet autorinis braižas."
+  },
+  {
+    "q": "Kokia operacinė sistema yra atvirojo kodo branduolys, naudojamas daugumoje serverių?",
+    "correct": "Linux",
+    "wrong": [
+      "Windows Server",
+      "FreeBSD",
+      "Solaris"
+    ],
+    "cat": "Technologijos",
+    "diff": "medium",
+    "note": "GNU/Linux ekosistema."
+  },
+  {
+    "q": "Kuri įmonė sukūrė ARM architektūrą?",
+    "correct": "ARM Holdings",
+    "wrong": [
+      "Intel",
+      "AMD",
+      "Apple"
+    ],
+    "cat": "Technologijos",
+    "diff": "hard",
+    "note": "RISC architektūra, licencijuojama plačiai."
+  },
+  {
+    "q": "Koks formatas naudojamas nuotoliniams vaizdo suspaudimams, pvz., H.264?",
+    "correct": "Konteineriai, pvz., MP4 (MPEG-4 Part 14)",
+    "wrong": [
+      "RAW BMP",
+      "TIFF be suspaudimo",
+      "SVG"
+    ],
+    "cat": "Technologijos",
+    "diff": "medium",
+    "note": "Kodekas ≠ konteineris."
+  },
+  {
+    "q": "Kuri šalis dažniausiai siejama su sumo sportu?",
+    "correct": "Japonija",
+    "wrong": [
+      "Mongolija",
+      "Korėja",
+      "Kinija"
+    ],
+    "cat": "Sportas",
+    "diff": "easy",
+    "note": "Profesionalios lygos nuo Edo laikų."
+  },
+  {
+    "q": "Koks muziejus Londone saugo „Rosetos akmenį“?",
+    "correct": "Britų muziejus",
+    "wrong": [
+      "Viktorijos ir Alberto muziejus",
+      "Tate Modern",
+      "Nacionalinė galerija"
+    ],
+    "cat": "Kultūra",
+    "diff": "medium",
+    "note": "Egiptologijos lūžis."
+  },
+  {
+    "q": "Kokia kulinarinė technika prancūzų virtuvėje reiškia lėtą troškinimą riebaluose žemoje temperatūroje?",
+    "correct": "Confit",
+    "wrong": [
+      "Sauté",
+      "Flambé",
+      "Pocher"
+    ],
+    "cat": "Gastronomija",
+    "diff": "hard",
+    "note": "Anties šlaunelės confit – klasika."
+  },
+  {
+    "q": "Kuris dailininkas siejamas su paveikslu „Žmonių sodas“ („Sodas žemiškųjų malonumų“)?",
+    "correct": "Hieronymus Bosch",
+    "wrong": [
+      "Pieter Bruegel vyresnysis",
+      "Albrecht Dürer",
+      "Jan van Eyck"
+    ],
+    "cat": "Menas",
+    "diff": "hard",
+    "note": "Tripikė, XV–XVI a. sandūra."
+  },
+  {
+    "q": "Koks literatūrinis terminas nusako autoriaus nuoseklų ironijos, grotesko ir absurdo derinį pokario Rytų Europoje?",
+    "correct": "Juodasis humoras / absurdo proza",
+    "wrong": [
+      "Maginis realizmas",
+      "Neoklasicizmas",
+      "Natūralizmas"
+    ],
+    "cat": "Literatūra",
+    "diff": "hard",
+    "note": "Kundera, Škėma, Mrożek kontekstas."
+  },
+  {
+    "q": "Kuris organizmų tipas sudaro didžiąją dalį Žemės biosferos biomasės pagal anglies kiekį?",
+    "correct": "Augalai",
+    "wrong": [
+      "Bakterijos",
+      "Gyvūnai",
+      "Grybai"
+    ],
+    "cat": "Mokslas",
+    "diff": "hard",
+    "note": "Augalai ~80 %, gyvūnai ~0,4 % (apytikriai)."
+  },
+  {
+    "q": "Koks reiškinys sukelia poliarines pašvaistes?",
+    "correct": "Saulės vėjo dalelių sąveika su magnetosfera",
+    "wrong": [
+      "Mėnulio šviesos lūžis",
+      "Oro jonizacija perkūnijos metu",
+      "Oro taršos fluorescencija"
+    ],
+    "cat": "Mokslas",
+    "diff": "medium",
+    "note": "Jonosfera ir magnetinis laukas."
+  },
+  {
+    "q": "Kurio miesto senamiestis įtrauktas į UNESCO sąrašą: Ryga, Talinas ar Klaipėda?",
+    "correct": "Ryga ir Talinas",
+    "wrong": [
+      "Tik Ryga",
+      "Tik Talinas",
+      "Tik Klaipėda"
+    ],
+    "cat": "Regionas",
+    "diff": "hard",
+    "note": "Abiejų senamiesčiai – UNESCO."
+  },
+  {
+    "q": "Koks tradicinis lietuviškas patiekalas gaminamas iš sutarkuotų bulvių ir patiekiamas su spirgučiais?",
+    "correct": "Žemaičių blynai (arba bulviniai blynai)",
+    "wrong": [
+      "Kibinai",
+      "Vėdarai",
+      "Šaltibarščiai"
+    ],
+    "cat": "Gastronomija",
+    "diff": "easy",
+    "note": "Regioninės variacijos skiriasi."
+  },
+  {
+    "q": "Kuri šventė Lietuvoje žymi Rasų ir Joninių laiką?",
+    "correct": "Kupolinės / Rasos",
+    "wrong": [
+      "Užgavėnės",
+      "Kaziuko mugė",
+      "Žolinė"
+    ],
+    "cat": "Kultūra",
+    "diff": "easy",
+    "note": "Vasaros saulėgrįža."
+  },
+  {
+    "q": "Koks terminas apibūdina klaidingą, bet įtikinamai pateiktą informaciją, skleidžiamą sąmoningai?",
+    "correct": "Dezinformacija",
+    "wrong": [
+      "Misinformacija",
+      "Satyrinė žinutė",
+      "Nuomonės skiltis"
+    ],
+    "cat": "Medijų raštingumas",
+    "diff": "medium",
+    "note": "Skirtumas – intencija."
+  },
+  {
+    "q": "Kurio autoriaus romanas „Šimtas metų vienatvės“ laikomas maginio realizmo etalonu?",
+    "correct": "Gabriel García Márquez",
+    "wrong": [
+      "Jorge Luis Borges",
+      "Julio Cortázar",
+      "Isabel Allende"
+    ],
+    "cat": "Literatūra",
+    "diff": "medium",
+    "note": "1967 m., Makondo mitas."
+  },
+  {
+    "q": "Kuri šalis dovanojo „Laisvės statulą“ JAV?",
+    "correct": "Prancūzija",
+    "wrong": [
+      "Didžioji Britanija",
+      "Italija",
+      "Ispanija"
+    ],
+    "cat": "Istorija",
+    "diff": "easy",
+    "note": "Paryžiaus–Niujorko draugystė."
+  },
+  {
+    "q": "Koks yra originalus „Instagram“ kvadratinės nuotraukos kraštinių santykis?",
+    "correct": "1:1",
+    "wrong": [
+      "4:3",
+      "16:9",
+      "3:2"
+    ],
+    "cat": "Technologijos",
+    "diff": "easy",
+    "note": "Vėliau atsirado ir kiti formatai."
+  },
+  {
+    "q": "Kokį gėrimą japonai vadina „nihonshu“?",
+    "correct": "Sake",
+    "wrong": [
+      "Soju",
+      "Umeshu",
+      "Shochu"
+    ],
+    "cat": "Gastronomija",
+    "diff": "medium",
+    "note": "Ryžių fermentacijos gėrimas."
+  },
+  {
+    "q": "Kuris Lietuvos dainininkas išpopuliarino dainą „Trys milijonai“?",
+    "correct": "Marijonas Mikutavičius",
+    "wrong": [
+      "Saulius Prūsaitis",
+      "Andrius Mamontovas",
+      "Vidas Bareikis"
+    ],
+    "cat": "Popkultūra",
+    "diff": "easy",
+    "note": "Krepšinio himnas 2000 m."
+  },
+  {
+    "q": "Kuri grupė debiutavo su albumu „Robotas“ (2008) ir vėliau laimėjo M.A.M.A. apdovanojimus?",
+    "correct": "„G&G Sindikatas“ (ankstesni darbai), bet „Leon Somov & Jazzu“ su elektronika labiau siejama",
+    "wrong": [
+      "„Antis“",
+      "„Skamp“",
+      "„Happyendless“"
+    ],
+    "cat": "Muzika",
+    "diff": "hard",
+    "note": "Elektroninės scenos suklestėjimas."
+  },
+  {
+    "q": "Kokioje saloje yra Moajų skulptūros?",
+    "correct": "Velykų saloje",
+    "wrong": [
+      "Borneo",
+      "Madeiroje",
+      "Tasmanijoje"
+    ],
+    "cat": "Kultūra",
+    "diff": "easy",
+    "note": "Rapa Nui civilizacija."
+  },
+  {
+    "q": "Kuri dykuma garsėja druskos ežerais ir flamingais Čilėje?",
+    "correct": "Atakama",
+    "wrong": [
+      "Sonora",
+      "Gobi",
+      "Namibas"
+    ],
+    "cat": "Geografija",
+    "diff": "medium",
+    "note": "Labai sausa, aukštikalnės."
+  },
+  {
+    "q": "Koks muzikinis terminas reiškia laipsnišką garso stiprėjimą?",
+    "correct": "Crescendo",
+    "wrong": [
+      "Diminuendo",
+      "Staccato",
+      "Legato"
+    ],
+    "cat": "Muzika",
+    "diff": "easy",
+    "note": "Itališki terminai – standartas."
+  },
+  {
+    "q": "Kokiu trijų raidžių kodu žymimas Vilniaus oro uostas (IATA)?",
+    "correct": "VNO",
+    "wrong": [
+      "KUN",
+      "PLQ",
+      "RIX"
+    ],
+    "cat": "Transportas",
+    "diff": "easy",
+    "note": "KUN – Kaunas, PLQ – Palanga."
+  },
+  {
+    "q": "Kuris automobilių gamintojas pirmasis masiškai pristatė hibridinį modelį „Prius“?",
+    "correct": "Toyota",
+    "wrong": [
+      "Honda",
+      "Ford",
+      "Hyundai"
+    ],
+    "cat": "Technologijos",
+    "diff": "easy",
+    "note": "Debiutas 1997 m. Japonijoje."
+  },
+  {
+    "q": "Koks mitologinis paukštis atgimsta iš pelenų?",
+    "correct": "Feniksas",
+    "wrong": [
+      "Gryfė",
+      "Harpija",
+      "Roc"
+    ],
+    "cat": "Mitologija",
+    "diff": "easy",
+    "note": "Plačiai paplitęs motyvas."
+  },
+  {
+    "q": "Kurio dievo atributas yra tridentas graikų mitologijoje?",
+    "correct": "Poseidono",
+    "wrong": [
+      "Hado",
+      "Apolono",
+      "Areso"
+    ],
+    "cat": "Mitologija",
+    "diff": "easy",
+    "note": "Jūros dievas."
+  },
+  {
+    "q": "Koks trumpinys žymi dirbtinio intelekto generuojamą turinį?",
+    "correct": "AIGC",
+    "wrong": [
+      "AGI",
+      "GAN",
+      "IoT"
+    ],
+    "cat": "Technologijos",
+    "diff": "hard",
+    "note": "AI‑Generated Content."
+  },
+  {
+    "q": "Koks sūris tradiciškai naudojamas italų patiekale „Carbonara“?",
+    "correct": "Pecorino Romano",
+    "wrong": [
+      "Parmezanas tikrai tinka, bet klasika – Pecorino",
+      "Grana Padano",
+      "Asiago"
+    ],
+    "cat": "Gastronomija",
+    "diff": "hard",
+    "note": "Klasikinėje versijoje – guanciale ir kiaušinis."
+  },
+  {
+    "q": "Koks dokumentas suteikia teisę rinkti asmens duomenis ES pagal griežtas taisykles?",
+    "correct": "BDAR (GDPR) teisinis pagrindas",
+    "wrong": [
+      "ISO/IEC 27001 sertifikatas",
+      "PCI DSS atitiktis",
+      "eIDAS parašas"
+    ],
+    "cat": "Teisė",
+    "diff": "hard",
+    "note": "Teisiniai pagrindai: sutikimas, sutartis ir kt."
+  },
+  {
+    "q": "Koks yra nacionalinis Suomijos eposas, sudarytas iš liaudies dainų?",
+    "correct": "„Kalevala“",
+    "wrong": [
+      "„Beovulfas“",
+      "„Eda“",
+      "„Gilgamešas“"
+    ],
+    "cat": "Kultūra",
+    "diff": "medium",
+    "note": "Elias Lönnrot XIX a."
+  },
+  {
+    "q": "Kokia organizacija teikia Pasaulio paveldo statusą?",
+    "correct": "UNESCO",
+    "wrong": [
+      "UNICEF",
+      "FAO",
+      "OECD"
+    ],
+    "cat": "Organizacijos",
+    "diff": "easy",
+    "note": "Jungtinių Tautų agentūra."
+  },
+  {
+    "q": "Koks yra tradicinis japonų peilis, skirtas suši pjaustymui vienu ilgu pjūviu?",
+    "correct": "Yanagiba",
+    "wrong": [
+      "Santoku",
+      "Nakiri",
+      "Gyuto"
+    ],
+    "cat": "Gastronomija",
+    "diff": "hard",
+    "note": "Ilga, siaura geležtė."
+  },
+  {
+    "q": "Kuri jūrų srovė sušildo vakarinius Europos krantus?",
+    "correct": "Golfo srovė",
+    "wrong": [
+      "Kanarinė srovė",
+      "Labradoro srovė",
+      "Benguelinė srovė"
+    ],
+    "cat": "Mokslas",
+    "diff": "medium",
+    "note": "Atlanto meridianinė apykaita."
+  },
+  {
+    "q": "Koks yra pagrindinis žaliosios arbatos apdorojimo žingsnis, stabdantis oksidaciją?",
+    "correct": "Karštas inaktyvinimas (pan‑fry/garinimas)",
+    "wrong": [
+      "Fermentacija",
+      "Šaltas brandinimas",
+      "Rūgštinimas"
+    ],
+    "cat": "Gastronomija",
+    "diff": "hard",
+    "note": "Japonijoje dažniau garinama."
+  },
+  {
+    "q": "Kokia valstybė įteisino tango kaip nematerialųjį paveldą kartu su Urugvajumi?",
+    "correct": "Argentina",
+    "wrong": [
+      "Brazilija",
+      "Čilė",
+      "Paragvajus"
+    ],
+    "cat": "Kultūra",
+    "diff": "medium",
+    "note": "UNESCO sąrašas."
+  },
+  {
+    "q": "Kur vyksta „La Tomatina“ festivalis?",
+    "correct": "Bunjolis (Ispanija)",
+    "wrong": [
+      "Pamplona",
+      "Valensija",
+      "Barselona"
+    ],
+    "cat": "Kultūra",
+    "diff": "easy",
+    "note": "Pomidorų mūšis rugpjūtį."
+  },
+  {
+    "q": "Koks skaitmeninis platinimo modelis žaidimų industrijoje pakeitė fizinius leidimus?",
+    "correct": "Skaitmeniniai parduotuvių katalogai (Steam, konsolių e‑shop'ai)",
+    "wrong": [
+      "Tik prenumeratos",
+      "Tik „early access“",
+      "Tik „free‑to‑play“"
+    ],
+    "cat": "Technologijos",
+    "diff": "medium",
+    "note": "Platus modelių derinys."
+  }
+]
