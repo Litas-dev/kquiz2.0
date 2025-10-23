@@ -20,6 +20,19 @@
     let guardActive = false;
     let curQ = null;
     let startTimer = null;
+    let vipSuppressed = false;
+    const VIP_TOKEN = "milestone-solo";
+    function setVipSuppressed(on) {
+      if (on) {
+        if (!vipSuppressed) {
+          try { window.KQuiz?.control?.suppressVip?.(VIP_TOKEN); } catch {}
+          vipSuppressed = true;
+        }
+      } else if (vipSuppressed) {
+        try { window.KQuiz?.control?.releaseVip?.(VIP_TOKEN); } catch {}
+        vipSuppressed = false;
+      }
+    }
     // --- Live flags (LT) + async question builder (non-breaking) ---
     const _FLAG_POOL = []; // {qid,nameLT,flagURL}
     let _flagLoadInFlight = null;
@@ -256,6 +269,7 @@
     }
 
     function unmountUI() {
+      setVipSuppressed(false);
       try { if (overlay?.parentNode) overlay.parentNode.removeChild(overlay); } catch {}
       try { if (styleEl?.parentNode) styleEl.parentNode.removeChild(styleEl); } catch {}
       overlay = null; styleEl = null; mounted = false;
@@ -358,6 +372,7 @@
       document.getElementById("kqSoloIntro").classList.remove("kq-hide");
       document.getElementById("kqSoloPlay").classList.add("kq-hide");
       overlay.style.display = "flex";
+      setVipSuppressed(true);
 
       playBonus();
 
@@ -423,6 +438,7 @@
           resetVisuals();
           overlay.style.display = "none";
           stage = "idle"; running = false; targetId = null; curQ = null;
+          setVipSuppressed(false);
           K.control.resumeMain();        // resume only when queue is empty
         }
       }, REVEAL_MS);

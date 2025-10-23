@@ -40,6 +40,7 @@
   let ansCounts = [0,0,0,0];
   const perQ = [];                 // per question answers
   const totals = new Map();        // uid -> agg
+  let vipSuppressed = false;
 
   const { $, shuffle, parseAnswer } = KQuiz.util;
   const { pauseMain, resumeFlow, setChatGuard, clearChatGuard } = KQuiz.control;
@@ -369,12 +370,20 @@
     try{ document.getElementById("kq-map-overlay")?.remove(); }catch{}
     try{ resumeFlow(); }catch{}
     releaseLock(ADDON_ID);
+    if(vipSuppressed){
+      try{ KQuiz.control?.releaseVip?.(ADDON_ID); }catch{}
+      vipSuppressed = false;
+    }
   }
 
   async function startInline(){
     if(active) return;
     if(!acquireLock(ADDON_ID)){ console.warn("[map-inline] start skipped; another mini active"); return; }
     active=true; phase="intro"; qIdx=1; used.clear(); perQ.length=0; totals.clear();
+    if(!vipSuppressed){
+      try{ KQuiz.control?.suppressVip?.(ADDON_ID); }catch{}
+      vipSuppressed = true;
+    }
     pauseMain(); mountOverlay();
   }
 

@@ -36,6 +36,20 @@ const el = (t, a = {}, ...cs) => {
   cs.forEach((c) => n.appendChild(typeof c === "string" ? document.createTextNode(c) : c));
   return n;
 };
+function applyVipMetadata(node, player) {
+  if (!node || !player) return;
+  const uid = String(player.id || player.uid || "");
+  const name = player.name || player.displayName || "";
+  try {
+    if (node.dataset) {
+      node.dataset.uid = uid;
+      node.dataset.name = name;
+    }
+  } catch {}
+  node.setAttribute("data-uid", uid);
+  node.setAttribute("data-name", name);
+  if (!node.title && name) node.title = name;
+}
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const shuffle = (a) => {
   for (let i = a.length - 1; i > 0; i--) {
@@ -44,6 +58,34 @@ const shuffle = (a) => {
   }
   return a;
 };
+
+const vipSuppressTokens = new Set();
+function refreshVipSuppressFlag() {
+  const body = document.body;
+  if (!body) return;
+  const shouldSuppress = vipSuppressTokens.size > 0;
+  try {
+    if (shouldSuppress) body.dataset.kqVipSuppress = "1";
+    else delete body.dataset.kqVipSuppress;
+  } catch {
+    try {
+      if (shouldSuppress) body.setAttribute("data-kq-vip-suppress", "1");
+      else body.removeAttribute("data-kq-vip-suppress");
+    } catch {}
+  }
+  try { window.KQ_VIP?.scan?.(); } catch {}
+}
+function suppressVip(tag) {
+  const token = tag || `sup-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  vipSuppressTokens.add(token);
+  refreshVipSuppressFlag();
+  return token;
+}
+function releaseVip(tag) {
+  if (!tag) return;
+  if (vipSuppressTokens.delete(tag)) refreshVipSuppressFlag();
+  else if (!vipSuppressTokens.size) refreshVipSuppressFlag();
+}
 
 // Event bus / plugin API
 const _bus = {};
@@ -254,19 +296,30 @@ function reveal(auto) {
   if (winners.length) {
     winners.sort((a, b) => b.score - a.score);
     winners.forEach((w) => {
-      const left = el("div", { class: "rowL" },
-        w.avatar
-          ? el("img", {
-              class: "av",
-              src: w.avatar,
-              alt: "",
-              referrerpolicy: "no-referrer",
-              loading: "lazy",
-              onerror: "this.remove()"
-            })
-          : el("span", {}, ""),
-        el("div", {}, w.name)
-      );
+      let avatarEl;
+      if (w.avatar) {
+        avatarEl = el("img", {
+          class: "av kq-av kquiz-avatar",
+          src: w.avatar,
+          alt: w.name || "",
+          referrerpolicy: "no-referrer",
+          loading: "lazy",
+          onerror: "this.remove()"
+        });
+      } else {
+        avatarEl = el("div", {
+          class: "av kq-av avatar",
+          style: "width:32px;height:32px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:inline-block;"
+        });
+      }
+      applyVipMetadata(avatarEl, w);
+
+      const nameWrap = el("div", { style: "display:flex;align-items:center;gap:6px;" }, w.name);
+      try {
+        window.KQ_VIP?.decorateLabel?.(nameWrap, { uid: w.id, id: w.id, name: w.name });
+      } catch {}
+
+      const left = el("div", { class: "rowL" }, avatarEl, nameWrap);
       box.appendChild(el("div", { class: "row" }, left, el("div", {}, String(w.score))));
     });
   } else {
@@ -275,14 +328,23 @@ function reveal(auto) {
       try { const f = $("#failAudio"); f.currentTime = 0; f.play(); } catch {}
     }
   }
-  $("#overlay").style.display = "flex";
+  const overlayEl = $("#overlay");
+  if (overlayEl) {
+    try { overlayEl.dataset.kqView = "results"; } catch { try { overlayEl.setAttribute("data-kq-view", "results"); } catch {} }
+    overlayEl.style.display = "flex";
+  }
   $("#nextBtn").classList.remove("hidden");
   save();
 
+  try { window.KQ_VIP?.scan?.(); } catch {}
+
   if (state.settings.autoNext && auto) {
     window.autoNextTimer = setTimeout(() => {
-      if ($("#overlay").style.display !== "none") {
-        $("#overlay").style.display = "none";
+      const overlayNode = $("#overlay");
+      if (overlayNode && overlayNode.style.display !== "none") {
+        overlayNode.style.display = "none";
+        try { delete overlayNode.dataset.kqView; } catch {}
+        try { overlayNode.removeAttribute("data-kq-view"); } catch {}
         proceed();
       }
     }, 3000);
@@ -290,7 +352,12 @@ function reveal(auto) {
   emit("questionEnd", { qid: curr ? curr.qid : null, correctKey: correct });
 }
 function proceed() {
-  $("#overlay").style.display = "none";
+  const overlayNode = $("#overlay");
+  if (overlayNode) {
+    overlayNode.style.display = "none";
+    try { delete overlayNode.dataset.kqView; } catch {}
+    try { overlayNode.removeAttribute("data-kq-view"); } catch {}
+  }
   state.session.i++;
   state.session.done++;
   state.session.curr = null;
@@ -454,7 +521,15 @@ function pauseMain() {
   tickStop();
 }
 function resumeFlow() { nextQ(); }
-function nextQuestionNow() { $("#overlay").style.display = "none"; proceed(); }
+function nextQuestionNow() {
+  const overlayNode = $("#overlay");
+  if (overlayNode) {
+    overlayNode.style.display = "none";
+    try { delete overlayNode.dataset.kqView; } catch {}
+    try { overlayNode.removeAttribute("data-kq-view"); } catch {}
+  }
+  proceed();
+}
 function setChatGuard(fn) { chatGuard = fn; }
 function clearChatGuard() { chatGuard = null; }
 function getRandomQuestion() {
@@ -518,7 +593,7 @@ function refreshAddonsUI() {
 window.KQuiz = {
   state, on, off, emit, use,
   util: { el, $, $$, shuffle, clamp, parseAnswer },
-  control: { pauseMain, resumeFlow, nextQuestionNow, setChatGuard, clearChatGuard, getRandomQuestion },
+  control: { pauseMain, resumeFlow, nextQuestionNow, setChatGuard, clearChatGuard, getRandomQuestion, suppressVip, releaseVip },
   registerAddon, setAddonEnabled
 };
 window.KQuiz.__addons = addons;
