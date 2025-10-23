@@ -1,5 +1,5 @@
-﻿/*!
- * KQuiz add-on: Dvikova â€¢ Herbai (v3.4.3)
+/*!
+ * KQuiz add-on: Dvikova • Herbai (v3.4.3)
  * Simple synchronous registration (like v3.3.2) so Settings sees it.
  * + Tick sound, winner +points, VS in rules, nicer buttons, robust close.
  */
@@ -85,11 +85,11 @@
         <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;background:linear-gradient(90deg,rgba(220,38,38,.18),rgba(59,130,246,.18));border:1px solid #313657;border-radius:16px;padding:10px">
           <div style="display:flex;align-items:center;gap:10px;justify-content:flex-start">
             ${attacker?.avatar?`<img src="${attacker.avatar}" referrerpolicy="no-referrer" style="width:96px;height:96px;border-radius:50%;border:2px solid rgba(220,38,38,.65);object-fit:cover">`:"<div style='width:96px;height:96px;border-radius:50%;border:2px solid rgba(220,38,38,.65);background:#20161b'></div>"}
-            <div><div class="pill" style="cursor:default;border-radius:999px;padding:6px 10px;border:1px solid #4a1b2f;background:#2a1320;color:#cfe0ff;">UÅ¾puolÄ—jas</div><div class="big" style="font-size:22px;font-weight:900">${attacker?.name||"Å½aidÄ—jas A"}</div></div>
+            <div><div class="pill" style="cursor:default;border-radius:999px;padding:6px 10px;border:1px solid #4a1b2f;background:#2a1320;color:#cfe0ff;">Užpuolėjas</div><div class="big" style="font-size:22px;font-weight:900">${attacker?.name||"Žaidėjas A"}</div></div>
           </div>
           <div style="font-size:28px;font-weight:900;letter-spacing:1px;padding:4px 10px;border:1px dashed #3a4667;border-radius:999px;background:#0e1427">VS</div>
           <div style="display:flex;align-items:center;gap:10px;justify-content:flex-end">
-            <div style="text-align:right"><div class="pill" style="cursor:default;border-radius:999px;padding:6px 10px;border:1px solid #1e3553;background:#111f2c;color:#cfe0ff;">GynÄ—jas</div><div class="big" style="font-size:22px;font-weight:900">${defender?.name||"Å½aidÄ—jas B"}</div></div>
+            <div style="text-align:right"><div class="pill" style="cursor:default;border-radius:999px;padding:6px 10px;border:1px solid #1e3553;background:#111f2c;color:#cfe0ff;">Gynėjas</div><div class="big" style="font-size:22px;font-weight:900">${defender?.name||"Žaidėjas B"}</div></div>
             ${defender?.avatar?`<img src="${defender.avatar}" referrerpolicy="no-referrer" style="width:96px;height:96px;border-radius:50%;border:2px solid rgba(59,130,246,.65);object-fit:cover">`:"<div style='width:96px;height:96px;border-radius:50%;border:2px solid rgba(59,130,246,.65);background:#121a26'></div>"}
           </div>
         </div>
@@ -98,35 +98,35 @@
         <div id="dvAns" style="display:grid;gap:10px"></div>
 
         <div style="display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap">
-          <button id="dvNextQ" class="pill" style="cursor:pointer;user-select:none;border-radius:999px;padding:8px 14px;border:1px solid #2a365f;background:#0f162d;color:#cfe0ff;">Keisti klausimÄ…</button>
-          <button id="dvContinue" class="pill" style="cursor:pointer;user-select:none;border-radius:999px;padding:8px 14px;border:1px solid #2a365f;background:#0f162d;color:#cfe0ff;display:none">TÄ™sti</button>
+          <button id="dvNextQ" class="pill" style="cursor:pointer;user-select:none;border-radius:999px;padding:8px 14px;border:1px solid #2a365f;background:#0f162d;color:#cfe0ff;">Keisti klausimą</button>
+          <button id="dvContinue" class="pill" style="cursor:pointer;user-select:none;border-radius:999px;padding:8px 14px;border:1px solid #2a365f;background:#0f162d;color:#cfe0ff;display:none">Tęsti</button>
         </div>
       </div>
 
       <div id="dvRules" style="position:fixed;inset:0;background:rgba(7,10,18,.92);display:flex;align-items:center;justify-content:center;z-index:10000">
         <div style="width:min(720px,92%);border:1px solid #2a365f;border-radius:16px;background:#0b1124;padding:16px;display:grid;gap:12px">
-          <div class="big" style="font-size:22px;font-weight:900">Dvikovos taisyklÄ—s</div>
+          <div class="big" style="font-size:22px;font-weight:900">Dvikovos taisyklės</div>
 
           <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;background:linear-gradient(90deg,rgba(220,38,38,.18),rgba(59,130,246,.18));border:1px solid #313657;border-radius:16px;padding:10px">
             <div style="display:flex;align-items:center;gap:10px;justify-content:flex-start">
               ${attacker?.avatar?`<img src="${attacker.avatar}" referrerpolicy="no-referrer" style="width:64px;height:64px;border-radius:50%;border:2px solid rgba(220,38,38,.65);object-fit:cover">`:"<div style='width:64px;height:64px;border-radius:50%;border:2px solid rgba(220,38,38,.65);background:#20161b'></div>"}
-              <div><div class="pill" style="cursor:default;border-radius:999px;padding:6px 10px;border:1px solid #4a1b2f;background:#2a1320;color:#cfe0ff;">UÅ¾puolÄ—jas</div><div class="big" style="font-size:18px;font-weight:900">${attacker?.name||"Å½aidÄ—jas A"}</div></div>
+              <div><div class="pill" style="cursor:default;border-radius:999px;padding:6px 10px;border:1px solid #4a1b2f;background:#2a1320;color:#cfe0ff;">Užpuolėjas</div><div class="big" style="font-size:18px;font-weight:900">${attacker?.name||"Žaidėjas A"}</div></div>
             </div>
             <div style="font-size:22px;font-weight:900;letter-spacing:1px;padding:4px 10px;border:1px dashed #3a4667;border-radius:999px;background:#0e1427">VS</div>
             <div style="display:flex;align-items:center;gap:10px;justify-content:flex-end">
-              <div style="text-align:right"><div class="pill" style="cursor:default;border-radius:999px;padding:6px 10px;border:1px solid #1e3553;background:#111f2c;color:#cfe0ff;">GynÄ—jas</div><div class="big" style="font-size:18px;font-weight:900">${defender?.name||"Å½aidÄ—jas B"}</div></div>
+              <div style="text-align:right"><div class="pill" style="cursor:default;border-radius:999px;padding:6px 10px;border:1px solid #1e3553;background:#111f2c;color:#cfe0ff;">Gynėjas</div><div class="big" style="font-size:18px;font-weight:900">${defender?.name||"Žaidėjas B"}</div></div>
               ${defender?.avatar?`<img src="${defender.avatar}" referrerpolicy="no-referrer" style="width:64px;height:64px;border-radius:50%;border:2px solid rgba(59,130,246,.65);object-fit:cover">`:"<div style='width:64px;height:64px;border-radius:50%;border:2px solid rgba(59,130,246,.65);background:#121a26'></div>"}
             </div>
           </div>
 
           <ul class="sub" style="line-height:1.5">
             <li>Rodomas Lietuvos <strong>herbas</strong>.</li>
-            <li>Du dalyviai atsakinÄ—ja tik <strong>A/B/C/D</strong>. Po <strong>vienÄ… bandymÄ…</strong>.</li>
-            <li>Pirmas teisingai â€“ laimi. LaimÄ—tojas perima <strong>20%</strong> prieÅ¡ininko taÅ¡kÅ³.</li>
-            <li>Laikas: <strong>${cfg.secPerTry}s</strong>. Jei niekas teisingai â€“ naujas klausimas.</li>
+            <li>Du dalyviai atsakinėja tik <strong>A/B/C/D</strong>. Po <strong>vieną bandymą</strong>.</li>
+            <li>Pirmas teisingai – laimi. Laimėtojas perima <strong>20%</strong> priešininko taškų.</li>
+            <li>Laikas: <strong>${cfg.secPerTry}s</strong>. Jei niekas teisingai – naujas klausimas.</li>
           </ul>
           <div style="display:flex;justify-content:flex-end;gap:8px">
-            <button id="dvStart" class="pill" style="cursor:pointer;user-select:none;border-radius:999px;padding:8px 14px;border:1px solid #2a365f;background:#0f162d;color:#cfe0ff;">PradÄ—ti dvikovÄ…</button>
+            <button id="dvStart" class="pill" style="cursor:pointer;user-select:none;border-radius:999px;padding:8px 14px;border:1px solid #2a365f;background:#0f162d;color:#cfe0ff;">Pradėti dvikovą</button>
           </div>
         </div>
       </div>
@@ -168,7 +168,7 @@
     opts.forEach((txt,i)=>{
       const row=document.createElement("div"); row.className="choice"; row.dataset.idx=String(i);
       row.style.cssText="display:flex;align-items:center;gap:10px;border:1px solid #263154;background:#0d1327;border-radius:14px;padding:14px";
-      row.innerHTML = `<div class="key" style="font-weight:900">${keys[i]}</div><div class="txt" style="flex:1;min-width:0;font-size:18px">${txt||"â€”"}</div>
+      row.innerHTML = `<div class="key" style="font-weight:900">${keys[i]}</div><div class="txt" style="flex:1;min-width:0;font-size:18px">${txt||"—"}</div>
         <div style="display:flex;align-items:center;gap:8px">
           <div id="dvStack-${i}" style="display:flex;align-items:center;gap:6px"></div>
           <div id="dvMore-${i}" style="display:none;min-width:32px;height:28px;border-radius:999px;border:1px solid #1e2435;align-items:center;justify-content:center;font-size:13px;color:#cfe0ff;background:#101830;padding:0 10px">+0</div>
@@ -228,7 +228,7 @@
     setChatGuard((msg)=>{
       if(!active || winner) return true;
       if(!isParticipant(msg)) return true;
-      const name=msg.displayName||msg.user?.nickname||"Å½aidÄ—jas";
+      const name=msg.displayName||msg.user?.nickname||"Žaidėjas";
       if(!lockNameOnce(name)) return true;
       const key = (msg.parsedAnswer || parseAnswer(String(msg.text||"")));
       if(!key) return true;
@@ -266,7 +266,7 @@
     const card = document.createElement("div");
     card.id="dvWinner";
     card.style.cssText="position:fixed;inset:0;z-index:10050;display:flex;align-items:center;justify-content:center;background:rgba(5,8,14,.78)";
-    const name = winner?.name||"â€”";
+    const name = winner?.name||"—";
     card.innerHTML = `
       <div style="width:min(740px,92%);border:1px solid #3a4a7a;border-radius:18px;background:linear-gradient(180deg,#0e1530,#0a1126);padding:18px;display:grid;gap:12px;box-shadow:0 24px 60px rgba(0,0,0,.45)">
         <div style="display:flex;align-items:center;gap:10px">
@@ -276,12 +276,12 @@
         <div style="display:flex;align-items:center;gap:14px">
           ${winner?.avatar?`<img src="${winner.avatar}" referrerpolicy="no-referrer" style="width:84px;height:84px;border-radius:50%;border:2px solid #2b6b43;object-fit:cover">`:""}
           <div>
-            <div style="font-size:24px;font-weight:900">NugalÄ—tojas: ${name}</div>
-            <div class="sub">UÅ¾dirbo: <span style="color:#9ef7bc;font-weight:800">+${_lastDelta||0}</span> taÅ¡kÅ³</div>
+            <div style="font-size:24px;font-weight:900">Nugalėtojas: ${name}</div>
+            <div class="sub">Uždirbo: <span style="color:#9ef7bc;font-weight:800">+${_lastDelta||0}</span> taškų</div>
           </div>
         </div>
         <div style="display:flex;justify-content:flex-end;gap:8px">
-          <button id="dvBack" class="pill" style="cursor:pointer;user-select:none;border-radius:999px;padding:8px 14px;border:1px solid #2a365f;background:#0f162d;color:#cfe0ff;">GrÄ¯Å¾ti Ä¯ Å¾aidimÄ…</button>
+          <button id="dvBack" class="pill" style="cursor:pointer;user-select:none;border-radius:999px;padding:8px 14px;border:1px solid #2a365f;background:#0f162d;color:#cfe0ff;">Grįžti į žaidimą</button>
         </div>
       </div>`;
     document.body.appendChild(card);
@@ -338,8 +338,8 @@
   function start(aName, dName){
     if(active) return;
     active=true; used.clear(); winner=null; lockedOnce.clear();
-    attacker = findPlayer(aName) || { name: aName||"Å½aidÄ—jas A" };
-    defender = findPlayer(dName) || { name: dName||"Å½aidÄ—jas B" };
+    attacker = findPlayer(aName) || { name: aName||"Žaidėjas A" };
+    defender = findPlayer(dName) || { name: dName||"Žaidėjas B" };
     pauseMain(); ui();
     ensurePool().then(()=>{
       const btn=$("#dvStart"); if(btn){ btn.onclick = ()=>{ $("#dvRules")?.remove(); ask(false); }; }
@@ -387,7 +387,7 @@
   KQuiz.registerAddon({
     id: "duel-vote",
     name: "Dvikova: Herbai (LT)",
-    description: "TaisyklÄ—s su VS, laikmatis su garsu, nugalÄ—tojo kortelÄ— su +taÅ¡kais. Vienas bandymas. 20% perÄ—mimas.",
+    description: "Taisyklės su VS, laikmatis su garsu, nugalėtojo kortelė su +taškais. Vienas bandymas. 20% perėmimas.",
     defaultEnabled: true,
     enable(){ enabled=true; uninstallSniffer = installChatSniffer(onChat); },
     disable(){ enabled=false; try{ uninstallSniffer && uninstallSniffer(); }catch{} if(active) close(); }
