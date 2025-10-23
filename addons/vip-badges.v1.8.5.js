@@ -18,7 +18,7 @@
 
   const byNameKey = (name)=> `nm:${norm(name)}`;
   const byIdKey   = (id)=> `id:${String(id)}`;
-  const saveVIPs = ()=> saveList(STORAGE.vip, state.vips);
+   const saveVIPs = ()=> saveList(STORAGE.vip, state.vips);
   const saveSUBs = ()=> saveList(STORAGE.sub, state.subs);
 
   const isVIP = (name, uid) => {
@@ -54,7 +54,9 @@
     @keyframes kqFlameSpin { 0%{ transform:rotate(0deg) } 100%{ transform:rotate(360deg) } }
     @keyframes kqSpark { 0%{ transform:scale(.6); opacity:0 } 10%{opacity:1} 100%{ transform:scale(1.2); opacity:0 } }
   }
-  .kq-vip-ring, .kq-aura, .kq-flame, .kq-trail, .kq-spark{ position:fixed; left:-9999px; top:-9999px; pointer-events:none; z-index:${CFG.z}; }
+
+ .kq-vip-ring, .kq-aura, .kq-flame, .kq-trail, .kq-spark{ position:fixed; left:-9999px; top:-9999px; pointer-events:none; z-index:${CFG.z}; }
+
   .kq-vip-ring{
     border-radius:999px;
     border:2px solid rgba(255,225,0,.85);
@@ -135,13 +137,13 @@
     t.style.left   = x + "px"; t.style.top    = y + "px";
     document.body.appendChild(t);
     o.trails.push(t);
-    while(o.trails.length > CFG.trailMax){ try{ o.trails.shift().remove(); }catch{} }
+ while(o.trails.length > CFG.trailMax){ try{ o.trails.shift().remove(); }catch{} }
     setTimeout(()=>{ try{ t.remove(); }catch{} }, CFG.trailTTL+50);
   }
   function spawnSpark(o, r){
     const now = performance.now();
     if(now - o.lastSparkAt < CFG.sparksEveryMs) return;
-    o.lastSparkAt = now;
+    o.lastTrailAt = now;
     const s = document.createElement("div"); s.className="kq-spark";
     const ang = Math.random()*Math.PI*2;
     const rad = Math.min(r.width, r.height)/2 + 8;
@@ -242,7 +244,7 @@
       const uid = node.dataset?.uid || node.getAttribute?.("data-uid") || node.getAttribute?.("data-user-id") || "";
       let name = node.getAttribute?.("data-name") || node.getAttribute?.("aria-label") || node.getAttribute?.("title") || (node.alt||"");
       if(!name || name.length<2) name = inferNameFrom(node);
-      const sub = isSUB(name, uid);
+     const sub = isSUB(name, uid);
       const vip = !sub && isVIP(name, uid);
       const overlays = ensureOverlays(node);
       if(sub){
@@ -264,57 +266,24 @@
 
   // ---------- scanning ----------
   let moA=null, moB=null;
-  let scheduledScan = 0;
-  function runScan(){
+  function schedule(){
     const t = findTargets();
     t.forEach(renderFor);
     ensureTick();
   }
-  function schedule(immediate){
-    if(immediate === true){
-      if(scheduledScan){ cancelAnimationFrame(scheduledScan); scheduledScan = 0; }
-      runScan();
-      return;
-    }
-    if(scheduledScan) return;
-    scheduledScan = requestAnimationFrame(()=>{
-      scheduledScan = 0;
-      runScan();
-    });
-  }
-  function isOverlayNode(node){
-    return !!(node && node.classList && (node.classList.contains("kq-vip-ring") || node.classList.contains("kq-aura") || node.classList.contains("kq-flame") || node.classList.contains("kq-trail") || node.classList.contains("kq-spark")));
-  }
-  function mutationCallback(records){
-    for(const rec of records){
-      if(rec.type === "childList" && rec.addedNodes && rec.addedNodes.length){
-        let onlyOverlays = true;
-        for(const node of rec.addedNodes){
-          if(!isOverlayNode(node)){
-            onlyOverlays = false;
-            break;
-          }
-        }
-        if(onlyOverlays) continue;
-      }
-      const el = rec.target;
-      if(isOverlayNode(el)) continue;
-      schedule();
-      break;
-    }
-  }
+
   // ---------- Settings panel ----------
   function renderPanel(container){
     container.innerHTML = "";
     const root = document.createElement("div"); root.style.display="grid"; root.style.gap="10px";
-    const title = document.createElement("div"); title.textContent="VIP ir SUB žaidėjai"; title.style.fontWeight="900";
+      const title = document.createElement("div"); title.textContent="VIP ir SUB žaidėjai"; title.style.fontWeight="900";
     const sub = document.createElement("div"); sub.className="kq-sub"; sub.textContent="Pažymėkite iš sąrašo arba pridėkite vardą. Saugojama naršyklėje.";
     const addRow = document.createElement("div"); addRow.style.display="grid"; addRow.style.gridTemplateColumns="1fr auto auto"; addRow.style.gap="8px";
     const input = document.createElement("input"); input.className="kq-input"; input.placeholder="Įrašykite vardą…";
     const addVipBtn = document.createElement("button"); addVipBtn.className="kq-btn"; addVipBtn.textContent="Pridėti VIP";
     const addSubBtn = document.createElement("button"); addSubBtn.className="kq-btn"; addSubBtn.textContent="Pridėti SUB";
-    addVipBtn.onclick = ()=>{ const v=input.value.trim(); if(v){ addVIPByName(v); input.value=""; renderPanel(container); schedule(true); } };
-    addSubBtn.onclick = ()=>{ const v=input.value.trim(); if(v){ addSUBByName(v); input.value=""; renderPanel(container); schedule(true); } };
+    addVipBtn.onclick = ()=>{ const v=input.value.trim(); if(v){ addVIPByName(v); input.value=""; renderPanel(container); schedule(); } };
+    addSubBtn.onclick = ()=>{ const v=input.value.trim(); if(v){ addSUBByName(v); input.value=""; renderPanel(container); schedule(); } };
     addRow.appendChild(input); addRow.appendChild(addVipBtn); addRow.appendChild(addSubBtn);
 
     const list = document.createElement("div"); list.style.cssText="border:1px solid #273149;border-radius:12px;max-height:320px;overflow:auto;padding:6px;background:#0b1124";
@@ -328,7 +297,7 @@
       list.appendChild(row);
     }else{
       players.forEach(p=>{
-        const row = document.createElement("div"); row.className="kq-row";
+               const row = document.createElement("div"); row.className="kq-row";
         const keyId = byIdKey(p.id), keyNm = byNameKey(p.name);
         const nm = document.createElement("div"); nm.textContent = `${p.name} • ${p.score}`; nm.style.flex="1";
 
@@ -343,7 +312,7 @@
           }else{
             state.vips = state.vips.filter(v=>v.key!==keyId && v.key!==keyNm);
           }
-          saveVIPs(); schedule(true);
+          saveVIPs(); schedule();
         };
         vipLabel.appendChild(vipCb);
         vipLabel.appendChild(document.createTextNode("VIP"));
@@ -357,7 +326,7 @@
           }else{
             state.subs = state.subs.filter(v=>v.key!==keyId && v.key!==keyNm);
           }
-          saveSUBs(); schedule(true);
+          saveSUBs(); schedule();
         };
         subLabel.appendChild(subCb);
         subLabel.appendChild(document.createTextNode("SUB"));
@@ -370,7 +339,7 @@
           removeVIP(keyNm);
           removeSUB(keyNm);
           renderPanel(container);
-          schedule(true);
+          schedule();
         };
         row.appendChild(nm); row.appendChild(toggles); row.appendChild(del);
         list.appendChild(row);
@@ -387,7 +356,7 @@
     (function loop(){
       try{
         if(KQuiz && KQuiz.settings && typeof KQuiz.settings.registerPanel==="function"){
-          KQuiz.settings.registerPanel("vip-badges", "VIP ir SUB žaidėjai", renderPanel);
+           KQuiz.settings.registerPanel("vip-badges", "VIP ir SUB žaidėjai", renderPanel);
           return;
         }
       }catch{}
@@ -413,19 +382,13 @@
     ensureStyle();
     window.addEventListener("scroll", schedule, true);
     window.addEventListener("resize", schedule, true);
-    moA = new MutationObserver(mutationCallback); moA.observe(document, {subtree:true, childList:true});
-    moB = new MutationObserver(mutationCallback); moB.observe(document, {subtree:true, attributes:true, attributeFilter:["src","style","data-uid","data-name","title","aria-label"]});
-    schedule(true); registerSettingsPanel(); ensureFab(); ensureTick();
+    moA = new MutationObserver(schedule); moA.observe(document, {subtree:true, childList:true});
+    moB = new MutationObserver(schedule); moB.observe(document, {subtree:true, attributes:true, attributeFilter:["src","style","data-uid","data-name","title","aria-label"]});
+    schedule(); registerSettingsPanel(); ensureFab(); ensureTick();
   }
   function disable(){
-    if(scheduledScan){ cancelAnimationFrame(scheduledScan); scheduledScan = 0; }
     if(rafId){ cancelAnimationFrame(rafId); rafId=0; }
     tracked.clear();
-    window.removeEventListener("scroll", schedule, true);
-    window.removeEventListener("resize", schedule, true);
-    try{ moA?.disconnect(); }catch{}
-    try{ moB?.disconnect(); }catch{}
-    moA = moB = null;
   }
 
   if(!window.KQuiz || !KQuiz.registerAddon){ console.warn("[vip-aura] Load after core."); return; }
@@ -440,9 +403,10 @@
     enable, disable
   });
 
-  window.KQ_VIP = Object.assign(window.KQ_VIP||{}, {
-    scan(){ schedule(true); },
-    open(){ ensureFab(); document.getElementById('kq-vip-fab')?.click(); },
+   window.KQ_VIP = Object.assign(window.KQ_VIP||{}, {
+    scan: schedule,
+    open(){ ensureFab(); document.getElementById('kq-vip-fab')?.click(); }
+    ,
     isVip(uid, name){
       const kId = uid ? byIdKey(uid) : null;
       const kNm = name ? byNameKey(name) : null;
