@@ -16,14 +16,6 @@
   const emit = (event, detail)=>{ try{ window.dispatchEvent(new CustomEvent(event,{ detail })); }catch{} };
   const STORAGE = { vip: "kq_vips", sub: "kq_subs" };
   const state = { vips: loadList(STORAGE.vip), subs: loadList(STORAGE.sub) };
-  const SUPPRESS_SELECTORS = [
-    "[data-kq-vip-block]",
-    ".kq-solo-overlay",
-    "#kq-money-overlay",
-    "#kq-map-overlay"
-  ];
-  const SUPPRESS_QUERY = SUPPRESS_SELECTORS.join(",");
-
   const byNameKey = (name)=> `nm:${norm(name)}`;
   const byIdKey   = (id)=> `id:${String(id)}`;
   const saveVIPs = ()=> saveList(STORAGE.vip, state.vips);
@@ -310,41 +302,11 @@
   // ---------- scanning ----------
   let moA=null, moB=null;
   let scheduledScan = 0;
-  function isElementVisible(el){
-    if(!el) return false;
-    if(el.hidden) return false;
-    try{
-      if(el.matches && (el.matches(".kq-vip-ring") || el.matches(".kq-sub-ring") || el.matches(".kq-aura") || el.matches(".kq-flame") || el.matches(".kq-trail") || el.matches(".kq-spark"))) return false;
-    }catch{}
-    try{
-      const style = window.getComputedStyle ? window.getComputedStyle(el) : null;
-      if(style){
-        if(style.display === "none" || style.visibility === "hidden") return false;
-        const op = style.opacity;
-        if(op && !Number.isNaN(Number(op)) && Number(op) <= 0) return false;
-      }else if(el.style && typeof el.style.display === "string" && el.style.display.trim().toLowerCase() === "none"){
-        return false;
-      }
-    }catch{}
-    try{
-      const rect = el.getBoundingClientRect();
-      if(!rect || (!rect.width && !rect.height)) return false;
-    }catch{}
-    return true;
-  }
   function isSuppressed(){
     try{
       const bodyFlag = document.body?.dataset?.kqVipSuppress;
       if(bodyFlag && bodyFlag !== "0" && bodyFlag !== "false") return true;
     }catch{}
-    if(SUPPRESS_QUERY){
-      try{
-        const nodes = document.querySelectorAll(SUPPRESS_QUERY);
-        for(const el of nodes){
-          if(isElementVisible(el)) return true;
-        }
-      }catch{}
-    }
     return false;
   }
   function runScan(){

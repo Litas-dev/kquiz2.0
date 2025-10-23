@@ -217,7 +217,6 @@
 
       overlay = document.createElement("div");
       overlay.className = "kq-solo-overlay";
-      try { overlay.dataset.kqVipBlock = "1"; } catch { try { overlay.setAttribute("data-kq-vip-block", "1"); } catch {} }
       overlay.innerHTML = `
         <div class="kq-solo-card">
           <!-- INTRO -->
