@@ -6,10 +6,21 @@
     let off=[];
     let lastSig="";
     let overlayWatchers=[];
+    let overlayMountObserver=null;
+    let overlayActive=false;
+    let hiddenDueToOverlay=false;
+
+    const OVERLAY_SELECTORS = [
+      '.overlay',
+      '#kq-money-overlay',
+      '#kq-map-overlay',
+      '.kq-solo-overlay'
+    ];
 
     const scheduleApplyVisibility = (()=>{
       let raf=0;
       return ()=>{
+        ensureOverlayWatchers();
         if(raf) return;
         raf=requestAnimationFrame(()=>{
           raf=0;
@@ -74,9 +85,16 @@
       scheduleApplyVisibility();
     };
 
+    const collectOverlays = ()=>{
+      try{
+        return Array.from(document.querySelectorAll(OVERLAY_SELECTORS.join(',')));
+      }catch{}
+      return [];
+    };
+
     const hasActiveOverlay = ()=>{
       try{
-        const overlays=document.querySelectorAll('.overlay');
+        const overlays = collectOverlays();
         for(const el of overlays){
           if(!el || !el.isConnected) continue;
           let display='';
@@ -101,18 +119,38 @@
 
     function applyVisibility(){
       if(!root) return;
-      let hasPlayers=false;
-      try{ hasPlayers = root.dataset.kqTop5bgHasPlayers === '1'; }catch{}
-      if(!hasPlayers){
-        root.style.display='none';
+      const active = hasActiveOverlay();
+      if(active){
+        overlayActive = true;
+        if(root.style.display !== 'none') root.style.display = 'none';
+        if(!hiddenDueToOverlay){
+          hiddenDueToOverlay = true;
+          if(listEl){
+            try{ listEl.innerHTML=''; }catch{}
+          }
+          try{ root.dataset.kqTop5bgHasPlayers = '0'; }catch{}
+          lastSig = '';
+          try{ window.KQ_VIP?.scan?.(); }catch{}
+        }
         return;
       }
-      root.style.display = hasActiveOverlay() ? 'none' : 'flex';
+      if(overlayActive){
+        overlayActive = false;
+      }
+      if(hiddenDueToOverlay){
+        hiddenDueToOverlay = false;
+        lastSig = '';
+        render();
+        return;
+      }
+      let hasPlayers=false;
+      try{ hasPlayers = root.dataset.kqTop5bgHasPlayers === '1'; }catch{}
+      root.style.display = hasPlayers ? 'flex' : 'none';
     }
 
-    const ensureOverlayWatchers = ()=>{
+    function ensureOverlayWatchers(){
       try{
-        const overlays=document.querySelectorAll('.overlay');
+        const overlays = collectOverlays();
         overlays.forEach(el=>{
           if(!el) return;
           const existing=overlayWatchers.find(entry=>entry.el===el);
@@ -124,9 +162,9 @@
           overlayWatchers.push({el, observer, listener});
         });
       }catch{}
-    };
+    }
 
-    const detachOverlayWatchers = ()=>{
+    function detachOverlayWatchers(){
       overlayWatchers.forEach(({observer, el, listener})=>{
         try{ observer?.disconnect(); }catch{}
         if(el && listener){
@@ -134,7 +172,7 @@
         }
       });
       overlayWatchers=[];
-    };
+    }
 
     function sortTop(){
       const players = Object.entries(K?.state?.players||{}).map(([id,p])=>({
@@ -164,6 +202,10 @@
       if(!root || !root.isConnected){ root=null; listEl=null; }
       ensureRoot();
       const top = sortTop();
+      if(overlayActive){
+        scheduleApplyVisibility();
+        return;
+      }
       const sig = JSON.stringify(top.map(p=>[p.id,p.score,p.avatar,p.name]));
       if(sig===lastSig){
         try{
@@ -238,11 +280,17 @@
 
     const enable = (ctx)=>{
       K=ctx;
+      overlayActive=false;
+      hiddenDueToOverlay=false;
       ensureStyle();
       ensureRoot();
       render();
       ensureOverlayWatchers();
       scheduleApplyVisibility();
+      if(!overlayMountObserver){
+        overlayMountObserver = new MutationObserver(()=>scheduleApplyVisibility());
+        try{ overlayMountObserver.observe(document.body||document.documentElement,{childList:true,subtree:false}); }catch{}
+      }
       const handlers=[
         ['scoresChanged', handleScores],
         ['leaderboardRefresh', handleScores],
@@ -267,10 +315,16 @@
       off=[];
       K=null;
       lastSig="";
+      overlayActive=false;
+      hiddenDueToOverlay=false;
       if(listEl){ try{ listEl.innerHTML=''; }catch{} }
       listEl=null;
       if(root){ try{ root.classList.remove('kq-top5bg'); }catch{} }
       detachOverlayWatchers();
+      if(overlayMountObserver){
+        try{ overlayMountObserver.disconnect(); }catch{}
+        overlayMountObserver=null;
+      }
     };
 
     return { id:'top5bg', name:'Top5 BG lentelė', description:'Rodo Top-5 foninėje lentoje su VIP/SUB ženklais.', defaultEnabled:true, enable, disable };
