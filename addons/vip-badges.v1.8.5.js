@@ -11,12 +11,16 @@
   const CFG = { z: 99995, haloGrow: 8, trailEveryMs: 80, trailTTL: 520, trailMax: 5, sparksEveryMs: 1100, sparkTTL: 850, spinMs: 4200 };
 
   const norm = s => String(s||"").normalize('NFKD').replace(/\p{Diacritic}/gu,'').trim().toLowerCase().replace(/\s+/g," ");
-  const load = () => { try{ return JSON.parse(localStorage.getItem("kq_vips")||"[]"); }catch{ return []; } };
-  const save = v => localStorage.setItem("kq_vips", JSON.stringify(v));
-  const state = { vips: load() };
+  const loadList = (key) => { try{ return JSON.parse(localStorage.getItem(key)||"[]"); }catch{ return []; } };
+  const saveList = (key, value) => localStorage.setItem(key, JSON.stringify(value));
+  const STORAGE = { vip: "kq_vips", sub: "kq_subs" };
+  const state = { vips: loadList(STORAGE.vip), subs: loadList(STORAGE.sub) };
 
   const byNameKey = (name)=> `nm:${norm(name)}`;
   const byIdKey   = (id)=> `id:${String(id)}`;
+  const saveVIPs = ()=> saveList(STORAGE.vip, state.vips);
+  const saveSUBs = ()=> saveList(STORAGE.sub, state.subs);
+
   const isVIP = (name, uid) => {
     const k1 = uid ? byIdKey(uid) : null;
     const k2 = name ? byNameKey(name) : null;
@@ -26,9 +30,21 @@
     const nm = String(name||"").trim(); if(!nm) return;
     const key = byNameKey(nm);
     if(!state.vips.some(v=>v.key===key)) state.vips.push({key, type:"name", name:nm});
-    save(state.vips);
+    saveVIPs();
   };
-  const removeVIP = (key)=>{ state.vips = state.vips.filter(v=>v.key!==key); save(state.vips); };
+  const removeVIP = (key)=>{ state.vips = state.vips.filter(v=>v.key!==key); saveVIPs(); };
+  const isSUB = (name, uid) => {
+    const k1 = uid ? byIdKey(uid) : null;
+    const k2 = name ? byNameKey(name) : null;
+    return state.subs.some(v => (k1 && v.key===k1) || (k2 && v.key===k2));
+  };
+  const addSUBByName = (name)=>{
+    const nm = String(name||"").trim(); if(!nm) return;
+    const key = byNameKey(nm);
+    if(!state.subs.some(v=>v.key===key)) state.subs.push({key, type:"name", name:nm});
+    saveSUBs();
+  };
+  const removeSUB = (key)=>{ state.subs = state.subs.filter(v=>v.key!==key); saveSUBs(); };
 
   // ---------- CSS ----------
   const CSS = `
@@ -38,7 +54,13 @@
     @keyframes kqFlameSpin { 0%{ transform:rotate(0deg) } 100%{ transform:rotate(360deg) } }
     @keyframes kqSpark { 0%{ transform:scale(.6); opacity:0 } 10%{opacity:1} 100%{ transform:scale(1.2); opacity:0 } }
   }
-  .kq-aura, .kq-flame, .kq-trail, .kq-spark{ position:fixed; left:-9999px; top:-9999px; pointer-events:none; z-index:${CFG.z}; }
+  .kq-vip-ring, .kq-aura, .kq-flame, .kq-trail, .kq-spark{ position:fixed; left:-9999px; top:-9999px; pointer-events:none; z-index:${CFG.z}; }
+  .kq-vip-ring{
+    border-radius:999px;
+    border:2px solid rgba(255,225,0,.85);
+    box-shadow:0 0 14px rgba(255,225,0,.55);
+    background:rgba(255,255,0,.06);
+  }
   .kq-aura{
     border-radius:999px;
     box-shadow: 0 0 0 2px rgba(255,215,120,.65), 0 0 22px rgba(255,215,120,.45), 0 0 44px rgba(167,139,250,.25);
@@ -79,15 +101,25 @@
   function ensureOverlays(node){
     let o = pool.get(node);
     if(!o){
+      const ring  = document.createElement("div"); ring.className  = "kq-vip-ring";
       const aura  = document.createElement("div"); aura.className  = "kq-aura";
       const flame = document.createElement("div"); flame.className = "kq-flame";
-      document.body.appendChild(aura); document.body.appendChild(flame);
-      o = { aura, flame, trails:[], lastTrailAt:0, lastRect:null, lastSparkAt:0 };
+      document.body.appendChild(ring); document.body.appendChild(aura); document.body.appendChild(flame);
+      o = { ring, aura, flame, trails:[], lastTrailAt:0, lastRect:null, lastSparkAt:0, role:null };
       pool.set(node, o);
     }
     return o;
   }
-  function hide(o){ if(!o) return; o.aura.style.left=o.flame.style.left="-9999px"; o.aura.style.top=o.flame.style.top="-9999px"; }
+  function hidePos(el){ if(!el) return; el.style.left="-9999px"; el.style.top="-9999px"; }
+  function clearTrails(o){ while(o?.trails?.length){ try{ o.trails.shift().remove(); }catch{} } }
+  function hide(o){ if(!o) return; o.role=null; hidePos(o.ring); hidePos(o.aura); hidePos(o.flame); clearTrails(o); }
+  function setRole(o, role){
+    if(!o) return;
+    if(o.role===role) return;
+    if(role==="vip"){ hidePos(o.aura); hidePos(o.flame); clearTrails(o); }
+    if(role==="sub"){ hidePos(o.ring); }
+    o.role = role;
+  }
 
   function spawnTrail(o, r){
     const now = performance.now();
@@ -121,18 +153,31 @@
   }
   function layout(node){
     const o = ensureOverlays(node);
+    if(!o.role){ hide(o); return; }
     const r = node.getBoundingClientRect();
     const snap = v => Math.round(v);
     const dx = o.lastRect ? Math.abs(r.left - o.lastRect.left) : 999;
     const dy = o.lastRect ? Math.abs(r.top  - o.lastRect.top)  : 999;
-    if(dx+dy > 1.5) spawnTrail(o, r);
     o.lastRect = { left:r.left, top:r.top, width:r.width, height:r.height };
-    const g = CFG.haloGrow;
-    const w = snap(Math.max(0, r.width + g*2)), h = snap(Math.max(0, r.height + g*2));
-    const x = snap(r.left - g), y = snap(r.top - g);
-    o.aura.style.width=w+"px"; o.aura.style.height=h+"px"; o.aura.style.left=x+"px"; o.aura.style.top=y+"px";
-    o.flame.style.width=w+"px"; o.flame.style.height=h+"px"; o.flame.style.left=x+"px"; o.flame.style.top=y+"px";
-    spawnSpark(o, r);
+    if(o.role === "sub"){
+      if(dx+dy > 1.5) spawnTrail(o, r);
+      const g = CFG.haloGrow;
+      const w = snap(Math.max(0, r.width + g*2)), h = snap(Math.max(0, r.height + g*2));
+      const x = snap(r.left - g), y = snap(r.top - g);
+      hidePos(o.ring);
+      o.aura.style.width=w+"px"; o.aura.style.height=h+"px"; o.aura.style.left=x+"px"; o.aura.style.top=y+"px";
+      o.flame.style.width=w+"px"; o.flame.style.height=h+"px"; o.flame.style.left=x+"px"; o.flame.style.top=y+"px";
+      spawnSpark(o, r);
+    }else if(o.role === "vip"){
+      clearTrails(o);
+      hidePos(o.aura); hidePos(o.flame);
+      const ringGrow = 6;
+      const w = snap(Math.max(0, r.width + ringGrow*2));
+      const h = snap(Math.max(0, r.height + ringGrow*2));
+      const x = snap(r.left - ringGrow);
+      const y = snap(r.top - ringGrow);
+      o.ring.style.width=w+"px"; o.ring.style.height=h+"px"; o.ring.style.left=x+"px"; o.ring.style.top=y+"px";
+    }
   }
 
   function tick(){
@@ -140,6 +185,12 @@
     tracked.forEach(node=>{
       if(!node || !node.isConnected){
         const o = pool.get(node); if(o){ hide(o); pool.delete(node); }
+        tracked.delete(node);
+        return;
+      }
+      const o = pool.get(node);
+      if(!o || !o.role){
+        if(o) hide(o);
         tracked.delete(node);
         return;
       }
@@ -191,9 +242,16 @@
       const uid = node.dataset?.uid || node.getAttribute?.("data-uid") || node.getAttribute?.("data-user-id") || "";
       let name = node.getAttribute?.("data-name") || node.getAttribute?.("aria-label") || node.getAttribute?.("title") || (node.alt||"");
       if(!name || name.length<2) name = inferNameFrom(node);
-      const vip = isVIP(name, uid);
+      const sub = isSUB(name, uid);
+      const vip = !sub && isVIP(name, uid);
       const overlays = ensureOverlays(node);
-      if(vip){
+      if(sub){
+        setRole(overlays, "sub");
+        tracked.add(node);
+        layout(node);
+        ensureTick();
+      }else if(vip){
+        setRole(overlays, "vip");
         tracked.add(node);
         layout(node);
         ensureTick();
@@ -206,23 +264,58 @@
 
   // ---------- scanning ----------
   let moA=null, moB=null;
-  function schedule(){
+  let scheduledScan = 0;
+  function runScan(){
     const t = findTargets();
     t.forEach(renderFor);
     ensureTick();
   }
-
+  function schedule(immediate){
+    if(immediate === true){
+      if(scheduledScan){ cancelAnimationFrame(scheduledScan); scheduledScan = 0; }
+      runScan();
+      return;
+    }
+    if(scheduledScan) return;
+    scheduledScan = requestAnimationFrame(()=>{
+      scheduledScan = 0;
+      runScan();
+    });
+  }
+  function isOverlayNode(node){
+    return !!(node && node.nodeType === 1 && node.classList && (node.classList.contains("kq-vip-ring") || node.classList.contains("kq-aura") || node.classList.contains("kq-flame") || node.classList.contains("kq-trail") || node.classList.contains("kq-spark")));
+  }
+  function onlyOverlayNodes(list){
+    if(!list || !list.length) return true;
+    for(const node of list){
+      if(!isOverlayNode(node)) return false;
+    }
+    return true;
+  }
+  function mutationCallback(records){
+    for(const rec of records){
+      if(rec.type === "childList"){
+        if(onlyOverlayNodes(rec.addedNodes) && onlyOverlayNodes(rec.removedNodes)) continue;
+      }
+      const el = rec.target;
+      if(isOverlayNode(el)) continue;
+      schedule();
+      break;
+    }
+  }
   // ---------- Settings panel ----------
   function renderPanel(container){
     container.innerHTML = "";
     const root = document.createElement("div"); root.style.display="grid"; root.style.gap="10px";
-    const title = document.createElement("div"); title.textContent="VIP žaidėjai"; title.style.fontWeight="900";
+    const title = document.createElement("div"); title.textContent="VIP ir SUB žaidėjai"; title.style.fontWeight="900";
     const sub = document.createElement("div"); sub.className="kq-sub"; sub.textContent="Pažymėkite iš sąrašo arba pridėkite vardą. Saugojama naršyklėje.";
-    const addRow = document.createElement("div"); addRow.style.display="grid"; addRow.style.gridTemplateColumns="1fr auto"; addRow.style.gap="8px";
+    const addRow = document.createElement("div"); addRow.style.display="grid"; addRow.style.gridTemplateColumns="1fr auto auto"; addRow.style.gap="8px";
     const input = document.createElement("input"); input.className="kq-input"; input.placeholder="Įrašykite vardą…";
-    const addBtn = document.createElement("button"); addBtn.className="kq-btn"; addBtn.textContent="Pridėti";
-    addBtn.onclick = ()=>{ const v=input.value.trim(); if(v){ addVIPByName(v); input.value=""; renderPanel(container); schedule(); } };
-    addRow.appendChild(input); addRow.appendChild(addBtn);
+    const addVipBtn = document.createElement("button"); addVipBtn.className="kq-btn"; addVipBtn.textContent="Pridėti VIP";
+    const addSubBtn = document.createElement("button"); addSubBtn.className="kq-btn"; addSubBtn.textContent="Pridėti SUB";
+    addVipBtn.onclick = ()=>{ const v=input.value.trim(); if(v){ addVIPByName(v); input.value=""; renderPanel(container); schedule(true); } };
+    addSubBtn.onclick = ()=>{ const v=input.value.trim(); if(v){ addSUBByName(v); input.value=""; renderPanel(container); schedule(true); } };
+    addRow.appendChild(input); addRow.appendChild(addVipBtn); addRow.appendChild(addSubBtn);
 
     const list = document.createElement("div"); list.style.cssText="border:1px solid #273149;border-radius:12px;max-height:320px;overflow:auto;padding:6px;background:#0b1124";
 
@@ -236,21 +329,50 @@
     }else{
       players.forEach(p=>{
         const row = document.createElement("div"); row.className="kq-row";
-        const cb = document.createElement("input"); cb.type="checkbox";
         const keyId = byIdKey(p.id), keyNm = byNameKey(p.name);
-        cb.checked = state.vips.some(v=>v.key===keyId || v.key===keyNm);
-        cb.onchange = ()=>{
-          if(cb.checked){
+        const nm = document.createElement("div"); nm.textContent = `${p.name} • ${p.score}`; nm.style.flex="1";
+
+        const toggles = document.createElement("div"); toggles.style.display="flex"; toggles.style.alignItems="center"; toggles.style.gap="12px";
+
+        const vipLabel = document.createElement("label"); vipLabel.style.display="flex"; vipLabel.style.alignItems="center"; vipLabel.style.gap="4px"; vipLabel.style.fontSize="12px";
+        const vipCb = document.createElement("input"); vipCb.type="checkbox";
+        vipCb.checked = state.vips.some(v=>v.key===keyId || v.key===keyNm);
+        vipCb.onchange = ()=>{
+          if(vipCb.checked){
             if(!state.vips.some(v=>v.key===keyId)) state.vips.push({key:keyId,type:"id",name:p.name});
           }else{
             state.vips = state.vips.filter(v=>v.key!==keyId && v.key!==keyNm);
           }
-          save(state.vips); schedule();
+          saveVIPs(); schedule(true);
         };
-        const nm = document.createElement("div"); nm.textContent = `${p.name} • ${p.score}`; nm.style.flex="1";
+        vipLabel.appendChild(vipCb);
+        vipLabel.appendChild(document.createTextNode("VIP"));
+
+        const subLabel = document.createElement("label"); subLabel.style.display="flex"; subLabel.style.alignItems="center"; subLabel.style.gap="4px"; subLabel.style.fontSize="12px";
+        const subCb = document.createElement("input"); subCb.type="checkbox";
+        subCb.checked = state.subs.some(v=>v.key===keyId || v.key===keyNm);
+        subCb.onchange = ()=>{
+          if(subCb.checked){
+            if(!state.subs.some(v=>v.key===keyId)) state.subs.push({key:keyId,type:"id",name:p.name});
+          }else{
+            state.subs = state.subs.filter(v=>v.key!==keyId && v.key!==keyNm);
+          }
+          saveSUBs(); schedule(true);
+        };
+        subLabel.appendChild(subCb);
+        subLabel.appendChild(document.createTextNode("SUB"));
+
+        toggles.appendChild(vipLabel);
+        toggles.appendChild(subLabel);
+
         const del = document.createElement("button"); del.className="kq-btn"; del.textContent="✕"; del.title="Pašalinti pagal vardą";
-        del.onclick = ()=>{ removeVIP(keyNm); save(state.vips); renderPanel(container); schedule(); };
-        row.appendChild(cb); row.appendChild(nm); row.appendChild(del);
+        del.onclick = ()=>{
+          removeVIP(keyNm);
+          removeSUB(keyNm);
+          renderPanel(container);
+          schedule(true);
+        };
+        row.appendChild(nm); row.appendChild(toggles); row.appendChild(del);
         list.appendChild(row);
       });
     }
@@ -265,7 +387,7 @@
     (function loop(){
       try{
         if(KQuiz && KQuiz.settings && typeof KQuiz.settings.registerPanel==="function"){
-          KQuiz.settings.registerPanel("vip-badges", "VIP žaidėjai", renderPanel);
+          KQuiz.settings.registerPanel("vip-badges", "VIP ir SUB žaidėjai", renderPanel);
           return;
         }
       }catch{}
@@ -291,13 +413,19 @@
     ensureStyle();
     window.addEventListener("scroll", schedule, true);
     window.addEventListener("resize", schedule, true);
-    moA = new MutationObserver(schedule); moA.observe(document, {subtree:true, childList:true});
-    moB = new MutationObserver(schedule); moB.observe(document, {subtree:true, attributes:true, attributeFilter:["src","style","data-uid","data-name","title","aria-label"]});
-    schedule(); registerSettingsPanel(); ensureFab(); ensureTick();
+    moA = new MutationObserver(mutationCallback); moA.observe(document, {subtree:true, childList:true});
+    moB = new MutationObserver(mutationCallback); moB.observe(document, {subtree:true, attributes:true, attributeFilter:["src","style","data-uid","data-name","title","aria-label"]});
+    schedule(true); registerSettingsPanel(); ensureFab(); ensureTick();
   }
   function disable(){
+    if(scheduledScan){ cancelAnimationFrame(scheduledScan); scheduledScan = 0; }
     if(rafId){ cancelAnimationFrame(rafId); rafId=0; }
     tracked.clear();
+    window.removeEventListener("scroll", schedule, true);
+    window.removeEventListener("resize", schedule, true);
+    try{ moA?.disconnect(); }catch{}
+    try{ moB?.disconnect(); }catch{}
+    moA = moB = null;
   }
 
   if(!window.KQuiz || !KQuiz.registerAddon){ console.warn("[vip-aura] Load after core."); return; }
@@ -313,13 +441,17 @@
   });
 
   window.KQ_VIP = Object.assign(window.KQ_VIP||{}, {
-    scan: schedule,
-    open(){ ensureFab(); document.getElementById('kq-vip-fab')?.click(); }
-    ,
+    scan(){ schedule(true); },
+    open(){ ensureFab(); document.getElementById('kq-vip-fab')?.click(); },
     isVip(uid, name){
       const kId = uid ? byIdKey(uid) : null;
       const kNm = name ? byNameKey(name) : null;
       return state.vips.some(v => (kId && v.key === kId) || (kNm && v.key === kNm));
+    },
+    isSub(uid, name){
+      const kId = uid ? byIdKey(uid) : null;
+      const kNm = name ? byNameKey(name) : null;
+      return state.subs.some(v => (kId && v.key === kId) || (kNm && v.key === kNm));
     }
   });
 })();
