@@ -18,7 +18,7 @@
 
   const byNameKey = (name)=> `nm:${norm(name)}`;
   const byIdKey   = (id)=> `id:${String(id)}`;
-  const saveVIPs = ()=> saveList(STORAGE.vip, state.vips);
+   const saveVIPs = ()=> saveList(STORAGE.vip, state.vips);
   const saveSUBs = ()=> saveList(STORAGE.sub, state.subs);
 
   const isVIP = (name, uid) => {
@@ -54,7 +54,9 @@
     @keyframes kqFlameSpin { 0%{ transform:rotate(0deg) } 100%{ transform:rotate(360deg) } }
     @keyframes kqSpark { 0%{ transform:scale(.6); opacity:0 } 10%{opacity:1} 100%{ transform:scale(1.2); opacity:0 } }
   }
-  .kq-vip-ring, .kq-aura, .kq-flame, .kq-trail, .kq-spark{ position:fixed; left:-9999px; top:-9999px; pointer-events:none; z-index:${CFG.z}; }
+
+ .kq-vip-ring, .kq-aura, .kq-flame, .kq-trail, .kq-spark{ position:fixed; left:-9999px; top:-9999px; pointer-events:none; z-index:${CFG.z}; }
+
   .kq-vip-ring{
     border-radius:999px;
     border:2px solid rgba(255,225,0,.85);
@@ -135,7 +137,7 @@
     t.style.left   = x + "px"; t.style.top    = y + "px";
     document.body.appendChild(t);
     o.trails.push(t);
-    while(o.trails.length > CFG.trailMax){ try{ o.trails.shift().remove(); }catch{} }
+ while(o.trails.length > CFG.trailMax){ try{ o.trails.shift().remove(); }catch{} }
     setTimeout(()=>{ try{ t.remove(); }catch{} }, CFG.trailTTL+50);
   }
   function spawnSpark(o, r){
@@ -242,7 +244,7 @@
       const uid = node.dataset?.uid || node.getAttribute?.("data-uid") || node.getAttribute?.("data-user-id") || "";
       let name = node.getAttribute?.("data-name") || node.getAttribute?.("aria-label") || node.getAttribute?.("title") || (node.alt||"");
       if(!name || name.length<2) name = inferNameFrom(node);
-      const sub = isSUB(name, uid);
+     const sub = isSUB(name, uid);
       const vip = !sub && isVIP(name, uid);
       const overlays = ensureOverlays(node);
       if(sub){
@@ -269,11 +271,12 @@
     t.forEach(renderFor);
     ensureTick();
   }
+
   // ---------- Settings panel ----------
   function renderPanel(container){
     container.innerHTML = "";
     const root = document.createElement("div"); root.style.display="grid"; root.style.gap="10px";
-    const title = document.createElement("div"); title.textContent="VIP ir SUB žaidėjai"; title.style.fontWeight="900";
+      const title = document.createElement("div"); title.textContent="VIP ir SUB žaidėjai"; title.style.fontWeight="900";
     const sub = document.createElement("div"); sub.className="kq-sub"; sub.textContent="Pažymėkite iš sąrašo arba pridėkite vardą. Saugojama naršyklėje.";
     const addRow = document.createElement("div"); addRow.style.display="grid"; addRow.style.gridTemplateColumns="1fr auto auto"; addRow.style.gap="8px";
     const input = document.createElement("input"); input.className="kq-input"; input.placeholder="Įrašykite vardą…";
@@ -294,7 +297,7 @@
       list.appendChild(row);
     }else{
       players.forEach(p=>{
-        const row = document.createElement("div"); row.className="kq-row";
+               const row = document.createElement("div"); row.className="kq-row";
         const keyId = byIdKey(p.id), keyNm = byNameKey(p.name);
         const nm = document.createElement("div"); nm.textContent = `${p.name} • ${p.score}`; nm.style.flex="1";
 
@@ -353,7 +356,7 @@
     (function loop(){
       try{
         if(KQuiz && KQuiz.settings && typeof KQuiz.settings.registerPanel==="function"){
-          KQuiz.settings.registerPanel("vip-badges", "VIP ir SUB žaidėjai", renderPanel);
+           KQuiz.settings.registerPanel("vip-badges", "VIP ir SUB žaidėjai", renderPanel);
           return;
         }
       }catch{}
@@ -400,9 +403,10 @@
     enable, disable
   });
 
-  window.KQ_VIP = Object.assign(window.KQ_VIP||{}, {
+   window.KQ_VIP = Object.assign(window.KQ_VIP||{}, {
     scan: schedule,
-    open(){ ensureFab(); document.getElementById('kq-vip-fab')?.click(); },
+    open(){ ensureFab(); document.getElementById('kq-vip-fab')?.click(); }
+    ,
     isVip(uid, name){
       const kId = uid ? byIdKey(uid) : null;
       const kNm = name ? byNameKey(name) : null;
