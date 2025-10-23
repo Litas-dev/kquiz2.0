@@ -5,6 +5,18 @@
     let styleEl=null, root=null, listEl=null;
     let off=[];
     let lastSig="";
+    let overlayWatchers=[];
+
+    const scheduleApplyVisibility = (()=>{
+      let raf=0;
+      return ()=>{
+        if(raf) return;
+        raf=requestAnimationFrame(()=>{
+          raf=0;
+          applyVisibility();
+        });
+      };
+    })();
 
     const ensureStyle = ()=>{
       if(styleEl) return;
@@ -37,6 +49,7 @@
       if(!root) return;
       root.classList.add('kq-top5bg');
       root.style.display='none';
+      try{ if(!root.dataset.kqTop5bgHasPlayers) root.dataset.kqTop5bgHasPlayers='0'; }catch{}
       try{ root.dataset.kqTop5bg='1'; }catch{}
       try{ root.querySelectorAll('.kq-top5bg-header').forEach(el=>el.remove()); }catch{}
       if(root.parentNode!==board){
@@ -57,6 +70,70 @@
       try{
         root.querySelectorAll('.kq-top5bg-list').forEach(el=>{ if(el!==listEl) el.remove(); });
       }catch{}
+      ensureOverlayWatchers();
+      scheduleApplyVisibility();
+    };
+
+    const hasActiveOverlay = ()=>{
+      try{
+        const overlays=document.querySelectorAll('.overlay');
+        for(const el of overlays){
+          if(!el || !el.isConnected) continue;
+          let display='';
+          let visibility='';
+          let opacity='';
+          try{
+            const cs=window.getComputedStyle(el);
+            display=cs?.display||'';
+            visibility=cs?.visibility||'';
+            opacity=cs?.opacity||'';
+          }catch{}
+          if(!display) display=el.style?.display||'';
+          if(display && display!=='none' && display!=='hidden'){
+            if(visibility && visibility==='hidden') continue;
+            if(opacity!=='' && Number(opacity)===0) continue;
+            return true;
+          }
+        }
+      }catch{}
+      return false;
+    };
+
+    function applyVisibility(){
+      if(!root) return;
+      let hasPlayers=false;
+      try{ hasPlayers = root.dataset.kqTop5bgHasPlayers === '1'; }catch{}
+      if(!hasPlayers){
+        root.style.display='none';
+        return;
+      }
+      root.style.display = hasActiveOverlay() ? 'none' : 'flex';
+    }
+
+    const ensureOverlayWatchers = ()=>{
+      try{
+        const overlays=document.querySelectorAll('.overlay');
+        overlays.forEach(el=>{
+          if(!el) return;
+          const existing=overlayWatchers.find(entry=>entry.el===el);
+          if(existing) return;
+          const observer=new MutationObserver(()=>scheduleApplyVisibility());
+          try{ observer.observe(el,{attributes:true,attributeFilter:['style','class','data-kq-view']}); }catch{}
+          const listener=()=>scheduleApplyVisibility();
+          try{ el.addEventListener('transitionend', listener); }catch{}
+          overlayWatchers.push({el, observer, listener});
+        });
+      }catch{}
+    };
+
+    const detachOverlayWatchers = ()=>{
+      overlayWatchers.forEach(({observer, el, listener})=>{
+        try{ observer?.disconnect(); }catch{}
+        if(el && listener){
+          try{ el.removeEventListener('transitionend', listener); }catch{}
+        }
+      });
+      overlayWatchers=[];
     };
 
     function sortTop(){
@@ -89,6 +166,12 @@
       const top = sortTop();
       const sig = JSON.stringify(top.map(p=>[p.id,p.score,p.avatar,p.name]));
       if(sig===lastSig){
+        try{
+          if(root){
+            root.dataset.kqTop5bgHasPlayers = top.length ? '1' : '0';
+            scheduleApplyVisibility();
+          }
+        }catch{}
         return;
       }
       lastSig=sig;
@@ -96,11 +179,13 @@
       if(!listEl) return;
       listEl.innerHTML='';
       const helpers = window.KQ_VIP || null;
+      if(root){
+        try{ root.dataset.kqTop5bgHasPlayers = top.length ? '1' : '0'; }catch{}
+      }
       if(top.length===0){
-        if(root) root.style.display='none';
+        scheduleApplyVisibility();
         return;
       }
-      if(root) root.style.display='flex';
       top.forEach((p,idx)=>{
         const rank=idx+1;
         const item=document.createElement('div');
@@ -144,6 +229,7 @@
       }catch{
         try{ window.KQ_VIP?.scan?.(); }catch{}
       }
+      scheduleApplyVisibility();
     };
 
     const handleScores = ()=>{ lastSig=""; render(); };
@@ -155,6 +241,8 @@
       ensureStyle();
       ensureRoot();
       render();
+      ensureOverlayWatchers();
+      scheduleApplyVisibility();
       const handlers=[
         ['scoresChanged', handleScores],
         ['leaderboardRefresh', handleScores],
@@ -171,6 +259,7 @@
         off.push(()=>{ try{ window.removeEventListener('kqvip:ready', vipHandler); }catch{} });
         off.push(()=>{ try{ window.removeEventListener('kqvip:change', vipHandler); }catch{} });
       }catch{}
+      off.push(()=>{ detachOverlayWatchers(); });
     };
 
     const disable = ()=>{
@@ -181,6 +270,7 @@
       if(listEl){ try{ listEl.innerHTML=''; }catch{} }
       listEl=null;
       if(root){ try{ root.classList.remove('kq-top5bg'); }catch{} }
+      detachOverlayWatchers();
     };
 
     return { id:'top5bg', name:'Top5 BG lentelė', description:'Rodo Top-5 foninėje lentoje su VIP/SUB ženklais.', defaultEnabled:true, enable, disable };
