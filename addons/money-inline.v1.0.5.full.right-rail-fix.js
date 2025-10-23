@@ -147,6 +147,7 @@ async function fetchMoneyRaw(kind){
   function mountOverlay(){
     const el=document.createElement("div");
     el.id="kq-money-overlay";
+    try{ el.dataset.kqVipBlock = "1"; }catch{ try{ el.setAttribute("data-kq-vip-block", "1"); }catch{} }
     el.style.cssText="position:fixed;inset:0;background:rgba(7,10,18,.96);z-index:10040;display:flex;align-items:center;justify-content:center;padding:12px";
     const coverImg=(()=>{ try{ if(window.KQ_ASSETS?.image) return window.KQ_ASSETS.image("pinigas.png"); }catch{} return "assets/images/pinigas.png"; })();
     const tickSrc=(()=>{ try{ if(window.KQ_ASSETS?.audio) return window.KQ_ASSETS.audio("clock-67787.mp3"); }catch{} return "assets/audio/clock-67787.mp3"; })();
